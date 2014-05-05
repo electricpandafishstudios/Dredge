@@ -41,12 +41,30 @@ ActorTalents:loadDefinition("/data/talents.lua")
 ActorTemporaryEffects:loadDefinition("/data/timed_effects.lua")
 
 -- Actor resources
-ActorResource:defineResource("Power", "power", nil, "power_regen", "Power represent your ability to use special talents.")
+ActorResource:defineResource("Action Points", "actions", nil, "actions_regen", "AP represent the actions that can be taken each turn.")
 
 -- Actor stats
-ActorStats:defineStat("Strength",	"str", 10, 1, 100, "Strength defines your character's ability to apply physical force. It increases your melee damage, damage with heavy weapons, your chance to resist physical effects, and carrying capacity.")
-ActorStats:defineStat("Dexterity",	"dex", 10, 1, 100, "Dexterity defines your character's ability to be agile and alert. It increases your chance to hit, your ability to avoid attacks and your damage with light weapons.")
-ActorStats:defineStat("Constitution",	"con", 10, 1, 100, "Constitution defines your character's ability to withstand and resist damage. It increases your maximum life and physical resistance.")
+ActorStats:defineStat("Constitution", 	"con", 5, 1, 10, "Defines the physical constitution of the character.")
+ActorStats:defineStat("Alertness",	 	"alr", 5, 1, 10, "Defines the character's awareness.")
+ActorStats:defineStat("Learned",		"lck", 5, 1, 10, "Luckiness")
+ActorStats:defineStat("Mental", 		"men", 5, 1, 10, "Defines the mental constitution of the character.")
+
+--Actor inventory
+ActorInventory:defineInventory("INVEN", "Inventory", false, "The character's inventory.")
+ActorInventory:defineInventory("HAND", "Weapon used", true, "The weapon the character is currently wielding.")
+ActorInventory:defineInventory("BODY", "Item worn", true, "The item the character is currently wearing.")
+ActorInventory:defineInventory("ITEM", "Special item", true, "The special item the character is holding.")
+
+-- Actor leveling
+ActorLevel:defineMaxLevel(15)
+ActorLevel.exp_chart = function(level)
+	local exp = 0
+	local mult = 1000
+	for i = 2, level do
+		exp = exp + (mult * (i - 1))
+	end
+	return math.ceil(exp)
+end
 
 -- Actor AIs
 ActorAI:loadDefinition("/engine/ai/")
