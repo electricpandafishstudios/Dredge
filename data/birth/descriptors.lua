@@ -54,18 +54,10 @@ newBirthDescriptor{
 	},
 	stats = {con = 0, men = 0, alr = 0, lck = 0	},
 	copy = {
-		resolvers.equip{
-								{type="weapon", subtype="firearm", name="Colt .45",},},
-		resolvers.inventory{  id = true,
-								{type="consumable", subtype="potion", name="Health Potion"},
-								{type="consumable", subtype="potion", name="Absinthe"},
-								{type="weapon", subtype="bludgeoning", name="Silver Candlestick"},
-								{type="weapon", subtype="slashing", name="Cleaver"},
-								{type="weapon", subtype="slashing", name="Silver Cleaver"},
-								{type="weapon", subtype="stabbing", name="Wooden Stake"},
-								{type="ammunition", subtype="bullet", name=".45 ACP Round"},
-								{type="ammunition", subtype="bullet", name=".45 ACP Round"},
-						   },
+		-- resolvers.equip{
+								-- {type="weapon", subtype="firearm", name="Colt .45",},},
+		-- resolvers.inventory{  id = true,
+						   -- },
 	},	
 	combat =
 	{

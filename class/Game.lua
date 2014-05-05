@@ -44,19 +44,9 @@ local Tooltip = require "engine.Tooltip"
 local CharacterSheet = require "mod.dialogs.CharacterSheet"
 local PlayerDisplay = require "mod.class.PlayerDisplay"
 
-local Opening = require "mod.dialogs.Opening"
 local QuitDialog = require "mod.dialogs.Quit"
 
 module(..., package.seeall, class.inherit(engine.GameTurnBased, engine.interface.GameTargeting))
-
-function _M:onOpen()
-	self.player:restStop()
-
-	if not self.open_dialog then
-		self.open_dialog = Opening.new()
-		self:registerDialog(self.open_dialog)
-	end
-end
 
 function _M:init()
 	engine.GameTurnBased.init(self, engine.KeyBind.new(), 1000, 100)
@@ -242,7 +232,7 @@ function _M:display(nb_keyframe)
 
 		-- And the minimap
 		self.level.map:minimapDisplay(self.w - 200, 20, util.bound(self.player.x - 25, 0, self.level.map.w - 50), util.bound(self.player.y - 25, 0, self.level.map.h - 50), 50, 50, 0.6)
-		self:onOpen()
+
 	end
 
 	-- We display the player's interface
@@ -356,10 +346,6 @@ function _M:setupCommands()
 		-- Exit the game
 		QUIT_GAME = function()
 			self:onQuit()
-		end,
-		
-		OPEN_DIALOG = function()
-			self:onOpen()
 		end,
 
 		SCREENSHOT = function() self:saveScreenshot() end,
