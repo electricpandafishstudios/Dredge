@@ -81,7 +81,7 @@ function _M:run()
 	self.logPlayer = function(e, style, ...) if e == self.player then self.log(style, ...) end end
 	self.player_display = PlayerDisplay.new(0, 0, 200, self.h, {30,30,0}, "/data/font/VeraMono.ttf", 12)
 	
-	self.log(self.flash.GOOD, "Welcome to #00FF00#The Valley of Nis.")
+	self.log(self.flash.GOOD, "Welcome to #00FF00#Dredge.")
 	self.player_display:toScreen(nb_keyframe)
 
 	-- Setup inputs
@@ -110,7 +110,7 @@ function _M:newGame()
 
 	self.creating_player = true
 	local birth = Birther.new(nil, self.player, {"base", "role" }, function()
-		self:changeLevel(1, "Valley_Entrance")
+		self:changeLevel(1, "dungeon")
 		print("[PLAYER BIRTH] resolve...")
 		self.player:resolve()
 		self.player:resolve(nil, true)
