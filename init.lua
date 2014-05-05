@@ -1,12 +1,13 @@
 name = "Dredge"
-long_name = "A Coffeebreak roguelike about decay."
+long_name = "Dredge"
 short_name = "dredge"
-author = { "ElectricPandaFish", "electricpandafishstudios@googlegroups.com" }
-homepage = "http://te4.org/modules:example"
-version = {1,1,5}
+author = { "ElectricPandaFish", "electricpandafish@googlegroups.com" }
+homepage = "http://te4.org/"
+version = {0,0,1}
 engine = {1,1,5,"te4"}
 description = [[
-...
+add a desciprion here later.
 ]]
 starter = "mod.load"
-show_only_on_cheat = false -- Example modules are not shown to normal players
+show_only_on_cheat = false
+no_get_name = true

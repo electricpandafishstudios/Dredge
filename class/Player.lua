@@ -1,4 +1,4 @@
--- ToME - Tales of Middle-Earth
+--[[ ToME - Tales of Middle-Earth
 -- Copyright (C) 2009, 2010, 2011, 2012, 2013 Nicolas Casalini
 --
 -- This program is free software: you can redistribute it and/or modify
@@ -15,7 +15,7 @@
 -- along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --
 -- Nicolas Casalini "DarkGod"
--- darkgod@te4.org
+-- darkgod@te4.org]]
 
 require "engine.class"
 require "mod.class.Actor"
@@ -29,6 +29,9 @@ local ActorTalents = require "engine.interface.ActorTalents"
 local DeathDialog = require "mod.dialogs.DeathDialog"
 local Astar = require"engine.Astar"
 local DirectPath = require"engine.DirectPath"
+
+local LogDisplay = require "engine.LogDisplay"
+local LogFlasher = require "engine.LogFlasher"
 
 --- Defines the player
 -- It is a normal actor, with some redefined methods to handle user interaction.<br/>
@@ -46,17 +49,22 @@ function _M:init(t, no_default)
 	t.color_r=t.color_r or 230
 	t.color_g=t.color_g or 230
 	t.color_b=t.color_b or 230
-
+	
 	t.player = true
 	t.type = t.type or "humanoid"
 	t.subtype = t.subtype or "player"
 	t.faction = t.faction or "players"
 
-	t.lite = t.lite or 0
-
+	t.lite = t.lite or 4
+	t.old_life = 0 
+	
 	mod.class.Actor.init(self, t, no_default)
 	engine.interface.PlayerHotkeys.init(self, t)
-
+	self:onStatChange(STAT_CON, 1)
+	self:onStatChange(STAT_ALR, 1)
+	self:onStatChange(STAT_LCK, 1)
+	self:onStatChange(STAT_MEN, 1)
+	
 	self.descriptor = {}
 end
 
@@ -74,9 +82,130 @@ function _M:act()
 	-- Clean log flasher
 	game.flash:empty()
 
+	self.old_life = self.life
 	-- Resting ? Running ? Otherwise pause
 	if not self:restStep() and not self:runStep() and self.player then
 		game.paused = true
+	end
+end
+
+function _M:playerUseItem(object, item, inven)
+	local use_fct = function(o, inven, item)
+        if not o then return end
+        local co = coroutine.create(function()
+            self.changed = true
+
+            local ret = o:use(self, nil, inven, item) or {}
+            if not ret.used then return end
+            if ret.destroy then
+                if o.multicharge and o.multicharge > 1 then
+                    o.multicharge = o.multicharge - 1
+                else
+                    local _, del = self:removeObject(self:getInven(inven), item)
+                    if del then
+                        game.log("You have no more %s.", o:getName{no_count=true, do_color=true})
+                    else
+                        game.log("You have %s.", o:getName{do_color=true})
+                    end
+                    self:sortInven(self:getInven(inven))
+                end
+            end
+        end)
+        local ok, ret = coroutine.resume(co)
+        if not ok and ret then print(debug.traceback(co)) error(ret) end
+        return true
+    end
+
+    if object and item then return use_fct(object, inven, item) end
+
+    local titleupdator = self:getEncumberTitleUpdator("Use object")
+    self:showEquipInven(titleupdator(),
+        function(o)
+            return o:canUseObject()
+        end,
+        use_fct
+    )
+end 
+
+function _M:playerPickup()
+    -- If 2 or more objects, display a pickup dialog, otherwise just picks up
+    if game.level.map:getObject(self.x, self.y, 2) then
+        local d d = self:showPickupFloor("Pickup", nil, function(o, item)
+            self:pickupFloor(item, true)
+            self.changed = true
+            d:used()
+        end)
+    else
+		if self:getActions() >= 2 then
+		       self:pickupFloor(1, true)
+				self:sortInven()
+				self:useActionPoints(2)
+				self.changed = true
+		else
+			game.flash(game.flash.BAD, "I don't have enough Action Points to do that. (5 Required)")
+			game.log("Low Action Points!")
+		end
+    end
+end
+
+function _M:playerDrop()
+    local inven = self:getInven(self.INVEN_INVEN)
+    local d d = self:showInventory("Drop object", inven, nil, function(o, item)
+        if self:getActions() >= 2 then
+		self:dropFloor(inven, item, true, true)
+        self:sortInven(inven)
+		self:useActionPoints(2)
+        self.changed = true
+        return true
+		else
+			game.flash(game.flash.BAD, "I don't have enough Action Points to do that. (5 Required)")
+			game.log("Low Action Points!")
+		end
+    end)
+end 
+
+function _M:doDrop(inven, item, on_done, nb)
+    if self.no_inventory_access then return end
+    if nb == nil or nb >= self:getInven(inven)[item]:getNumber() then
+        self:dropFloor(inven, item, true, true)
+    else
+        for i = 1, nb do self:dropFloor(inven, item, true) end
+    end
+    self:sortInven(inven)
+	self:useActionPoints(3)
+    self.changed = true
+    if on_done then on_done() end
+end
+
+function _M:doWear(inven, item, o)
+	if self:getActions() >= 3 then
+		self:removeObject(inven, item, true)
+		local ro = self:wearObject(o, true, true)
+		if ro then
+			if type(ro) == "table" then self:addObject(inven, ro) end
+		elseif not ro then
+			self:addObject(inven, o)
+		end
+		self:sortInven()
+		self:useActionPoints(3)
+		self.changed = true
+	else
+		game.flash(game.flash.BAD, "I don't have enough Action Points to do that. (5 Required)")
+		game.log("Low Action Points!")
+	end
+end
+
+function _M:doTakeoff(inven, item, o)
+	if self:getActions() >= 3 then
+		if self:takeoffObject(inven, item) then
+			self:addObject(self.INVEN_INVEN, o)
+		end
+		self:sortInven()
+		self:useActionPoints(3)
+		self.changed = true
+	else
+		game.flash(game.flash.BAD, "I don't have enough Action Points to do that. (5 Required)")
+		game.log("Low Action Points!")
 	end
 end
 
@@ -89,6 +218,8 @@ end
 function _M:playerFOV()
 	-- Clean FOV before computing it
 	game.level.map:cleanFOV()
+	self.lite = (self:getAlr() - 1) / 2
+	self.sight = self:getAlr() * 2
 	-- Compute both the normal and the lite FOV, using cache
 	self:computeFOV(self.sight or 20, "block_sight", function(x, y, dx, dy, sqdist)
 		game.level.map:apply(x, y, fovdist[sqdist])
@@ -167,10 +298,8 @@ function _M:restCheck()
 	if spotHostiles(self) then return false, "hostile spotted" end
 
 	-- Check resources, make sure they CAN go up, otherwise we will never stop
-	if self:getPower() < self:getMaxPower() and self.power_regen > 0 then return true end
-	if self.life < self.max_life and self.life_regen> 0 then return true end
-
-	return false, "all resources and life at maximum"
+	if self.life < self.max_life and self.life_regen > 0 then return true end
+	return false, "life at maximum"
 end
 
 --- Can we continue running?
@@ -197,3 +326,10 @@ end
 function _M:mouseMove(tmx, tmy)
 	return engine.interface.PlayerMouse.mouseMove(self, tmx, tmy, spotHostiles)
 end
+
+-- Superload runStep to drop a game.paused = false in for Action Points to work
+local previous_runStep = _M.runStep
+function _M:runStep()
+	game.paused = false
+	return previous_runStep(self)
+end	

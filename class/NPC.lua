@@ -1,4 +1,4 @@
--- ToME - Tales of Middle-Earth
+--[[ ToME - Tales of Middle-Earth
 -- Copyright (C) 2009, 2010, 2011, 2012, 2013 Nicolas Casalini
 --
 -- This program is free software: you can redistribute it and/or modify
@@ -15,7 +15,7 @@
 -- along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --
 -- Nicolas Casalini "DarkGod"
--- darkgod@te4.org
+-- darkgod@te4.org]]
 
 require "engine.class"
 local ActorAI = require "engine.interface.ActorAI"
@@ -39,7 +39,9 @@ function _M:act()
 	-- Let the AI think .... beware of Shub !
 	-- If AI did nothing, use energy anyway
 	self:doAI()
-	if not self.energy.used then self:useEnergy() end
+	if not self.energy.used and self:getActions() == self:getMaxActions() then
+		self:useEnergy()
+	end
 end
 
 --- Called by ActorLife interface

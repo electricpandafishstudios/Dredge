@@ -26,7 +26,10 @@ local ActorTalents = require "engine.interface.ActorTalents"
 local ActorAI = require "engine.interface.ActorAI"
 local ActorLevel = require "engine.interface.ActorLevel"
 local ActorTemporaryEffects = require "engine.interface.ActorTemporaryEffects"
+local ActorInventory = require "engine.interface.ActorInventory"
 local Birther = require "engine.Birther"
+
+dofile("/mod/resolvers.lua")
 
 -- Useful keybinds
 KeyBind:load("move,hotkeys,inventory,actions,interface,debug")
@@ -41,12 +44,15 @@ ActorTalents:loadDefinition("/data/talents.lua")
 ActorTemporaryEffects:loadDefinition("/data/timed_effects.lua")
 
 -- Actor resources
+
+-- ActorResource:defineResource("Sanity", "sanity", nil, "sanity_regen", "Sanity represents your character's mental state.")
+
 ActorResource:defineResource("Action Points", "actions", nil, "actions_regen", "AP represent the actions that can be taken each turn.")
 
 -- Actor stats
 ActorStats:defineStat("Constitution", 	"con", 5, 1, 10, "Defines the physical constitution of the character.")
 ActorStats:defineStat("Alertness",	 	"alr", 5, 1, 10, "Defines the character's awareness.")
-ActorStats:defineStat("Learned",		"lck", 5, 1, 10, "Luckiness")
+ActorStats:defineStat("Luck",			"lck", 5, 1, 10, "Luckiness")
 ActorStats:defineStat("Mental", 		"men", 5, 1, 10, "Defines the mental constitution of the character.")
 
 --Actor inventory
@@ -64,9 +70,7 @@ ActorLevel.exp_chart = function(level)
 		exp = exp + (mult * (i - 1))
 	end
 	return math.ceil(exp)
-end
-
--- Actor AIs
+end-- Actor AIs
 ActorAI:loadDefinition("/engine/ai/")
 
 -- Birther descriptor

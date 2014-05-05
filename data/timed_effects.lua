@@ -17,6 +17,7 @@
 -- Nicolas Casalini "DarkGod"
 -- darkgod@te4.org
 
+--local DamageType = require "engine.DamageType"
 local Stats = require "engine.interface.ActorStats"
 
 newEffect{
@@ -29,5 +30,30 @@ newEffect{
 	on_lose = function(self, err) return "#Target# is free from the acid.", "-Acid" end,
 	on_timeout = function(self, eff)
 		DamageType:get(DamageType.ACID).projector(eff.src or self, self.x, self.y, DamageType.ACID, eff.power)
+	end,
+}
+
+newEffect{
+	name = "MADNESS",
+	desc = "Losing your mind",
+	type = "physical",
+	status = "detrimental",
+	parameters = { power = 1},
+	on_timeout = function(self, eff)
+		self:incSanity(-eff.power)
+	end,
+}
+
+newEffect{
+	name = "POISON",
+	desc = "Damage over time",
+	type = "physical",
+	status = "detrimental",
+	parameters = { power = 1},
+	on_gain = function(self, err) return "#Target# is poisoned!", "+Infected" end,
+	on_lose = function(self, err) return "#Target# is free from poison.", "-Infected" end,
+	on_timeout = function(self, eff)
+		self:heal(-eff.power, self)
+		--DamageType:get(DamageType.INFECTED).projector(eff.src or self, self.x, self.y, DamageType.INFECTED, eff.power)
 	end,
 }

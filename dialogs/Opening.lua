@@ -18,27 +18,32 @@
 -- darkgod@te4.org
 
 require "engine.class"
-require "engine.Dialog"
+local Dialog = require "engine.ui.Dialog"
+local Textzone = require "engine.ui.Textzone"
+
+local Separator = require "engine.ui.Separator"
+local List = require "engine.ui.List"
 local Savefile = require "engine.Savefile"
+local Map = require "engine.Map"
 
 module(..., package.seeall, class.inherit(engine.Dialog))
 
 function _M:init()
-	engine.Dialog.init(self, "Really exit the Eldritch Castle?", 300, 100)
+	engine.Dialog.init(self, "Introduction", 500, 300)
+	-- self.c_desc = Textzone.new{width=self.iw, auto_height=true, text=[[Indroction paragraphs go here.]]}
+	-- self:loadUI{
+	-- {left=0, top=0, ui=self.c_desc},
+	-- }
+	--self:setFocus(self.c_desc)
+	-- self:setupUI(false, true)
+	--self:simpleLongPopup("A", "B", game.w * 0.7, game.player:heal(1, self), false)
 	self:keyCommands({
-		__DEFAULT = function()
-			game:unregisterDialog(self)
-			game.quit_dialog = false
-		end,
-	}, {
-		ACCEPT = function()
-			-- savefile_pipe is created as a global by the engine
-			savefile_pipe:push(game.save_name, "game", game)
-			util.showMainMenu()
-		end,
-	})
+    __DEFAULT = function(c)
+        game:unregisterDialog(self)
+    end,
+})
 end
 
 function _M:drawDialog(s, w, h)
-	s:drawColorStringCentered(self.font, "Press enter to quit, any other keys to stay", 2, 2, self.iw - 2, self.ih - 2)
+	s:drawColorStringCentered(self.font, "Indroction paragraphs go here.", 2, 2, self.iw - 2, self.ih - 2)
 end

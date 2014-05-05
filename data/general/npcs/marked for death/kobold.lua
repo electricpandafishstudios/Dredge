@@ -17,28 +17,32 @@
 -- Nicolas Casalini "DarkGod"
 -- darkgod@te4.org
 
-require "engine.class"
-require "engine.Dialog"
-local Savefile = require "engine.Savefile"
+local Talents = require("engine.interface.ActorTalents")
 
-module(..., package.seeall, class.inherit(engine.Dialog))
+newEntity{
+	define_as = "BASE_NPC_KOBOLD",
+	type = "humanoid", subtype = "kobold",
+	display = "k", color=colors.WHITE,
+	desc = [[Ugly and green!]],
 
-function _M:init()
-	engine.Dialog.init(self, "Really exit the Eldritch Castle?", 300, 100)
-	self:keyCommands({
-		__DEFAULT = function()
-			game:unregisterDialog(self)
-			game.quit_dialog = false
-		end,
-	}, {
-		ACCEPT = function()
-			-- savefile_pipe is created as a global by the engine
-			savefile_pipe:push(game.save_name, "game", game)
-			util.showMainMenu()
-		end,
-	})
-end
+	ai = "dumb_talented_simple", ai_state = { talent_in=3, },
+	stats = { con=5, men=5, per=5 },
+	combat_armor = 0,
+}
 
-function _M:drawDialog(s, w, h)
-	s:drawColorStringCentered(self.font, "Press enter to quit, any other keys to stay", 2, 2, self.iw - 2, self.ih - 2)
-end
+newEntity{ base = "BASE_NPC_KOBOLD",
+	name = "kobold warrior", color=colors.GREEN,
+	level_range = {1, 4}, exp_worth = 1,
+	rarity = 4,
+	max_life = resolvers.rngavg(5,9),
+	combat = { dam=2 },
+}
+
+newEntity{ base = "BASE_NPC_KOBOLD",
+	name = "armoured kobold warrior", color=colors.AQUAMARINE,
+	level_range = {6, 10}, exp_worth = 1,
+	rarity = 4,
+	max_life = resolvers.rngavg(10,12),
+	combat_armor = 3,
+	combat = { dam=5 },
+}

@@ -1,4 +1,4 @@
--- ToME - Tales of Middle-Earth
+--[[ ToME - Tales of Middle-Earth
 -- Copyright (C) 2009, 2010, 2011, 2012, 2013 Nicolas Casalini
 --
 -- This program is free software: you can redistribute it and/or modify
@@ -15,7 +15,7 @@
 -- along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --
 -- Nicolas Casalini "DarkGod"
--- darkgod@te4.org
+-- darkgod@te4.org]]
 
 require "engine.class"
 require "engine.GameTurnBased"
@@ -41,13 +41,25 @@ local DebugConsole = require "engine.DebugConsole"
 local FlyingText = require "engine.FlyingText"
 local Tooltip = require "engine.Tooltip"
 
+local CharacterSheet = require "mod.dialogs.CharacterSheet"
+local PlayerDisplay = require "mod.class.PlayerDisplay"
+
+local Opening = require "mod.dialogs.Opening"
 local QuitDialog = require "mod.dialogs.Quit"
 
 module(..., package.seeall, class.inherit(engine.GameTurnBased, engine.interface.GameTargeting))
 
+function _M:onOpen()
+	self.player:restStop()
+
+	if not self.open_dialog then
+		self.open_dialog = Opening.new()
+		self:registerDialog(self.open_dialog)
+	end
+end
+
 function _M:init()
 	engine.GameTurnBased.init(self, engine.KeyBind.new(), 1000, 100)
-
 	-- Pause at birth
 	self.paused = true
 
@@ -56,7 +68,7 @@ function _M:init()
 end
 
 function _M:run()
-	self.flash = LogFlasher.new(0, 0, self.w, 20, nil, nil, nil, {255,255,255}, {0,0,0})
+	self.flash = LogFlasher.new(208, 0, self.w, 20, nil, nil, nil, {255,255,255}, {0,0,0})
 	self.logdisplay = LogDisplay.new(0, self.h * 0.8, self.w * 0.5, self.h * 0.2, nil, nil, nil, {255,255,255}, {30,30,30})
 	self.hotkeys_display = HotkeysDisplay.new(nil, self.w * 0.5, self.h * 0.8, self.w * 0.5, self.h * 0.2, {30,30,0})
 	self.npcs_display = ActorsSeenDisplay.new(nil, self.w * 0.5, self.h * 0.8, self.w * 0.5, self.h * 0.2, {30,30,0})
@@ -67,8 +79,10 @@ function _M:run()
 	self.log = function(style, ...) if type(style) == "number" then self.logdisplay(...) self.flash(style, ...) else self.logdisplay(style, ...) self.flash(self.flash.NEUTRAL, style, ...) end end
 	self.logSeen = function(e, style, ...) if e and self.level.map.seens(e.x, e.y) then self.log(style, ...) end end
 	self.logPlayer = function(e, style, ...) if e == self.player then self.log(style, ...) end end
-
-	self.log(self.flash.GOOD, "Welcome to #00FF00#the template module!")
+	self.player_display = PlayerDisplay.new(0, 0, 200, self.h, {30,30,0}, "/data/font/VeraMono.ttf", 12)
+	
+	self.log(self.flash.GOOD, "Welcome to #00FF00#The Valley of Nis.")
+	self.player_display:toScreen(nb_keyframe)
 
 	-- Setup inputs
 	self:setupCommands()
@@ -96,7 +110,7 @@ function _M:newGame()
 
 	self.creating_player = true
 	local birth = Birther.new(nil, self.player, {"base", "role" }, function()
-		self:changeLevel(1, "dungeon")
+		self:changeLevel(1, "Valley_Entrance")
 		print("[PLAYER BIRTH] resolve...")
 		self.player:resolve()
 		self.player:resolve(nil, true)
@@ -110,15 +124,16 @@ end
 
 function _M:loaded()
 	engine.GameTurnBased.loaded(self)
-	Zone:setup{npc_class="mod.class.NPC", grid_class="mod.class.Grid", }
+	Zone:setup{npc_class="mod.class.NPC", grid_class="mod.class.Grid", object_class="mod.class.Object"}
 	Map:setViewerActor(self.player)
 	Map:setViewPort(200, 20, self.w - 200, math.floor(self.h * 0.80) - 20, 32, 32, nil, 22, true)
 	self.key = engine.KeyBind.new()
 end
 
 function _M:setupDisplayMode()
-	print("[DISPLAY MODE] 32x32 ASCII/background")
+	print("[DISPLAY MODE] 16x16 ASCII/background")
 	Map:setViewPort(200, 20, self.w - 200, math.floor(self.h * 0.80) - 20, 32, 32, nil, 22, true)
+	
 	Map:resetTiles()
 	Map.tiles.use_images = false
 
@@ -188,7 +203,7 @@ end
 function _M:tick()
 	if self.level then
 		self:targetOnTick()
-
+		
 		engine.GameTurnBased.tick(self)
 		-- Fun stuff: this can make the game realtime, although calling it in display() will make it work better
 		-- (since display is on a set FPS while tick() ticks as much as possible
@@ -209,6 +224,7 @@ function _M:onTurn()
 end
 
 function _M:display(nb_keyframe)
+	self.player_display:toScreen(nb_keyframe)
 	-- If switching resolution, blank everything but the dialog
 	if self.change_res_dialog then engine.GameTurnBased.display(self, nb_keyframe) return end
 
@@ -226,6 +242,7 @@ function _M:display(nb_keyframe)
 
 		-- And the minimap
 		self.level.map:minimapDisplay(self.w - 200, 20, util.bound(self.player.x - 25, 0, self.level.map.w - 50), util.bound(self.player.y - 25, 0, self.level.map.h - 50), 50, 50, 0.6)
+		self:onOpen()
 	end
 
 	-- We display the player's interface
@@ -264,6 +281,7 @@ function _M:setupCommands()
 		MOVE_RIGHT_UP = function() self.player:moveDir(9) end,
 		MOVE_RIGHT_DOWN = function() self.player:moveDir(3) end,
 		MOVE_STAY = function() self.player:useEnergy() end,
+		-- END_TURN = function() self.player:useEnergy() end,
 
 		RUN_LEFT = function() self.player:runInit(4) end,
 		RUN_RIGHT = function() self.player:runInit(6) end,
@@ -278,41 +296,6 @@ function _M:setupCommands()
 		HOTKEY_1 = function() self.player:activateHotkey(1) end,
 		HOTKEY_2 = function() self.player:activateHotkey(2) end,
 		HOTKEY_3 = function() self.player:activateHotkey(3) end,
-		HOTKEY_4 = function() self.player:activateHotkey(4) end,
-		HOTKEY_5 = function() self.player:activateHotkey(5) end,
-		HOTKEY_6 = function() self.player:activateHotkey(6) end,
-		HOTKEY_7 = function() self.player:activateHotkey(7) end,
-		HOTKEY_8 = function() self.player:activateHotkey(8) end,
-		HOTKEY_9 = function() self.player:activateHotkey(9) end,
-		HOTKEY_10 = function() self.player:activateHotkey(10) end,
-		HOTKEY_11 = function() self.player:activateHotkey(11) end,
-		HOTKEY_12 = function() self.player:activateHotkey(12) end,
-		HOTKEY_SECOND_1 = function() self.player:activateHotkey(13) end,
-		HOTKEY_SECOND_2 = function() self.player:activateHotkey(14) end,
-		HOTKEY_SECOND_3 = function() self.player:activateHotkey(15) end,
-		HOTKEY_SECOND_4 = function() self.player:activateHotkey(16) end,
-		HOTKEY_SECOND_5 = function() self.player:activateHotkey(17) end,
-		HOTKEY_SECOND_6 = function() self.player:activateHotkey(18) end,
-		HOTKEY_SECOND_7 = function() self.player:activateHotkey(19) end,
-		HOTKEY_SECOND_8 = function() self.player:activateHotkey(20) end,
-		HOTKEY_SECOND_9 = function() self.player:activateHotkey(21) end,
-		HOTKEY_SECOND_10 = function() self.player:activateHotkey(22) end,
-		HOTKEY_SECOND_11 = function() self.player:activateHotkey(23) end,
-		HOTKEY_SECOND_12 = function() self.player:activateHotkey(24) end,
-		HOTKEY_THIRD_1 = function() self.player:activateHotkey(25) end,
-		HOTKEY_THIRD_2 = function() self.player:activateHotkey(26) end,
-		HOTKEY_THIRD_3 = function() self.player:activateHotkey(27) end,
-		HOTKEY_THIRD_4 = function() self.player:activateHotkey(28) end,
-		HOTKEY_THIRD_5 = function() self.player:activateHotkey(29) end,
-		HOTKEY_THIRD_6 = function() self.player:activateHotkey(30) end,
-		HOTKEY_THIRD_7 = function() self.player:activateHotkey(31) end,
-		HOTKEY_THIRD_8 = function() self.player:activateHotkey(32) end,
-		HOTKEY_THIRD_9 = function() self.player:activateHotkey(33) end,
-		HOTKEY_THIRD_10 = function() self.player:activateHotkey(34) end,
-		HOTKEY_THIRD_11 = function() self.player:activateHotkey(35) end,
-		HOTKEY_THIRD_12 = function() self.player:activateHotkey(36) end,
-		HOTKEY_PREV_PAGE = function() self.player:prevHotkeyPage() end,
-		HOTKEY_NEXT_PAGE = function() self.player:nextHotkeyPage() end,
 
 		-- Actions
 		CHANGE_LEVEL = function()
@@ -339,10 +322,44 @@ function _M:setupCommands()
 		SHOW_CHARACTER_SHEET = function()
 			self:registerDialog(require("mod.dialogs.CharacterSheet").new(self.player))
 		end,
+		
+		PICKUP_FLOOR = function()
+			if self.player.no_inventory_access then return end
+			self.player:playerPickup()
+		end,
+		
+		DROP_FLOOR = function()
+			if self.player.no_inventory_access then return end
+			self.player:playerDrop()
+		end,
+		
+		SHOW_INVENTORY = function()
+			if self.player:getActions() < 2 then
+				self.flash(game.flash.BAD, "I don't have enough Action Points to do that. (5 Required)")
+				self.log("Low Action Points!")
+				return
+			end
+			self.player:useActionPoints(2)
+			if self.player.no_inventory_access then return end
+			local d
+			d = self.player:showEquipInven("Inventory", nil, function(o, inven, item, button, event)
+				if not o then return end
+				local ud = require("mod.dialogs.UseItemDialog").new(event == "button", self.player, o, item, inven, function(_, _, _, stop)
+					d:generate()
+					d:generateList()
+					if stop then self:unregisterDialog(d) end
+				end)
+				self:registerDialog(ud)
+			end)
+		end, 
 
 		-- Exit the game
 		QUIT_GAME = function()
 			self:onQuit()
+		end,
+		
+		OPEN_DIALOG = function()
+			self:onOpen()
 		end,
 
 		SCREENSHOT = function() self:saveScreenshot() end,
