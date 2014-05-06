@@ -43,20 +43,20 @@ newTalent{
 	end,
 }
 
-newTalent{
-	name = "Mad",
-	type = {"role/combat", 1},
-	points = 1,
-	cooldown = 2,
-	sanity = 1,
-	range = 1,
-	mode = "passive",
-	getAttack = function(self, t) return self:getTalentLevel(t) * 10 end,
-	action = function(self, t) end,
-	info = function(self, t)
-		return "Zshhhhhhhhh!"
-	end,
-}
+-- newTalent{
+	-- name = "Mad",
+	-- type = {"role/combat", 1},
+	-- points = 1,
+	-- cooldown = 2,
+	-- sanity = 1,
+	-- range = 1,
+	-- mode = "passive",
+	-- getAttack = function(self, t) return self:getTalentLevel(t) * 10 end,
+	-- action = function(self, t) end,
+	-- info = function(self, t)
+		-- return "Zshhhhhhhhh!"
+	-- end,
+-- }
 
 -- newTalent{
 	-- name = "Attack",

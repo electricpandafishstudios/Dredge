@@ -82,12 +82,12 @@ function _M:act()
 
 	-- Clean log flasher
 	game.flash:empty()
-
 	self.old_life = self.life
 	-- Resting ? Running ? Otherwise pause
 	if not self:restStep() and not self:runStep() and self.player then
 		game.paused = true
 	end
+	self:onStatChange(STAT_CON, 1)
 end
 
 function _M:playerUseItem(object, item, inven)

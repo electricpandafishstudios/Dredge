@@ -44,5 +44,5 @@ newEntity{ base = "BASE_NPC_KOBOLD",
 	rarity = 4,
 	max_life = resolvers.rngavg(10,12),
 	combat_armor = 3,
-	combat = { dam=5 },
+	combat = { dam=4 },
 }
