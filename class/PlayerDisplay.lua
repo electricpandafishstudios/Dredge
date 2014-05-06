@@ -82,13 +82,21 @@ function _M:display()
 
     self:makeTextureBar("#c00000#Life:", nil, player.life, player.max_life, player.life_regen * util.bound((player.healing_factor or 1), 0, 2.5), x, h, 255, 255, 255, colors.DARK_RED, colors.VERY_DARK_RED) h = h + self.font_h
 	self:makeTextureBar("AP:", nil, player.actions, player.max_actions, nil, x, h, 255, 255, 255, colors.BLUE, colors.DARK_BLUE) h = h + self.font_h
+	h = h + self.font_h
     self:makeTextureBar("Decay:", nil, player.level - 1, player.max_level - 1, nil, x, h, 255, 255, 255, colors.YELLOW_GREEN, colors.OLIVE_DRAB) h = h + self.font_h
 	self:makeTextureBar("XP:", nil, player.exp, player:getExpChart(player.level + 1), nil, x, h, 255, 255, 255, colors.YELLOW_GREEN, colors.OLIVE_DRAB) h = h + self.font_h + self.font_h
-	-- s:drawStringBlended(self.font, "CON : "..(player:getCon()), w, h, 0, 255, 255, true) h = h + self.font_h
-    -- s:drawStringBlended(self.font, "ALR : "..(player:getAlr()), w, h, 255, 255, 0, true) h = h + self.font_h
-	-- s:drawStringBlended(self.font, "LCK : "..(player:getLck()), w, h, 255, 255, 255, true) h = h + self.font_h
-	-- s:drawStringBlended(self.font, "MEN : "..(player:getMen()), w, h, 255, 0, 255, true) h = h + self.font_h
-		
+	h = h + self.font_h
+	self:makeTexture("Stats:", 0, h, 255, 255, 255, self.w) h = h + self.font_h
+	self:makeTexture("CON: "..(player:getCon()), 0, h, 255, 255, 255, self.w) h = h + self.font_h
+	self:makeTexture("ALR: "..(player:getAlr()), 0, h, 255, 255, 255, self.w) h = h + self.font_h	
+	self:makeTexture("LCK: "..(player:getLck()), 0, h, 255, 255, 255, self.w) h = h + self.font_h
+	self:makeTexture("MEN: "..(player:getMen()), 0, h, 255, 255, 255, self.w) h = h + self.font_h
+	h = h + self.font_h
+	self:makeTexture("Abilities:", 0, h, 255, 255, 255, self.w) h = h + self.font_h
+	h = h + self.font_h
+	self:makeTexture("Inventory:", 0, h, 255, 255, 255, self.w) h = h + self.font_h
+	
+	
 	if savefile_pipe.saving then
         h = h + self.font_h
         self:makeTextureBar("Saving:", "%d%%", 100 * savefile_pipe.current_nb / savefile_pipe.total_nb, 100, nil, x, h, colors.YELLOW.r, colors.YELLOW.g, colors.YELLOW.b, 
