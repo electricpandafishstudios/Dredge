@@ -21,6 +21,28 @@
 newTalentType{ type="role/combat", name = "combat", description = "Combat techniques" }
 newTalentType{ type="attack/mob", name = "mob", description = "Mob auto-attacks" }
 
+--Unused / boxed
+newTalent{
+	name = "Kick",
+	type = {"role/combat", 1},
+	points = 1,
+	cooldown = 6,
+	-- sanity = 0,
+	range = 1,
+	action = function(self, t)
+		local tg = {type="hit", range=self:getTalentRange(t)}
+		local x, y, target = self:getTarget(tg)
+		if not x or not y or not target then return nil end
+		if core.fov.distance(self.x, self.y, x, y) > 1 then return nil end
+
+		target:knockback(self.x, self.y, 2 + self:getCon())
+		return true
+	end,
+	info = function(self, t)
+		return "Kick!"
+	end,
+}
+
 newTalent{
 	name = "Mad",
 	type = {"role/combat", 1},
@@ -36,26 +58,26 @@ newTalent{
 	end,
 }
 
-newTalent{
-	name = "Attack",
-	type = {"role/combat", 1},
-	points = 1,
-	cooldown = 0,
-	sanity = 0,
-	range = 1,
-	action = function(self, t)
-		local tg = {type="hit", range=self:getTalentRange(t)}
-		local x, y, target = self:getTarget(tg)
-		if not x or not y or not target then return nil end
-		if core.fov.distance(self.x, self.y, x, y) > 1 then return nil end
+-- newTalent{
+	-- name = "Attack",
+	-- type = {"role/combat", 1},
+	-- points = 1,
+	-- cooldown = 0,
+	-- sanity = 0,
+	-- range = 1,
+	-- action = function(self, t)
+		-- local tg = {type="hit", range=self:getTalentRange(t)}
+		-- local x, y, target = self:getTarget(tg)
+		-- if not x or not y or not target then return nil end
+		-- if core.fov.distance(self.x, self.y, x, y) > 1 then return nil end
 
-		self:bumpInto(target)
-		return true
-	end,
-	info = function(self, t)
-		return "Attack!"
-	end,
-}
+		-- self:bumpInto(target)
+		-- return true
+	-- end,
+	-- info = function(self, t)
+		-- return "Attack!"
+	-- end,
+-- }
 
 
 newTalent{
@@ -88,27 +110,7 @@ newTalent{
 	end,
 }
 
---Unused / boxed
---newTalent{
---	name = "Kick",
---	type = {"role/combat", 1},
---	points = 1,
---	cooldown = 6,
---	sanity = 0,
---	range = 1,
---	action = function(self, t)
---		local tg = {type="hit", range=self:getTalentRange(t)}
---		local x, y, target = self:getTarget(tg)
---		if not x or not y or not target then return nil end
---		if core.fov.distance(self.x, self.y, x, y) > 1 then return nil end
---
---		target:knockback(self.x, self.y, 2 + self:getCon())
---		return true
---	end,
---	info = function(self, t)
---		return "Kick!"
---	end,
---}
+
 --newTalent{
 --	name = "Particles",
 --	type = {"role/combat", 1},

@@ -191,7 +191,7 @@ function _M:tooltip()
 	self.name,
 	self.level,
 	self:lifeIndicatorColor(),
-	self:lifeIndicatorText(),
+	self.life,
 	self:getCon(),
 	self:getAlr(),
 	self:getLck(),
@@ -240,23 +240,23 @@ end
 
 --- Notifies a change of stat value
 function _M:onStatChange(stat, v)
-	if stat == self.STAT_CON then
+	-- if stat == self.STAT_CON then
 		self.max_life = 15 +  3 * self:getCon()
 		self.life_regen = math.max(1, self:getCon() / 3)
-		self.combat.damage = math.max(1, self:getCon() - 5 + (self:getCon() - 5) / 2)
-	end
-	if stat == self.STAT_ALR then
+		self.combat.damage = math.max(1, self:getCon() - 5)
+	-- end
+	-- if stat == self.STAT_ALR then
 		self.max_actions = 5 + math.floor(self:getAlr() / 2)
 		self.max_action_points = max_actions or 5 + math.floor(self:getAlr() / 2)
 		self.lite = math.floor((self:getAlr() - 1) / 2)
 		self.sight = 2 * self:getAlr()
-	end
-	if stat == self.STAT_Lck then
+	-- end
+	-- if stat == self.STAT_Lck then
 		self.ego_chance = self:getLck()
-	end
-	if stat == self.STAT_MEN then
-		self.combat.damage = math.max(1, self:getCon() - 5 + math.floor((self:getCon() - 5) / 2))
-	end
+	-- end
+	-- if stat == self.STAT_MEN then
+		-- self.combat.damage = math.max(1, self:getCon() - 5 + math.floor((self:getCon() - 5) / 2))
+	-- end
 end
 
 function _M:attack(target)

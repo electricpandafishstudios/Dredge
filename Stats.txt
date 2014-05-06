@@ -1,0 +1,9 @@
+Max HP:			15 + 3 * CON
+HP Regen: 		max(1, CON / 3)
+Dam: 			max(1, CON - 5)
+Action Points:	5 + floor(ALR / 2)
+Lite: 			floor( (ALR - 1) / 2)
+Sight:			2 * ALR
+
+*Skill Points: 	max(1, LRN - 4)
+

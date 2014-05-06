@@ -33,13 +33,12 @@ newBirthDescriptor{
 	},
 	combat = 
 	{
-		dam = 0.5, damtype = DamageType.PHYSICAL
+		dam = 1, damtype = DamageType.PHYSICAL
 	},
 	
 	talents =
 	{
-		[ActorTalents.T_ATTACK] = 1,
-		[ActorTalents.T_FIRE] = 1,
+		[ActorTalents.T_KICK] = 1,
 	},
 }
 
@@ -52,7 +51,7 @@ newBirthDescriptor{
 		"<Choose this class to start with a myriad of the currently implemented items>",
 		"[Mechanical Description goes here]",
 	},
-	stats = {con = 0, men = 0, alr = 0, lck = 0	},
+	stats = {con = 5, men = 5, alr = 5, lck = 5	},
 	copy = {
 		-- resolvers.equip{
 								-- {type="weapon", subtype="firearm", name="Colt .45",},},
@@ -66,38 +65,38 @@ newBirthDescriptor{
 	talents = {},
 }
 
-newBirthDescriptor{
-	type = "role",
-	name = "Anthropologist",	
-	desc =
-	{
-		"I read about this castle in a book once!",
-		"[Mechanical Description goes here]",
-	},
-	stats = {con = -1, men = 3, alr = -1, lck = -1},
-	talents = {},
-}
+-- newBirthDescriptor{
+	-- type = "role",
+	-- name = "Anthropologist",	
+	-- desc =
+	-- {
+		-- "I read about this castle in a book once!",
+		-- "[Mechanical Description goes here]",
+	-- },
+	-- stats = {con = -1, men = 3, alr = -1, lck = -1},
+	-- talents = {},
+-- }
 
-newBirthDescriptor{
-	type = "role",
-	name = "Lover",
-	desc =
-	{
-		"Love is in the air!",
-		"[Mechanical Description goes here]",
-	},
-	stats = {con = -1, men = -1, alr = 3, lck = -1},
-	talents = {},
-}
+-- newBirthDescriptor{
+	-- type = "role",
+	-- name = "Lover",
+	-- desc =
+	-- {
+		-- "Love is in the air!",
+		-- "[Mechanical Description goes here]",
+	-- },
+	-- stats = {con = -1, men = -1, alr = 3, lck = -1},
+	-- talents = {},
+-- }
 
-newBirthDescriptor{
-	type = "role",
-	name = "Madman",
-	desc =
-	{
-		"I AM LOVECRAFT!",
-		"[Mechanical Description goes here]",
-	},
-	stats = {con = -1, men = -1, alr = -1, lck = 3},
-	talents = {},
-}
+-- newBirthDescriptor{
+	-- type = "role",
+	-- name = "Madman",
+	-- desc =
+	-- {
+		-- "I AM LOVECRAFT!",
+		-- "[Mechanical Description goes here]",
+	-- },
+	-- stats = {con = -1, men = -1, alr = -1, lck = 3},
+	-- talents = {},
+-- }
