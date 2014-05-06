@@ -30,9 +30,6 @@ newBirthDescriptor{
 		lite = 4,
 		max_life = 30,
 		life = 30,
-		resolvers.inventory{  id = true,
-								{type="consumable", subtype="potion", name="Health Potion"},
-						   },
 	},
 	combat = 
 	{
@@ -56,7 +53,10 @@ newBirthDescriptor{
 	},
 	stats = {con = 5, men = 5, alr = 5, lck = 5	},
 	copy = {
-
+		-- resolvers.equip{
+								-- {type="weapon", subtype="firearm", name="Colt .45",},},
+		-- resolvers.inventory{  id = true,
+						   -- },
 	},	
 	combat =
 	{
