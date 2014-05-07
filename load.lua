@@ -59,7 +59,6 @@ ActorStats:defineStat("Mental", 		"men", 5, 1, 10, "Defines the mental constitut
 ActorInventory:defineInventory("INVEN", "Inventory", false, "The character's inventory.")
 ActorInventory:defineInventory("HAND", "Weapon used", true, "The weapon the character is currently wielding.")
 ActorInventory:defineInventory("BODY", "Item worn", true, "The item the character is currently wearing.")
-ActorInventory:defineInventory("ITEM", "Special item", true, "The special item the character is holding.")
 
 -- Actor leveling
 ActorLevel:defineMaxLevel(15)

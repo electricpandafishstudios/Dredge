@@ -24,7 +24,7 @@ newBirthDescriptor{
 	desc = {},
 	experience = 1.0,
 
-	body = { INVEN = 10, HAND = 1, BODY = 1, ITEM = 1 },
+	body = { INVEN = 10, HAND = 1, BODY = 1},
 	copy = {
 		max_level = 10,
 		lite = 4,
@@ -53,15 +53,15 @@ newBirthDescriptor{
 	},
 	stats = {con = 5, men = 5, alr = 5, lck = 5	},
 	copy = {
-		-- resolvers.equip{
-								-- {type="weapon", subtype="firearm", name="Colt .45",},},
-		-- resolvers.inventory{  id = true,
-						   -- },
+		resolvers.equip{
+								-- {type="weapon", subtype="firearm", name="Colt .45"},
+						},
+		resolvers.inventory{  id = true,
+								{type="consumable", subtype="potion", name="Health Potion"},
+								{type="consumable", subtype="potion", name="Experience Potion"},
+						   },
 	},	
-	combat =
-	{
-		-- dam = ,
-	},
+	combat = {},
 	talents = {},
 }
 

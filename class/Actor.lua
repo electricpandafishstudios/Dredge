@@ -100,20 +100,20 @@ function _M:init(t, no_default)
 	-- Default melee barehanded damage
 	self.combat = { dam=1, damtype = DamageType.PHYSICAL}
 	
-	self.hitMessages = {
-		default = "harms",
-		normal = {"punched", "bashed", "slashed", "stabbed"},
-		weak = {},
-		crit = {},
-		spcrit = {},
-	}
-	self.deathMessages = {
-		default = "was killed",
-		normal = {"was beaten to death", "was bashed to death", "was cut to death", "was stabbed to death"},
-		weak = {},
-		crit = {},
-		spcrit = {},
-	}
+	-- self.hitMessages = {
+		-- default = "harms",
+		-- normal = {"punched", "bashed", "slashed", "stabbed"},
+		-- weak = {},
+		-- crit = {},
+		-- spcrit = {},
+	-- }
+	-- self.deathMessages = {
+		-- default = "was killed",
+		-- normal = {"was beaten to death", "was bashed to death", "was cut to death", "was stabbed to death"},
+		-- weak = {},
+		-- crit = {},
+		-- spcrit = {},
+	-- }
 
 	engine.Actor.init(self, t, no_default)
 	engine.interface.ActorTemporaryEffects.init(self, t)
