@@ -26,23 +26,23 @@ newEntity{
 	desc = [[Ugly and green!]],
 
 	ai = "dumb_talented_simple", ai_state = { talent_in=3, },
-	stats = { str=5, dex=5, con=5 },
+	stats = { con=10, alr=10, lck=10, men=10, },
 	combat_armor = 0,
 }
 
 newEntity{ base = "BASE_NPC_KOBOLD",
 	name = "kobold warrior", color=colors.GREEN,
-	level_range = {1, 4}, exp_worth = 1,
+	level_range = {1, 4}, exp_worth = 100,
 	rarity = 4,
-	max_life = resolvers.rngavg(5,9),
-	combat = { dam=2 },
+	max_life = 45,
+	combat = { dam=5 },
 }
 
 newEntity{ base = "BASE_NPC_KOBOLD",
 	name = "armoured kobold warrior", color=colors.AQUAMARINE,
-	level_range = {6, 10}, exp_worth = 1,
+	level_range = {1, 5}, exp_worth = 500,
 	rarity = 4,
-	max_life = resolvers.rngavg(10,12),
-	combat_armor = 3,
-	combat = { dam=4 },
+	max_life = 45,
+	combat_armor = 1,
+	combat = { dam=5 },
 }
