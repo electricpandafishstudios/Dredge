@@ -104,6 +104,9 @@ function _M:newGame()
 		print("[PLAYER BIRTH] resolve...")
 		self.player:resolve()
 		self.player:resolve(nil, true)
+		self.player.life = self.player.max_life
+		self.player:onStatChange(self.player.STAT_CON, 1)
+		self.player.actions = self.player.max_actions
 		self.player.energy.value = self.energy_to_act
 		self.paused = true
 		self.creating_player = false
