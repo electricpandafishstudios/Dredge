@@ -80,7 +80,7 @@ newEntity{ base = "BASE_KNIFE",
 	name = "Dagger",
 	level_range = {1, 10},
 	require = { stat = { con= 4}, },
-	combat = { dam = 5, damtype = DamageType.SLASHING, },
+	combat = { dam = 3, damtype = DamageType.PHYSICAL, },
 }
 newEntity{ base = "BASE_KNIFE",
 	name = "Cleaver",

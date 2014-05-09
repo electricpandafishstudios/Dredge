@@ -17,4 +17,5 @@
 -- Nicolas Casalini "DarkGod"
 -- darkgod@te4.org
 load("/data/general/objects/consumables.lua")
+load("/data/general/objects/melee_weapons.lua")
 load("/data/general/objects/ranged_weapons.lua")

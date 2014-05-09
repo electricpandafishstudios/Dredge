@@ -51,10 +51,10 @@ newBirthDescriptor{
 		"<Choose this class to start with a myriad of the currently implemented items>",
 		"[Mechanical Description goes here]",
 	},
-	stats = {con = 5, men = 5, alr = 5, lck = 5	},
+	stats = {con = 5, alr = 3, lck = 2, men = 0,},
 	copy = {
 		resolvers.equip{
-								-- {type="weapon", subtype="firearm", name="Colt .45"},
+								{type="weapon", subtype="slashing", name="Dagger"},
 						},
 		resolvers.inventory{  id = true,
 								{type="consumable", subtype="potion", name="Health Potion"},

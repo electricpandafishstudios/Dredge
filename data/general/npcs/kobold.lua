@@ -26,7 +26,7 @@ newEntity{
 	desc = [[Ugly and green!]],
 
 	ai = "dumb_talented_simple", ai_state = { talent_in=3, },
-	stats = { con=10, alr=10, lck=10, men=10, },
+	stats = { con=10, alr=7, lck=5, men=7, },
 	combat_armor = 0,
 }
 

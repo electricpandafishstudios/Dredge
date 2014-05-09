@@ -49,5 +49,10 @@ return {
 	},
 	levels =
 	{
+		[5] = {
+			generator = { map = {
+				up = "SAND_UP_WILDERNESS",
+			}, },
+		},
 	},
 }
