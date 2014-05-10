@@ -53,7 +53,6 @@ function _M:cleanActor()
 
 	-- Go through all spell effects
 	for eff_id, p in pairs(self.actor.tmp) do
-
 		local e = self.actor.tempeffect_def[eff_id]
 		effs[#effs+1] = {"effect", eff_id}
 	end
@@ -117,9 +116,9 @@ end
 function _M:generateList()
 	local list = {}
 
-	list[#list+1] = {name="Constitution", action ="con"}
-	list[#list+1] = {name="Alertness", action ="alr"}
-	list[#list+1] = {name="Luck", action ="lck"}
-	list[#list+1] = {name="Mental", action ="men"}
+	list[#list+1] = {name="Constitution: Determines your melee damage, health, and health regen", action ="con"}
+	list[#list+1] = {name="Alertness: Determines the number of APs you have.", action ="alr"}
+	list[#list+1] = {name="Luck: Determines how many Skills you can have.", action ="lck"}
+	list[#list+1] = {name="Mental: Affects the damage output of your abilities.", action ="men"}
 	self.list = list
 end

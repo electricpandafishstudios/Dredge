@@ -81,20 +81,23 @@ function _M:display()
     h = h + self.font_h
 
     self:makeTextureBar("#c00000#Life:", nil, player.life, player.max_life, player.life_regen * util.bound((player.healing_factor or 1), 0, 2.5), x, h, 255, 255, 255, colors.DARK_RED, colors.VERY_DARK_RED) h = h + self.font_h
-	self:makeTextureBar("AP:", nil, player.actions, player.max_actions, nil, x, h, 255, 255, 255, colors.BLUE, colors.DARK_BLUE) h = h + self.font_h
+	self:makeTextureBar("#BLUE#AP:", nil, player.actions, player.max_actions, nil, x, h, 255, 255, 255, colors.BLUE, colors.DARK_BLUE) h = h + self.font_h
 	h = h + self.font_h
     self:makeTextureBar("Decay:", nil, player.level - 1, player.max_level - 1, nil, x, h, 255, 255, 255, colors.YELLOW_GREEN, colors.OLIVE_DRAB) h = h + self.font_h
 	self:makeTextureBar("XP:", nil, player.exp, player:getExpChart(player.level + 1), nil, x, h, 255, 255, 255, colors.YELLOW_GREEN, colors.OLIVE_DRAB) h = h + self.font_h + self.font_h
 	h = h + self.font_h
 	self:makeTexture("Stats:", 0, h, 255, 255, 255, self.w) h = h + self.font_h
-	self:makeTexture("CON: "..(player:getCon()), 0, h, 255, 255, 255, self.w) h = h + self.font_h
-	self:makeTexture("ALR: "..(player:getAlr()), 0, h, 255, 255, 255, self.w) h = h + self.font_h	
-	self:makeTexture("LCK: "..(player:getLck()), 0, h, 255, 255, 255, self.w) h = h + self.font_h
-	self:makeTexture("MEN: "..(player:getMen()), 0, h, 255, 255, 255, self.w) h = h + self.font_h
+	self:makeTexture("#c00000#CON: "..(player:getCon()), 0, h, 255, 255, 255, self.w) h = h + self.font_h
+	self:makeTexture("#BLUE#ALR: "..(player:getAlr()), 0, h, 255, 255, 255, self.w) h = h + self.font_h	
+	self:makeTexture("#ORANGE#LCK: "..(player:getLck()), 0, h, 255, 255, 255, self.w) h = h + self.font_h
+	self:makeTexture("#GREEN#MEN: "..(player:getMen()), 0, h, 255, 255, 255, self.w) h = h + self.font_h
 	h = h + self.font_h
 	self:makeTexture("Abilities:", 0, h, 255, 255, 255, self.w) h = h + self.font_h
+	self:makeTexture("(1): Kick (2 + #c00000#"..(player:getCon()).."#LAST#)", 0, h, 255, 255, 255, self.w) h = h + self.font_h
 	h = h + self.font_h
 	self:makeTexture("Inventory:", 0, h, 255, 255, 255, self.w) h = h + self.font_h
+	self:makeTexture("(Press i to open the", 0, h, 255, 255, 255, self.w) h = h + self.font_h
+	self:makeTexture("inventory)", 125, h, 255, 255, 255, self.w) h = h + self.font_h
 	
 	
 	if savefile_pipe.saving then

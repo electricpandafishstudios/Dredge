@@ -3,7 +3,7 @@ long_name = "Dredge"
 short_name = "dredge"
 author = { "ElectricPandaFish", "electricpandafish@googlegroups.com" }
 homepage = "http://te4.org/"
-version = {0,1,4}
+version = {0,1,9}
 engine = {1,1,5,"te4"}
 description = [[
 add a desciprion here later.

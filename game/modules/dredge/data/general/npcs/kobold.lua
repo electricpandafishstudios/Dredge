@@ -35,7 +35,7 @@ newEntity{ base = "BASE_NPC_KOBOLD",
 	level_range = {1, 4}, exp_worth = 100,
 	rarity = 4,
 	max_life = 45,
-	combat = { dam=8 },
+	combat = { dam=5 },
 }
 
 newEntity{ base = "BASE_NPC_KOBOLD",
@@ -44,5 +44,5 @@ newEntity{ base = "BASE_NPC_KOBOLD",
 	rarity = 4,
 	max_life = 45,
 	combat_armor = 1,
-	combat = { dam=8 },
+	combat = { dam=5 },
 }
