@@ -6170,4 +6170,68 @@ Server latency	436
 [LOG]	Player hits armoured kobold warrior for #aaaaaa#7.00 physical damage#LAST#.
 [LOG]	Player hits armoured kobold warrior for #aaaaaa#7.00 physical damage#LAST#.
 [LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
-[
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#7.00 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#7.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#7.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed armoured kobold warrior!#{normal}#
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#7.00 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#7.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#7.00 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#7.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#7.00 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#7.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#7.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed armoured kobold warrior!#{normal}#
+Server latency	264
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#7.00 physical damage#LAST#.
+[LOG]	Low Action Points!
+[LOG]	Low Action Points!
+[LOG]	Low Action Points!
+[LOG]	Low Action Points!
+[LOG]	Low Action Points!
+[LOG]	Low Action Points!
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#7.00 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#7.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#7.00 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#7.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#7.00 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#7.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed armoured kobold warrior!#{normal}#
+[LOG]	Low Action Points!
+[LOG]	Low Action Points!
+[LOG]	Low Action Points!
+[LOG]	Low Action Points!
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#7.00 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#7.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#7.00 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#7.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[ENGINE] Setting requested FPS to 2 (500 ms)
+Server latency	392
+[ENGINE] Setting requested FPS to 30 (33 ms)
+Server latency	525
+[ENGINE] Setting requested FPS to 2 (500 ms)
+[ENGINE] Setting requested FPS to 30 (33 ms)
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#7.00 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#7.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#7.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed armoured kobold warrior!#{normal}#
+[LOG]	#00ffff#Welcome to level 4.
+[ENGINE] Setting requested FPS to 2 (500 ms)
+[ENGINE] Setting requested FPS to 30 (33 ms)
+Server latency	128
+[LOG]	Low Action 
