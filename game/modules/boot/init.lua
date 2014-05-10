@@ -17,14 +17,14 @@
 -- Nicolas Casalini "DarkGod"
 -- darkgod@te4.org
 
-name = "Boot Example"
-long_name = "T-Engine4 Main Menu simple example"
+name = "Dredgge"
+long_name = "Dredge"
 short_name = "boot"
 author = { "DarkGod", "darkgod@te4.org" }
 homepage = "http://te4.org/"
 is_boot = true
-version = {1,0,0}
-engine = {1,0,0,"te4"}
+version = {0,1,0}
+engine = {1,1,5,"te4"}
 description = [[
 Bootmenu!
 ]]
