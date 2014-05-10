@@ -406,4 +406,209 @@ Using cached font	/data/font/DroidSansMono.ttf	22
 Using cached font	/data/font/DroidSansMono.ttf	22
 C Map size 18:14 :: 252
 C Map seens texture: 129 (60x60)
-[LOG]	#LIGHT_RED#Online profile disabled(switching to
+[LOG]	#LIGHT_RED#Online profile disabled(switching to offline profile) due to no online profile active.
+[MODULE LOADER] done loading module	Dredge
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+[QUICK HOTKEYS] Loading quick hotkey settings for module "dredge" from /save/quick_hotkeys...
+[QUICK HOTKEYS] Successfully loaded quick hotkey settings.
+Wait finished, counted 803, 931 ticks
+[PROFILE THREAD] flushing CSETs
+[PROFILE THREAD] flushing CSETs ignored, empty dataset
+C Map minimap texture: 124 (50x50; 64x64)
+[ENGINE] Setting requested FPS to 2 (500 ms)
+Server latency	539
+[ENGINE] Setting requested FPS to 30 (33 ms)
+[LOG]	Player hits kobold warrior for #aaaaaa#8.00 physical damage#LAST#.
+[LOG]	Low Action Points!
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits kobold warrior for #aaaaaa#8.00 physical damage#LAST#.
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits kobold warrior for #aaaaaa#8.00 physical damage#LAST#.
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits kobold warrior for #aaaaaa#8.00 physical damage#LAST#.
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits kobold warrior for #aaaaaa#8.00 physical damage#LAST#.
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits kobold warrior for #aaaaaa#8.00 physical damage#LAST#.
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits kobold warrior for #aaaaaa#8.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed kobold warrior!#{normal}#
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits kobold warrior for #aaaaaa#8.00 physical damage#LAST#.
+[LOG]	Low Action Points!
+[LOG]	Low Action Points!
+[LOG]	Low Action Points!
+[LOG]	Low Action Points!
+[LOG]	Low Action Points!
+[LOG]	Low Action Points!
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits kobold warrior for #aaaaaa#8.00 physical damage#LAST#.
+[LOG]	Low Action Points!
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits kobold warrior for #aaaaaa#8.00 physical damage#LAST#.
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	#{bold}#Armoured kobold warrior killed player!#{normal}#
+[LOG]	#LIGHT_BLUE#You resurrect! CHEATER !
+Server latency	456
+[LOG]	Player hits kobold warrior for #aaaaaa#8.00 physical damage#LAST#.
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits kobold warrior for #aaaaaa#8.00 physical damage#LAST#.
+[ENGINE] Setting requested FPS to 2 (500 ms)
+[ENGINE] Setting requested FPS to 30 (33 ms)
+Loading tile	border_7.png
+Loading tile	border_9.png
+Loading tile	border_1.png
+Loading tile	border_3.png
+Loading tile	border_8.png
+Loading tile	border_4.png
+[COROUTINE] registering	savefilepipe	thread: 0x0b71cd50
+[ENGINE] Switching to turn based
+[SAVEFILE PIPE] force waiting
+Make wait background texture 131 : 800x600 (1024, 1024)
+[SAVEFILE PIPE] new save running in the pipe:	player	game	::	game.teag	::	table: 0x0af51688	=>	table: 0x0b753c98	(105)
+Loading savefile 	/save/player/
+[SAVEFILE PIPE] unleashing save thread
+Saving zipname /save/player/game.teag.tmp
+Saved zipname /save/player/game.teag.tmp
+[SAVEFILE PIPE] Checking save	player	game	/save/player/game.teag.tmp
+Loading savefile 	/save/player/
+[SAVEFILE] checked validity of type	game	 => 	all fine
+[LOG]	Saving done.
+[SAVEFILE PIPE] on end	saveGame_md5
+Wait finished, counted 324, 144 ticks
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+[MAIN] rebooting lua state: 	nil	nil	nil	nil	nil
+stack traceback:
+[COROUTINE] error	cannot resume dead coroutine
+[COROUTINE] dead	savefilepipe
+[ENGINE] Switching to turn based
+NO SELFEXE: bootstrapping from CWD
+===top 0
+===top 2
+Booting T-Engine from: C:\Documents and Settings\Spencer\Desktop\dredge\t-engine.exe
+SelfExe gave us app directory of:	C:\Documents and Settings\Spencer\Desktop\dredge\
+LuaVM:	LuaJIT 2.0.2	x86
+Destroying particle thread 0 (waiting for mutex)
+Destroying particle thread 0
+Destroying particle thread 0 (waiting for thread f39e20)
+Cleaning up particle thread 0
+Cleaned up particle thread 0
+Destroyed particle thread 0 (0)
+Creating particles thread 0
+LuaVM:	LuaJIT 2.0.2	x86
+Running lua loader code...
+===	
+Reboot using	te4	LATEST	boot	player	false
+[ENGINE LOADER] available from teae: 	te4-1.1.5
+[ENGINE LOADER] found engines	te4={[1]={[1]=1.000000 , [2]=1.000000 , [3]=5.000000 , [4]="te4" , [5]=17.000000 , ["load_teae"]="/engines/te4-1.1.5.teae" , } , } __byname={["te4-1.1.5"]=true , } 
+[ENGINE LOADER] looked in:
+	C:\Documents and Settings\Spencer\\T-Engine\4.0
+	bootstrap
+	C:\Documents and Settings\Spencer\Desktop\dredge\\game\thirdparty
+	C:\Documents and Settings\Spencer\Desktop\dredge\\game
+[ENGINE LOADER] sorted:	te4	1	1	5
+[ENGINE LOADER] loading engine:	1	1	5	te4
+[ENGINE LOADER] using archived engine:	/engines/te4-1.1.5.teae
+Available resolutions: 1280x800x32
+Available resolutions: 1280x768x32
+Available resolutions: 1280x720x32
+Available resolutions: 1024x768x32
+Available resolutions: 800x1280x32
+Available resolutions: 800x600x32
+Available resolutions: 768x1280x32
+Available resolutions: 768x1024x32
+Available resolutions: 720x1280x32
+Available resolutions: 640x480x32
+Available resolutions: 640x400x32
+Available resolutions: 600x800x32
+Available resolutions: 480x640x32
+Available resolutions: 400x640x32
+Available resolutions: 1280x800x16
+Available resolutions: 1280x768x16
+Available resolutions: 1280x720x16
+Available resolutions: 1024x768x16
+Available resolutions: 800x1280x16
+Available resolutions: 800x600x16
+Available resolutions: 768x1280x16
+Available resolutions: 768x1024x16
+Available resolutions: 720x1280x16
+Available resolutions: 640x480x16
+Available resolutions: 640x400x16
+Available resolutions: 600x800x16
+Available resolutions: 480x640x16
+Available resolutions: 400x640x16
+[KEYBINDER] Loaded keybinds: move
+[KEYBINDER] Loaded keybinds: hotkeys
+[KEYBINDER] Loaded keybinds: inventory
+[KEYBINDER] Loaded keybinds: actions
+[KEYBINDER] Loaded keybinds: interface
+[KEYBINDER] Loaded keybinds: debug
+Remapping	SCREENSHOT	table: 0x0a9d7418
+Remapping	HOTKEY_6	table: 0x0a9d2d78
+Remapping	MOVE_STAY	table: 0x0a9d2dc8
+setResolution: switching resolution to	800x600 Windowed	800	600	false	nil	(forced)
+Setting resolution to 800x600 (windowed, with borders)
+[DO RESIZE] Requested: 800x600 (0, 0)
+[DO RESIZE] Got: 800x600 (0, 0)
+OpenGL max texture size: 2048
+setResolution: performing onResolutionChange...
+
+onResolutionChange: resolution changed to 	800	600	from	nil	nil
+onResolutionChange: no game yet!
+Disabling FBO
+Disabling Shaders
+[ONLINE PROFILE] fun facts	nil
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+[ENGINE] Setting requested FPS to 30 (33 ms)
+[ENGINE] Switching to turn based
+[SAVEFILE PIPE] force waiting
+Creating module	boot	:: (as dir)	true	:: (as team)	nil	
+Module mismatch engine version boot-1.0.0 using engine te4-1.0.0
+Loaded module definition for boot-1.0.0 using engine te4-1.0.0
+Creating module	dredge	:: (as dir)	true	:: (as team)	nil	
+Loaded module definition for dredge-0.1.1 using engine te4-1.1.5
+dredge	boot
+* Module: boot
+ ** 1.0.0
+* Module: dredge
+ ** 0.1.1
+After fs.reset
+[1] = {
+  [path] = C:\Documents and Settings\Spencer\Desktop\dredge\\game\engines\te4-1.1.5.teae
+}
+[ENGINE] Switching to turn based
+Loading savefile 	/save//
+Loading savefile 	/save/player/
+Make wait background texture 2 : 800x600 (1024, 1024)
+Using cached font	/data/font/DroidSans.ttf	12
+[MODULE] All hashes validation: 	nil	no online profile active
+[PROFILE THREAD] batching CSETs
+[MODULE LOADER] loading module	T-Engine4 Main Menu simple example	[mod.load]	::	nil	nil
+[GAMMA] Setting gamma correction using SDL	1.2
+[ENGINE] Switching to turn based
+[GAMMA] Setting gamma correction using SDL	1.2
+Loading savefile 	/save/player/
+[GAMMA] Setting gamma correction using SDL	1.2
+[MUSIC] loading	whatever.ogg	Error loading sound "/data/music/whatever.ogg": The system cannot find the file specified.
+[ENGINE] Setting requested FPS to 30 (33 ms)
+[MODULE LOADER] done loading module	T-Engine4 Main Menu simple example
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+Wait finished, counted 4, 250 ticks
+[PROFILE THREAD] flushing CSETs
+[PROFILE THREAD] flushing CSETs ignored, empty dataset
+[SOUND] loading from	/data/sound/ui/subtle_button_sound.ogg	:=:	sound "/data/sound/ui/subtle_button_sound.ogg" : <static>
+Using cached font	/data/font/DroidSans-Bold.ttf	16
+Thanks for having fun!

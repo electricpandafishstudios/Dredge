@@ -31,7 +31,7 @@ module(..., package.seeall, class.make)
 function _M:bumpInto(target)
 	local reaction = self:reactionToward(target)
 	if reaction < 0 then
-		if self:getActions() >= 5 then
+		if self:getActions() >= 4 then
 			return self:attackTarget(target)
 		elseif self == game.player then 
 			game.flash(game.flash.BAD, "I don't have enough Action Points to do that. (5 Required)")
@@ -65,7 +65,7 @@ function _M:attackTarget(target, no_actions)
 	end
 	
 	if not no_actions then
-		self:useActionPoints(5)
+		self:useActionPoints(4)
 	end
 end
 
