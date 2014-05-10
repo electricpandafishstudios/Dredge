@@ -229,10 +229,10 @@ end
 
 function _M:levelup()
 	-- increment stats
-	self:incStat(STAT_CON, 1)
-	self:incStat(STAT_ALR, 1)
-	self:incStat(STAT_LCK, 1)
-	self:incStat(STAT_MEN, 1)
+	-- self:incStat(STAT_CON, 1)
+	-- self:incStat(STAT_ALR, 1)
+	-- self:incStat(STAT_LCK, 1)
+	-- self:incStat(STAT_MEN, 1)
 	
 	-- Heal upon new level
 	self.life = self.max_life
