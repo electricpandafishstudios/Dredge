@@ -36,22 +36,34 @@ newBirthDescriptor{
 		dam = 1, damtype = DamageType.PHYSICAL
 	},
 	
-	talents =
-	{
-		[ActorTalents.T_KICK] = 1,
-	},
+	talents = {},
 }
+
+-- newBirthDescriptor{
+	-- type = "role",
+	-- name = "Champion",
+	-- desc =
+	-- {
+		-- "Adventure!",
+		-- "<Choose this class to start with a myriad of the currently implemented items>",
+		-- "[Mechanical Description goes here]",
+	-- },
+	-- stats = {con = 5, alr = 3, lck = 2, men = 0,},	
+	-- talents = 
+	-- {
+		-- [ActorTalents.T_KICK] = 1,
+	-- },
+-- }
 
 newBirthDescriptor{
 	type = "role",
-	name = "Champion",
+	name = "Anthropologist",	
 	desc =
 	{
-		"Adventure!",
-		"<Choose this class to start with a myriad of the currently implemented items>",
+		"I read about this castle in a book once!",
 		"[Mechanical Description goes here]",
 	},
-	stats = {con = 5, alr = 3, lck = 2, men = 0,},
+	stats = {con = 3, alr = 5, lck = 0, men = 2,},
 	copy = {
 		resolvers.equip{
 								{type="weapon", subtype="slashing", name="Dagger"},
@@ -60,22 +72,12 @@ newBirthDescriptor{
 								{type="consumable", subtype="potion", name="Health Potion"},
 								{type="consumable", subtype="potion", name="Experience Potion"},
 						   },
-	},	
-	combat = {},
-	talents = {},
+	},
+	talents = 
+	{
+		[ActorTalents.T_SPIKESHOT] = 1
+	},
 }
-
--- newBirthDescriptor{
-	-- type = "role",
-	-- name = "Anthropologist",	
-	-- desc =
-	-- {
-		-- "I read about this castle in a book once!",
-		-- "[Mechanical Description goes here]",
-	-- },
-	-- stats = {con = -1, men = 3, alr = -1, lck = -1},
-	-- talents = {},
--- }
 
 -- newBirthDescriptor{
 	-- type = "role",

@@ -43,6 +43,26 @@ newTalent{
 	end,
 }
 
+newTalent{
+	name = "Spikeshot",
+	type = {"role/combat", 1},
+	points = 1,
+	cooldown = 3,
+	range = 1,
+	action_points=4,
+	action = function(self, t)
+		local tg = {type="cone", range=self:getTalentRange(t), radius=5, cone_angle=90, no_restrict=true, stop_block=false}
+		local x, y, target = self:getTarget(tg)
+		-- if not x or not y or not target then return nil end
+		-- if core.fov.distance(self.x, self.y, x, y) > 1 then return nil end
+		self:project(tg,x,y, DamageType.PHYSICAL, 1 + self:getCon() * 0.4 + self:getMen() * 0.6, nil)
+		return true
+	end,
+	info = function(self, t)
+		return "Kick!"
+	end,
+}
+
 -- newTalent{
 	-- name = "Mad",
 	-- type = {"role/combat", 1},

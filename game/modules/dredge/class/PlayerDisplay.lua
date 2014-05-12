@@ -93,7 +93,9 @@ function _M:display()
 	self:makeTexture("#GREEN#MEN: "..(player:getMen()), 0, h, 255, 255, 255, self.w) h = h + self.font_h
 	h = h + self.font_h
 	self:makeTexture("Abilities:", 0, h, 255, 255, 255, self.w) h = h + self.font_h
-	self:makeTexture("(1): Kick (2 + #c00000#"..(player:getCon()).."#LAST#)", 0, h, 255, 255, 255, self.w) h = h + self.font_h
+	self:makeTexture("(1): Spikeshot", 0, h, 255, 255, 255, self.w) h = h + self.font_h
+	self:makeTexture("    (1 + #c00000#"..(player:getCon() * 0.4).."#LAST# + #BLUE#"..(player:getMen() * 0.6).."#LAST#)", 0, h, 255, 255, 255, self.w) h = h + self.font_h
+	-- self:makeTexture("(1): Kick (2 + #c00000#"..(player:getCon()).."#LAST#)", 0, h, 255, 255, 255, self.w) h = h + self.font_h
 	h = h + self.font_h
 	self:makeTexture("Inventory:", 0, h, 255, 255, 255, self.w) h = h + self.font_h
 	self:makeTexture("(Press i to open the", 0, h, 255, 255, 255, self.w) h = h + self.font_h
