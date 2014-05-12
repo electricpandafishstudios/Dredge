@@ -44,9 +44,6 @@ ActorTalents:loadDefinition("/data/talents.lua")
 ActorTemporaryEffects:loadDefinition("/data/timed_effects.lua")
 
 -- Actor resources
-
--- ActorResource:defineResource("Sanity", "sanity", nil, "sanity_regen", "Sanity represents your character's mental state.")
-
 ActorResource:defineResource("Action Points", "actions", nil, "actions_regen", "AP represent the actions that can be taken each turn.")
 
 -- Actor stats
@@ -69,7 +66,9 @@ ActorLevel.exp_chart = function(level)
 		exp = exp + (mult * (i - 1))
 	end
 	return math.ceil(exp)
-end-- Actor AIs
+end
+
+-- Actor AIs
 ActorAI:loadDefinition("/engine/ai/")
 
 -- Birther descriptor
