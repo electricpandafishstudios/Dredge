@@ -34,14 +34,12 @@ end
 
 function _M:attackTarget(target, no_actions)
 	local weapon = self:getWeaponFromSlot("HAND")
-	
+	local dam = self.combat.dam or 1
 	if weapon then
-		local damage_type = weapon.combat.damtype or self.combat.damtype or DamageType.PHYSICAL
-		local weapon_damage = weapon.combat.dam or 0
-		self:attackTargetWith(target, damage_type, weapon_damage)
+		local damage_type = weapon.combat.damtype or DamageType.PHYSICAL
+		self:attackTargetWith(target, dam, damage_type, weapon)
 	else
-		local damage_type = self.combat.damtype or DamageType.PHYSICAL
-		self:attackTargetWith(target, damage_type)
+		self:attackTargetWith(target, dam, DamageType.PHYSICAL)
 	end
 	
 	if not no_actions then
@@ -49,10 +47,21 @@ function _M:attackTarget(target, no_actions)
 	end
 end
 
-function _M:attackTargetWith(target, damage_type, weapon_damage, damage_modifier)
-	local weapon_damage = weapon_damage or 0
-	local init_dam = self.combat.dam + weapon_damage	
-	local calc_dam = math.floor(math.max(0, init_dam))
+function _M:attackTargetWith(target, dam, damage_type, weapon)
+	--get attack hit chance based on whether we have a weapon
+	local hitchance = 30
+	local base = dam or 1 
+	if weapon then
+		hitchance = hitchance + 25 + 0.5 * self:getCon() + 0.5 * self:getAlr()
+		base = base + game.rng.range(weapon.combat.dam[1], weapon.combat.dam[2])
+	else
+		hitchance = hitchance + 2 * self:getCon() + 2 * self:getAlr()
+	end
 	
-	DamageType:get(damage_type).projector(self, target.x, target.y, damage_type, calc_dam)
+	hitchance = hitchance - target.armor_class
+	local hit = game.rng.percent(hitchance)
+	
+	if hit then
+		DamageType:get(damage_type).projector(self, target.x, target.y, damage_type, base)
+	end
 end

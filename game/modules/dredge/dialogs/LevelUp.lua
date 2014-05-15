@@ -78,40 +78,21 @@ function _M:cleanActor()
 	end
 end
 
---- Restore resources
-function _M:restoreResources()
-	self.actor.life = self.actor.max_life
-	self.actor.power = self.actor.max_power
-
-	self.actor.energy.value = game.energy_to_act
-end
-
 function _M:use(item)
 	if not item then return end
 	local act = item.action
 
 	if act == "con" then
 		self.actor:incStat(game.player.STAT_CON, -1)
-		self:cleanActor()
-		self:restoreResources()
-		game:unregisterDialog(self)
 	elseif act == "alr" then
 		self.actor:incStat(game.player.STAT_ALR, -1)
-		self:cleanActor()
-		self:restoreResources()
-		game:unregisterDialog(self)
 	elseif act == "lck" then
 		self.actor:incStat(game.player.STAT_LCK, -1)
-		self:cleanActor()
-		self:restoreResources()
-		game:unregisterDialog(self)
 	elseif act == "men" then
 		self.actor:incStat(game.player.STAT_MEN, -1)
-		self:cleanActor()
-		self:restoreResources()
-		game:unregisterDialog(self)
 	end
-	self:recalculateStats()
+	game:unregisterDialog(self)
+	self.actor:recalculateStats()
 end
 
 function _M:generateList()

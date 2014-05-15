@@ -51,8 +51,11 @@ function _M:init(t, no_default)
 	t.life_regen_pool = t.life_regen_pool or 0
 
 	-- Default melee barehanded damage
-	self.combat = { dam=1, ac=5, dt=0, dr=0,}
-
+	self.combat = { dam=1}
+	self.armor_class = 5
+	self.damage_threshold = 0
+	self.damage_resistance = 0
+	
 	engine.Actor.init(self, t, no_default)
 	engine.interface.ActorTemporaryEffects.init(self, t)
 	engine.interface.ActorLife.init(self, t)
@@ -185,9 +188,9 @@ function _M:recalculateStats()
 end
 
 function _M:recalculateCombatStats()
-	self.combat.ac = self:getAlr() + self.actions
-	self.combat.dt = 0
-	self.combat.dr = 0
+	self.armor_class = self:getAlr() + self.actions
+	self.damage_threshold = 0
+	self.damage_resistance = 0
 end
 
 function _M:attack(target)

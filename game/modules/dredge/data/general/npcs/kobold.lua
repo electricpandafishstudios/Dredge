@@ -27,7 +27,7 @@ newEntity{
 
 	ai = "dumb_talented_simple", ai_state = { talent_in=3, },
 	stats = { con=10, alr=7, lck=5, men=7, },
-	combat_armor = 0,
+	armor_class = 7,
 }
 
 newEntity{ base = "BASE_NPC_KOBOLD",
