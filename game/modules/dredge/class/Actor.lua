@@ -1,22 +1,3 @@
---[[ ToME - Tales of Middle-Earth
--- Copyright (C) 2009, 2010, 2011, 2012, 2013 Nicolas Casalini
---
--- This program is free software: you can redistribute it and/or modify
--- it under the terms of the GNU General Public License as published by
--- the Free Software Foundation, either version 3 of the License, or
--- (at your option) any later version.
---
--- This program is distributed in the hope that it will be useful,
--- but WITHOUT ANY WARRANTY; without even the implied warranty of
--- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
--- GNU General Public License for more details.
---
--- You should have received a copy of the GNU General Public License
--- along with this program.  If not, see <http://www.gnu.org/licenses/>.
---
--- Nicolas Casalini "DarkGod"
--- darkgod@te4.org]]
-
 require "engine.class"
 require "engine.Actor"
 require "engine.Autolevel"
@@ -47,26 +28,6 @@ module(..., package.seeall, class.inherit(
 	mod.class.interface.Combat
 ))
 
-function _M:getHitMessage(damage_type)
-		damage_type = damage_type or DamageType.PHYSICAL
-		hit_type = hit_type or "hit_normal"
-		if hit_type == "hit_normal" and self.hitMessages.normal[damage_type] then
-			return self.hitMessages.normal[damage_type]
-		else
-			return self.hitMessages.default
-		end 
-end
-
-function _M:getDeathMessage(damage_type)
-		damage_type = damage_type or DamageType.PHYSICAL
-		death_type = death_type or "death_normal"
-		if death_type == "death_normal" and self.deathMessages.normal[damage_type] then
-			return self.deathMessages.normal[damage_type]
-		else
-			return self.deathMessages.default
-		end
-end
-
 function _M:getWeaponFromSlot(weapon_slot)
 	if not 	weapon_slot or not self:getInven(weapon_slot) then return end
 	local weapon = self:getInven(weapon_slot)[1]
@@ -76,44 +37,21 @@ function _M:getWeaponFromSlot(weapon_slot)
 		return weapon
 end
 
-function _M:getWeaponDam()
-	if not self:getInven("HAND") then return 0 end
-	local weapon = self:getInven("HAND")[1]
-	if not weapon then return 0 end
-	return weapon.combat.dam * self:getCon()
-end
-
 function _M:init(t, no_default)
 	-- Define some basic combat stats
 	self.energyBase = 0
-	self.combat_armor = 0
 	self.moved_this_turn = 0
 	self.max_action_points = 5
 
 	t.max_actions = t.max_actions or  self.max_action_points or 5
 	
 	-- Default regen
-	t.life_regen = t.life_regen or 1 -- Life regen real slow
+	t.life_regen = t.life_regen or 1
 	t.actions_regen = t.actons_regen or 100
 	t.life_regen_pool = t.life_regen_pool or 0
 
 	-- Default melee barehanded damage
-	self.combat = { dam=1, damtype = DamageType.PHYSICAL}
-	
-	-- self.hitMessages = {
-		-- default = "harms",
-		-- normal = {"punched", "bashed", "slashed", "stabbed"},
-		-- weak = {},
-		-- crit = {},
-		-- spcrit = {},
-	-- }
-	-- self.deathMessages = {
-		-- default = "was killed",
-		-- normal = {"was beaten to death", "was bashed to death", "was cut to death", "was stabbed to death"},
-		-- weak = {},
-		-- crit = {},
-		-- spcrit = {},
-	-- }
+	self.combat = { dam=1, ac=5, dt=0, dr=0,}
 
 	engine.Actor.init(self, t, no_default)
 	engine.interface.ActorTemporaryEffects.init(self, t)
@@ -125,6 +63,8 @@ function _M:init(t, no_default)
 	engine.interface.ActorLevel.init(self, t)
 	engine.interface.ActorFOV.init(self, t)
 	engine.interface.ActorInventory.init(self, t)
+	
+	self:recalculateStats()
 end
 
 function _M:addedToLevel(level, x, y)
@@ -133,6 +73,7 @@ function _M:addedToLevel(level, x, y)
 end
 
 function _M:actBase()
+	self:recalculateCombatStats()
 	self.energyBase = self.energyBase - game.energy_to_act
 	-- Cooldown talents
 	self:cooldownTalents()
@@ -142,13 +83,12 @@ function _M:actBase()
 	if self.life < self.max_life and self.life_regen > 0 then
 		self:regenLife()
 	end
-	
 	self:timedEffects()
 end
 
 function _M:act()
 	if not engine.Actor.act(self) then return end
-
+	self:recalculateStats()
 	self.changed = true
 
 	-- Still enough energy to act ?
@@ -208,14 +148,6 @@ function _M:lifeIndicatorColor()
 	elseif 5 > percentLife then return "#c90000#" end
 end
 
-function _M:lifeIndicatorText()
-	local percentLife = self.life * 100 / self.max_life
-	if percentLife >= 95 then return "unharmed"
-	elseif 95 > percentLife and percentLife >= 51 then return "injured"
-	elseif 51 > percentLife and percentLife >= 6 then return "wounded"
-	elseif  6 > percentLife then return "mortally wounded" end
-end
-
 function _M:die(src)
 	engine.interface.ActorLife.die(self, src)
 
@@ -228,35 +160,36 @@ function _M:die(src)
 end
 
 function _M:levelup()
-	-- increment stats
-	-- self:incStat(STAT_CON, 1)
-	-- self:incStat(STAT_ALR, 1)
-	-- self:incStat(STAT_LCK, 1)
-	-- self:incStat(STAT_MEN, 1)
-	
-	-- Heal upon new level
-	self.life = self.max_life
+	self:recalculateStats()
 end
 
---- Notifies a change of stat value
-function _M:onStatChange(stat, v)
-	-- if stat == self.STAT_CON then
-		self.max_life = 15 +  3 * self:getCon()
-		self.life_regen = math.max(1, self:getCon() / 3)
-		self.combat.dam = math.max(1, self:getCon() - 5)
-	-- end
-	-- if stat == self.STAT_ALR then
-		self.max_actions = 5 + math.floor(self:getAlr() / 2)
-		self.max_action_points = max_actions or 5 + math.floor(self:getAlr() / 2)
-		self.lite = math.floor((self:getAlr() - 1) / 2)
-		self.sight = 2 * self:getAlr()
-	-- end
-	-- if stat == self.STAT_Lck then
-		self.ego_chance = self:getLck()
-	-- end
-	-- if stat == self.STAT_MEN then
-		-- self.combat.damage = math.max(1, self:getCon() - 5 + math.floor((self:getCon() - 5) / 2))
-	-- end
+function _M:recalculateStats()
+	--Constitution (non-combat) based stats
+	self.max_life = 15 + 3 * self:getCon()
+	self.life_regen = math.max(1, self:getCon() / 3)
+	
+	--Constitution (combat) based stats
+	self.combat.dam = math.max(1, self:getCon() - 5)
+	
+	--Alertness based stats
+	self.max_actions = 5 + math.floor(self:getAlr() / 2)
+	self.max_action_points = max_actions or 5 + math.floor(self:getAlr() / 2)
+	self.lite = math.floor((self:getAlr() - 1) / 2)
+	self.sight = 2 * self:getAlr()
+	
+	--Make sure resources are not above max.
+	if self.life > self.max_life then
+		self.life = self.max_life
+	end
+	if self.actions > self.max_actions then
+		self.actions = self.max_actions
+	end
+end
+
+function _M:recalculateCombatStats()
+	self.combat.ac = self:getAlr() + self.actions
+	self.combat.dt = 0
+	self.combat.dr = 0
 end
 
 function _M:attack(target)

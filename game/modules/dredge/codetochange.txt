@@ -1,0 +1,4 @@
+/class/interface/Combat.lua:52
+/class/Actor.lua
+/class/NPC.lua:22 (AI settings need to be adjusted)
+/class/Object.lua:28

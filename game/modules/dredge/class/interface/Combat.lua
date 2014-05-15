@@ -1,22 +1,3 @@
---[[ ToME - Tales of Middle-Earth
--- Copyright (C) 2009, 2010, 2011, 2012, 2013 Nicolas Casalini
---
--- This program is free software: you can redistribute it and/or modify
--- it under the terms of the GNU General Public License as published by
--- the Free Software Foundation, either version 3 of the License, or
--- (at your option) any later version.
---
--- This program is distributed in the hope that it will be useful,
--- but WITHOUT ANY WARRANTY; without even the implied warranty of
--- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
--- GNU General Public License for more details.
---
--- You should have received a copy of the GNU General Public License
--- along with this program.  If not, see <http://www.gnu.org/licenses/>.
---
--- Nicolas Casalini "DarkGod"
--- darkgod@te4.org ]]
-
 require "engine.class"
 local DamageType = require "engine.DamageType"
 local Map = require "engine.Map"
@@ -71,12 +52,7 @@ end
 function _M:attackTargetWith(target, damage_type, weapon_damage, damage_modifier)
 	local weapon_damage = weapon_damage or 0
 	local init_dam = self.combat.dam + weapon_damage	
-	local calc_dam = math.floor(math.max(0, init_dam - target.combat_armor))
+	local calc_dam = math.floor(math.max(0, init_dam))
 	
-	DamageType:get(damage_type).projector(self, target.x, target.y, damage_type, calc_dam, hit_type)
-	target:onHit(damage_type, calc_dam)
-end
-
-function _M:onHit(damtype, dam)
-	
+	DamageType:get(damage_type).projector(self, target.x, target.y, damage_type, calc_dam)
 end

@@ -1,22 +1,3 @@
---[[ ToME - Tales of Middle-Earth
--- Copyright (C) 2009, 2010, 2011, 2012, 2013 Nicolas Casalini
---
--- This program is free software: you can redistribute it and/or modify
--- it under the terms of the GNU General Public License as published by
--- the Free Software Foundation, either version 3 of the License, or
--- (at your option) any later version.
---
--- This program is distributed in the hope that it will be useful,
--- but WITHOUT ANY WARRANTY; without even the implied warranty of
--- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
--- GNU General Public License for more details.
---
--- You should have received a copy of the GNU General Public License
--- along with this program.  If not, see <http://www.gnu.org/licenses/>.
---
--- Nicolas Casalini "DarkGod"
--- darkgod@te4.org]]
-
 require "engine.class"
 require "mod.class.Actor"
 require "engine.interface.PlayerRest"
@@ -62,10 +43,8 @@ function _M:init(t, no_default)
 	
 	mod.class.Actor.init(self, t, no_default)
 	engine.interface.PlayerHotkeys.init(self, t)
-	self:onStatChange(STAT_CON, 1)
-	-- self:onStatChange(STAT_ALR, 1)
-	-- self:onStatChange(STAT_LCK, 1)
-	-- self:onStatChange(STAT_MEN, 1)
+	self:recalculateStats()
+	self:recalculateCombatStats()
 	
 	self.descriptor = {}
 end
@@ -89,7 +68,6 @@ function _M:act()
 	if not self:restStep() and not self:runStep() and self.player then
 		game.paused = true
 	end
-	self:onStatChange(STAT_CON, 1)
 end
 
 function _M:playerUseItem(object, item, inven)

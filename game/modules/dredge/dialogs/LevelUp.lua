@@ -111,6 +111,7 @@ function _M:use(item)
 		self:restoreResources()
 		game:unregisterDialog(self)
 	end
+	self:recalculateStats()
 end
 
 function _M:generateList()

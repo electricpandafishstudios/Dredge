@@ -17,7 +17,7 @@
 -- Nicolas Casalini "DarkGod"
 -- darkgod@te4.org ]]
 	
-local function doDamageFlyers(src, x, y, type, dam, hit_type)
+local function doDamageFlyers(src, x, y, type, dam)
 	local flash = game.flash.NEUTRAL
 	if target == game.player then flash = game.flash.BAD end
 	if src == game.player then flash = game.flash.GOOD end	
@@ -40,13 +40,13 @@ local function doDamageFlyers(src, x, y, type, dam, hit_type)
 end
 
 -- The basic stuff used to damage a grid
-setDefaultProjector(function(src, x, y, type, dam, hit_type)
+setDefaultProjector(function(src, x, y, type, dam)
 	local target = game.level.map(x, y, Map.ACTOR)
 	local sx, sy = game.level.map:getTileToScreen(x, y)
 	if target then
 		-- Note the actual damage happens inside the damage flyers when takeHit is called
 		-- Any thing before damage should be above this
-		doDamageFlyers(src, x, y, type, dam, hit_type)
+		doDamageFlyers(src, x, y, type, dam)
 		-- Anything after below
 		return dam
 	end
