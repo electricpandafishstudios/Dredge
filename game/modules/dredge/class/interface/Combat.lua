@@ -48,20 +48,38 @@ function _M:attackTarget(target, no_actions)
 end
 
 function _M:attackTargetWith(target, dam, damage_type, weapon)
-	--get attack hit chance based on whether we have a weapon
-	local hitchance = 30
-	local base = dam or 1 
-	if weapon then
-		hitchance = hitchance + 25 + 0.5 * self:getCon() + 0.5 * self:getAlr()
-		base = base + game.rng.range(weapon.combat.dam[1], weapon.combat.dam[2])
-	else
-		hitchance = hitchance + 2 * self:getCon() + 2 * self:getAlr()
-	end
+	local adjustedHitChance = math.min(self:getHitChance(weapon), 95) - target.armor_class
+	local hit = game.rng.percent(adjustedHitChance)
 	
-	hitchance = hitchance - target.armor_class
-	local hit = game.rng.percent(hitchance)
+	local dmg = self:getBaseDam(dam, weapon)
+		  dmg = self:getAdjustedDamage(dmg, target.damage_threshold)
+		  dmg = self:getFinalDamage(dmg, target.damage_resistance)
 	
 	if hit then
-		DamageType:get(damage_type).projector(self, target.x, target.y, damage_type, base)
+		DamageType:get(damage_type).projector(self, target.x, target.y, damage_type, dmg)
 	end
+end
+
+function _M:getHitChance(weapon)
+	if weapon then
+		return 55 + 0.5 * self:getCon() + 0.5 * self:getAlr()
+	else
+		return 30 + 0.5 * self:getCon() + 0.5 * self:getAlr()
+	end
+end
+
+function _M:getBaseDam(raw, weapon)
+	local base = raw or 0
+	if weapon then
+		base = base + game.rng.range(weapon.combat.dam[1], weapon.combat.dam[2])
+	end
+	return base
+end
+
+function _M:getAdjustedDamage(base, DT)
+	return math.max(0, base - DT)
+end
+
+function _M:getFinalDamage(adjusted, DR)
+	return math.max(1, adjusted * ((100 - math.min(DR, 90)) / 100))
 end
