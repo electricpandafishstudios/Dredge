@@ -103,23 +103,23 @@ Loading savefile 	/save//
 Loading savefile 	/save/player/
 Make wait background texture 2 : 800x600 (1024, 1024)
 Upgrading black texture to size 4194304
-Using cached font	/data/font/DroidSans.ttf	12
-[MODULE] All hashes validation: 	nil	no online profile active
 [PROFILE] Thread connected to te4.org
 [ONLINE PROFILE] reconnecting to channels
+Using cached font	/data/font/DroidSans.ttf	12
+[MODULE] All hashes validation: 	nil	no online profile active
 [MODULE LOADER] loading module	Dredge	[mod.load]	::	nil	nil
 [GAMMA] Setting gamma correction using SDL	1.2
 [ENGINE] Switching to turn based
 [GAMMA] Setting gamma correction using SDL	1.2
 Loading savefile 	/save/player/
 [GAMMA] Setting gamma correction using SDL	1.2
+[PROFILE THREAD] batching CSETs
 [MUSIC] loading	whatever.ogg	Error loading sound "/data/music/whatever.ogg": The system cannot find the file specified.
 [ENGINE] Setting requested FPS to 30 (33 ms)
 [MODULE LOADER] done loading module	Dredge
 [PROFILE] mounted 	online	on /current-profile
 [PROFILE] unmounted 	online	from /current-profile
-Wait finished, counted 4, 255 ticks
-[PROFILE THREAD] batching CSETs
+Wait finished, counted 4, 738 ticks
 [PROFILE THREAD] flushing CSETs
 [PROFILE THREAD] flushing CSETs ignored, empty dataset
 [SOUND] loading from	/data/sound/ui/subtle_button_sound.ogg	:=:	sound "/data/sound/ui/subtle_button_sound.ogg" : <static>
@@ -156,441 +156,8 @@ Cleaning up particle thread 0
 Cleaned up particle thread 0
 Destroyed particle thread 0 (0)
 Creating particles thread 0
+LuaVM:	LuaJIT 2.0.2	x86
 Running lua loader code...
-LuaVM:	LuaJIT 2.0.2	x86
-===	
-Reboot using	te4	1.1.5	dredge-0.1.9	player	true
-[ENGINE LOADER] available from teae: 	te4-1.1.5
-[ENGINE LOADER] found engines	te4={[1]={[1]=1.000000 , [2]=1.000000 , [3]=5.000000 , [4]="te4" , [5]=17.000000 , ["load_teae"]="/engines/te4-1.1.5.teae" , } , } __byname={["te4-1.1.5"]=true , } 
-[ENGINE LOADER] looked in:
-	C:\Documents and Settings\Spencer\\T-Engine\4.0
-	bootstrap
-	C:\Documents and Settings\Spencer\Desktop\dredge\\game\thirdparty
-	C:\Documents and Settings\Spencer\Desktop\dredge\\game
-[ENGINE LOADER] loading engine:	1	1	5	te4
-[ENGINE LOADER] using archived engine:	/engines/te4-1.1.5.teae
-Available resolutions: 1280x800x32
-Available resolutions: 1280x768x32
-Available resolutions: 1280x720x32
-Available resolutions: 1024x768x32
-Available resolutions: 800x1280x32
-Available resolutions: 800x600x32
-Available resolutions: 768x1280x32
-Available resolutions: 768x1024x32
-Available resolutions: 720x1280x32
-Available resolutions: 640x480x32
-Available resolutions: 640x400x32
-Available resolutions: 600x800x32
-Available resolutions: 480x640x32
-Available resolutions: 400x640x32
-Available resolutions: 1280x800x16
-Available resolutions: 1280x768x16
-Available resolutions: 1280x720x16
-Available resolutions: 1024x768x16
-Available resolutions: 800x1280x16
-Available resolutions: 800x600x16
-Available resolutions: 768x1280x16
-Available resolutions: 768x1024x16
-Available resolutions: 720x1280x16
-Available resolutions: 640x480x16
-Available resolutions: 640x400x16
-Available resolutions: 600x800x16
-Available resolutions: 480x640x16
-Available resolutions: 400x640x16
-[KEYBINDER] Loaded keybinds: move
-[KEYBINDER] Loaded keybinds: hotkeys
-[KEYBINDER] Loaded keybinds: inventory
-[KEYBINDER] Loaded keybinds: actions
-[KEYBINDER] Loaded keybinds: interface
-[KEYBINDER] Loaded keybinds: debug
-Remapping	SCREENSHOT	table: 0x0a9e67e0
-Remapping	HOTKEY_6	table: 0x0a9e6830
-Remapping	MOVE_STAY	table: 0x0a9e6880
-setResolution: switching resolution to	800x600 Windowed	800	600	false	nil	(forced)
-Setting resolution to 800x600 (windowed, with borders)
-[DO RESIZE] Requested: 800x600 (0, 0)
-[DO RESIZE] Got: 800x600 (0, 0)
-OpenGL max texture size: 2048
-setResolution: performing onResolutionChange...
-
-onResolutionChange: resolution changed to 	800	600	from	nil	nil
-onResolutionChange: no game yet!
-Disabling FBO
-Disabling Shaders
-[ONLINE PROFILE] fun facts	nil
-[PROFILE] mounted 	online	on /current-profile
-[PROFILE] unmounted 	online	from /current-profile
-[ENGINE] Setting requested FPS to 30 (33 ms)
-[ENGINE] Switching to turn based
-[SAVEFILE PIPE] force waiting
-Creating module	boot	:: (as dir)	true	:: (as team)	nil	
-Loaded module definition for boot-0.1.0 using engine te4-1.1.5
-Creating module	dredge	:: (as dir)	true	:: (as team)	nil	
-Loaded module definition for dredge-0.1.9 using engine te4-1.1.5
-dredge	boot
-* Module: dredge
- ** 0.1.9
-* Module: boot
- ** 0.1.0
-After fs.reset
-[1] = {
-  [path] = C:\Documents and Settings\Spencer\Desktop\dredge\\game\engines\te4-1.1.5.teae
-}
-[ENGINE] Switching to turn based
-Loading savefile 	/save//
-Loading savefile 	/save/player/
-Make wait background texture 2 : 800x600 (1024, 1024)
-Using cached font	/data/font/DroidSans.ttf	12
-[MODULE] All hashes validation: 	nil	no online profile active
-[PROFILE] mounted 	offline	on /current-profile
-[PROFILE] unmounted 	offline	from /current-profile
-[PROFILE] mounted 	online	on /current-profile
-[PROFILE] unmounted 	online	from /current-profile
-[PROFILE THREAD] batching CSETs
-module 'mod.dialogs.ShowInventory' not found:
-	no field package.preload['mod.dialogs.ShowInventory']
-	no file '/mod/dialogs/ShowInventory.lua'
-stack traceback:
-	/engine/utils.lua:2017: in function </engine/utils.lua:2016>
-	[C]: at 0x0048c8b0
-	[C]: in function 'xpcall'
-	/engine/utils.lua:2016: in function 'require_first'
-	/engine/interface/ActorInventory.lua:22: in main chunk
-	[C]: in function 'require'
-	/mod/load.lua:29: in main chunk
-	[C]: in function 'require'
-	/engine/Module.lua:158: in function 'load'
-	/engine/Module.lua:796: in function 'instanciate'
-	/engine/utils.lua:1902: in function 'showMainMenu'
-	/engine/init.lua:153: in main chunk
-	[C]: in function 'dofile'
-	/loader/init.lua:196: in main chunk
-module 'mod.dialogs.ShowEquipment' not found:
-	no field package.preload['mod.dialogs.ShowEquipment']
-	no file '/mod/dialogs/ShowEquipment.lua'
-stack traceback:
-	/engine/utils.lua:2017: in function </engine/utils.lua:2016>
-	[C]: at 0x0048c8b0
-	[C]: in function 'xpcall'
-	/engine/utils.lua:2016: in function 'require_first'
-	/engine/interface/ActorInventory.lua:23: in main chunk
-	[C]: in function 'require'
-	/mod/load.lua:29: in main chunk
-	[C]: in function 'require'
-	/engine/Module.lua:158: in function 'load'
-	/engine/Module.lua:796: in function 'instanciate'
-	/engine/utils.lua:1902: in function 'showMainMenu'
-	/engine/init.lua:153: in main chunk
-	[C]: in function 'dofile'
-	/loader/init.lua:196: in main chunk
-module 'mod.dialogs.ShowEquipInven' not found:
-	no field package.preload['mod.dialogs.ShowEquipInven']
-	no file '/mod/dialogs/ShowEquipInven.lua'
-stack traceback:
-	/engine/utils.lua:2017: in function </engine/utils.lua:2016>
-	[C]: at 0x0048c8b0
-	[C]: in function 'xpcall'
-	/engine/utils.lua:2016: in function 'require_first'
-	/engine/interface/ActorInventory.lua:24: in main chunk
-	[C]: in function 'require'
-	/mod/load.lua:29: in main chunk
-	[C]: in function 'require'
-	/engine/Module.lua:158: in function 'load'
-	/engine/Module.lua:796: in function 'instanciate'
-	/engine/utils.lua:1902: in function 'showMainMenu'
-	/engine/init.lua:153: in main chunk
-	[C]: in function 'dofile'
-	/loader/init.lua:196: in main chunk
-module 'mod.dialogs.ShowPickupFloor' not found:
-	no field package.preload['mod.dialogs.ShowPickupFloor']
-	no file '/mod/dialogs/ShowPickupFloor.lua'
-stack traceback:
-	/engine/utils.lua:2017: in function </engine/utils.lua:2016>
-	[C]: at 0x0048c8b0
-	[C]: in function 'xpcall'
-	/engine/utils.lua:2016: in function 'require_first'
-	/engine/interface/ActorInventory.lua:25: in main chunk
-	[C]: in function 'require'
-	/mod/load.lua:29: in main chunk
-	[C]: in function 'require'
-	/engine/Module.lua:158: in function 'load'
-	/engine/Module.lua:796: in function 'instanciate'
-	/engine/utils.lua:1902: in function 'showMainMenu'
-	/engine/init.lua:153: in main chunk
-	[C]: in function 'dofile'
-	/loader/init.lua:196: in main chunk
-[INVENTORY] define slot	1	In inventory
-[INVENTORY] define slot	2	Inventory
-[INVENTORY] define slot	3	Weapon used
-[INVENTORY] define slot	4	Item worn
-[MODULE LOADER] loading module	Dredge	[mod.load]	::	nil	nil
-[GAMMA] Setting gamma correction using SDL	1.2
-[MAP] Reseting tiles caches
-Using cached font	/data/font/DroidSansMono.ttf	22
-Using cached font	/data/font/DroidSansMono.ttf	22
-Using cached font	/data/font/DroidSansMono.ttf	22
-[GAMMA] Setting gamma correction using SDL	1.2
-Loading savefile 	/save/player/
-Using cached font	/data/font/DroidSans.ttf	16
-Using cached font	/data/font/DroidSans.ttf	12
-Using cached font	/data/font/DroidSansMono.ttf	10
-Using cached font	/data/font/DroidSans.ttf	12
-Using cached font	/data/font/DroidSans.ttf	12
-[LOG]	Welcome to #00FF00#Dredge.
-[DISPLAY MODE] 16x16 ASCII/background
-Using cached font	/data/font/DroidSansMono.ttf	22
-Using cached font	/data/font/DroidSansMono.ttf	22
-Using cached font	/data/font/DroidSansMono.ttf	22
-Using cached font	/data/font/DroidSansMono.ttf	22
-[BIRTHER] selecting type	base
-[BIRTHER] checking allowance for 	base
-[BIRTHER] selecting type	role
-[BIRTHER] checking allowance for 	Anthropologist
-[BIRTHER] Applying descriptor base
-[BIRTHER] Applying descriptor Anthropologist
-Loading savefile 	/save/player/
-Loading entities file from file	/data/zones/dungeon/npcs.lua
-Loading entities file from file	/data/general/npcs/kobold.lua
-Loading entities file from file	/data/zones/dungeon/grids.lua
-Loading entities file from file	/data/general/grids/basic.lua
-Loading entities file from file	/data/zones/dungeon/objects.lua
-Loading entities file from file	/data/general/objects/consumables.lua
-Loading entities file from file	/data/general/objects/melee_weapons.lua
-Loading entities file from file	/data/general/objects/ranged_weapons.lua
-Loading entities file from file	/data/zones/dungeon/traps.lua
-Initiated zone	Old ruins	with base_level	1
-C Map size 18:14 :: 252
-C Map seens texture: 112 (60x60)
-loaded room generator	simple	function: 0x0b78fb28
-loaded room	pilar	10	5
-room generator	function: 0x0b78fb28	is making a room
-alloc	simple9x11
-room allocated at	26	36	with center	30	41
-alloc	pilar
-room allocated at	38	19	with center	42	21
-alloc	pilar
-room allocated at	18	7	with center	22	9
-alloc	pilar
-room allocated at	8	17	with center	12	19
-alloc	pilar
-room allocated at	35	34	with center	39	36
-alloc	pilar
-room allocated at	34	25	with center	38	27
-alloc	pilar
-room allocated at	7	6	with center	11	8
-alloc	pilar
-room allocated at	3	25	with center	7	27
-alloc	pilar
-room allocated at	19	25	with center	23	27
-alloc	pilar
-room allocated at	1	12	with center	5	14
-Begin tunnel	10	table: 0x0b7b2fd0
-[PLAYER BIRTH] resolve...
-Inventory resolver	player	consumable	potion
-Zone made us an inventory according to filter!	Health Potion
-Inventory resolver	player	consumable	potion
-Zone made us an inventory according to filter!	Experience Potion
-Equipment resolver for	player
-Equipment resolver	player	weapon	slashing
-Zone made us an equipment according to filter!	Dagger
-[PLAYER BIRTH] resolved!
-[BIRTHER] Finished!
-[DISPLAY MODE] 16x16 ASCII/background
-Using cached font	/data/font/DroidSansMono.ttf	22
-Using cached font	/data/font/DroidSansMono.ttf	22
-Using cached font	/data/font/DroidSansMono.ttf	22
-Using cached font	/data/font/DroidSansMono.ttf	22
-C Map size 18:14 :: 252
-C Map seens texture: 127 (60x60)
-[LOG]	#LIGHT_RED#Online profile disabled(switching to offline profile) due to no online profile active.
-[MODULE LOADER] done loading module	Dredge
-[PROFILE] mounted 	online	on /current-profile
-[PROFILE] unmounted 	online	from /current-profile
-[QUICK HOTKEYS] Loading quick hotkey settings for module "dredge" from /save/quick_hotkeys...
-[QUICK HOTKEYS] Successfully loaded quick hotkey settings.
-Wait finished, counted 778, 928 ticks
-[PROFILE THREAD] flushing CSETs
-[PROFILE THREAD] flushing CSETs ignored, empty dataset
-C Map minimap texture: 126 (50x50; 64x64)
-Loading tile	border_7.png
-Loading tile	border_9.png
-Loading tile	border_1.png
-Loading tile	border_3.png
-Loading tile	border_8.png
-Loading tile	border_4.png
-[COROUTINE] registering	savefilepipe	thread: 0x0b7a17c8
-[ENGINE] Switching to turn based
-[SAVEFILE PIPE] force waiting
-Make wait background texture 135 : 800x600 (1024, 1024)
-[SAVEFILE PIPE] new save running in the pipe:	player	game	::	game.teag	::	table: 0x0aeec960	=>	table: 0x0b7b57f0	(94)
-Loading savefile 	/save/player/
-[SAVEFILE PIPE] unleashing save thread
-Saving zipname /save/player/game.teag.tmp
-Saved zipname /save/player/game.teag.tmp
-[SAVEFILE PIPE] Checking save	player	game	/save/player/game.teag.tmp
-Loading savefile 	/save/player/
-[SAVEFILE] checked validity of type	game	 => 	all fine
-[LOG]	Saving done.
-[SAVEFILE PIPE] on end	saveGame_md5
-Wait finished, counted 266, 122 ticks
-[PROFILE] mounted 	online	on /current-profile
-[PROFILE] unmounted 	online	from /current-profile
-[MAIN] rebooting lua state: 	nil	nil	nil	nil	nil
-stack traceback:
-[COROUTINE] error	cannot resume dead coroutine
-[COROUTINE] dead	savefilepipe
-[ENGINE] Switching to turn based
-NO SELFEXE: bootstrapping from CWD
-===top 0
-===top 2
-Booting T-Engine from: C:\Documents and Settings\Spencer\Desktop\dredge\t-engine.exe
-SelfExe gave us app directory of:	C:\Documents and Settings\Spencer\Desktop\dredge\
-LuaVM:	LuaJIT 2.0.2	x86
-Destroying particle thread 0 (waiting for mutex)
-Destroying particle thread 0
-Destroying particle thread 0 (waiting for thread f39e20)
-Cleaning up particle thread 0
-Cleaned up particle thread 0
-Destroyed particle thread 0 (0)
-Creating particles thread 0
-Running lua loader code...
-LuaVM:	LuaJIT 2.0.2	x86
-===	
-Reboot using	te4	LATEST	boot	player	false
-[ENGINE LOADER] available from teae: 	te4-1.1.5
-[ENGINE LOADER] found engines	te4={[1]={[1]=1.000000 , [2]=1.000000 , [3]=5.000000 , [4]="te4" , [5]=17.000000 , ["load_teae"]="/engines/te4-1.1.5.teae" , } , } __byname={["te4-1.1.5"]=true , } 
-[ENGINE LOADER] looked in:
-	C:\Documents and Settings\Spencer\\T-Engine\4.0
-	bootstrap
-	C:\Documents and Settings\Spencer\Desktop\dredge\\game\thirdparty
-	C:\Documents and Settings\Spencer\Desktop\dredge\\game
-[ENGINE LOADER] sorted:	te4	1	1	5
-[ENGINE LOADER] loading engine:	1	1	5	te4
-[ENGINE LOADER] using archived engine:	/engines/te4-1.1.5.teae
-Available resolutions: 1280x800x32
-Available resolutions: 1280x768x32
-Available resolutions: 1280x720x32
-Available resolutions: 1024x768x32
-Available resolutions: 800x1280x32
-Available resolutions: 800x600x32
-Available resolutions: 768x1280x32
-Available resolutions: 768x1024x32
-Available resolutions: 720x1280x32
-Available resolutions: 640x480x32
-Available resolutions: 640x400x32
-Available resolutions: 600x800x32
-Available resolutions: 480x640x32
-Available resolutions: 400x640x32
-Available resolutions: 1280x800x16
-Available resolutions: 1280x768x16
-Available resolutions: 1280x720x16
-Available resolutions: 1024x768x16
-Available resolutions: 800x1280x16
-Available resolutions: 800x600x16
-Available resolutions: 768x1280x16
-Available resolutions: 768x1024x16
-Available resolutions: 720x1280x16
-Available resolutions: 640x480x16
-Available resolutions: 640x400x16
-Available resolutions: 600x800x16
-Available resolutions: 480x640x16
-Available resolutions: 400x640x16
-[KEYBINDER] Loaded keybinds: move
-[KEYBINDER] Loaded keybinds: hotkeys
-[KEYBINDER] Loaded keybinds: inventory
-[KEYBINDER] Loaded keybinds: actions
-[KEYBINDER] Loaded keybinds: interface
-[KEYBINDER] Loaded keybinds: debug
-Remapping	SCREENSHOT	table: 0x0a9d7418
-Remapping	HOTKEY_6	table: 0x0a9d2d78
-Remapping	MOVE_STAY	table: 0x0a9d2dc8
-setResolution: switching resolution to	800x600 Windowed	800	600	false	nil	(forced)
-Setting resolution to 800x600 (windowed, with borders)
-[DO RESIZE] Requested: 800x600 (0, 0)
-[DO RESIZE] Got: 800x600 (0, 0)
-OpenGL max texture size: 2048
-setResolution: performing onResolutionChange...
-
-onResolutionChange: resolution changed to 	800	600	from	nil	nil
-onResolutionChange: no game yet!
-Disabling FBO
-Disabling Shaders
-[ONLINE PROFILE] fun facts	nil
-[PROFILE] mounted 	online	on /current-profile
-[PROFILE] unmounted 	online	from /current-profile
-[ENGINE] Setting requested FPS to 30 (33 ms)
-[ENGINE] Switching to turn based
-[SAVEFILE PIPE] force waiting
-Creating module	boot	:: (as dir)	true	:: (as team)	nil	
-Loaded module definition for boot-0.1.0 using engine te4-1.1.5
-Creating module	dredge	:: (as dir)	true	:: (as team)	nil	
-Loaded module definition for dredge-0.1.9 using engine te4-1.1.5
-dredge	boot
-* Module: dredge
- ** 0.1.9
-* Module: boot
- ** 0.1.0
-After fs.reset
-[1] = {
-  [path] = C:\Documents and Settings\Spencer\Desktop\dredge\\game\engines\te4-1.1.5.teae
-}
-[ENGINE] Switching to turn based
-Loading savefile 	/save//
-Loading savefile 	/save/player/
-Make wait background texture 2 : 800x600 (1024, 1024)
-Using cached font	/data/font/DroidSans.ttf	12
-[MODULE] All hashes validation: 	nil	no online profile active
-[PROFILE THREAD] batching CSETs
-[MODULE LOADER] loading module	Dredge	[mod.load]	::	nil	nil
-[GAMMA] Setting gamma correction using SDL	1.2
-[ENGINE] Switching to turn based
-[GAMMA] Setting gamma correction using SDL	1.2
-Loading savefile 	/save/player/
-[GAMMA] Setting gamma correction using SDL	1.2
-[MUSIC] loading	whatever.ogg	Error loading sound "/data/music/whatever.ogg": The system cannot find the file specified.
-[ENGINE] Setting requested FPS to 30 (33 ms)
-[MODULE LOADER] done loading module	Dredge
-[PROFILE] mounted 	online	on /current-profile
-[PROFILE] unmounted 	online	from /current-profile
-Wait finished, counted 4, 252 ticks
-[PROFILE THREAD] flushing CSETs
-[PROFILE THREAD] flushing CSETs ignored, empty dataset
-[SOUND] loading from	/data/sound/ui/subtle_button_sound.ogg	:=:	sound "/data/sound/ui/subtle_button_sound.ogg" : <static>
-Creating module	boot	:: (as dir)	true	:: (as team)	nil	
-Loaded module definition for boot-0.1.0 using engine te4-1.1.5
-Creating module	dredge	:: (as dir)	true	:: (as team)	nil	
-Loaded module definition for dredge-0.1.9 using engine te4-1.1.5
-dredge	boot
-* Module: dredge
- ** 0.1.9
-* Module: boot
- ** 0.1.0
-After fs.reset
-[1] = {
-  [path] = C:\Documents and Settings\Spencer\Desktop\dredge\\game\engines\te4-1.1.5.teae
-}
-Using cached font	/data/font/DroidSans-Bold.ttf	16
-[ENGINE] Switching to turn based
-[SAVEFILE PIPE] force waiting
-[PROFILE] mounted 	online	on /current-profile
-[PROFILE] unmounted 	online	from /current-profile
-[MAIN] rebooting lua state: 	te4	1.1.5	dredge-0.1.9	player	true
-[ENGINE] Switching to turn based
-NO SELFEXE: bootstrapping from CWD
-===top 0
-===top 2
-Booting T-Engine from: C:\Documents and Settings\Spencer\Desktop\dredge\t-engine.exe
-SelfExe gave us app directory of:	C:\Documents and Settings\Spencer\Desktop\dredge\
-LuaVM:	LuaJIT 2.0.2	x86
-Destroying particle thread 0 (waiting for mutex)
-Destroying particle thread 0
-Destroying particle thread 0 (waiting for thread f39e20)
-Cleaning up particle thread 0
-Cleaned up particle thread 0
-Destroyed particle thread 0 (0)
-Creating particles thread 0
-Running lua loader code...
-LuaVM:	LuaJIT 2.0.2	x86
 ===	
 Reboot using	te4	1.1.5	dredge-0.1.9	player	true
 [ENGINE LOADER] available from teae: 	te4-1.1.5
@@ -793,65 +360,33 @@ Loading entities file from file	/data/general/objects/ranged_weapons.lua
 Loading entities file from file	/data/zones/dungeon/traps.lua
 Initiated zone	Old ruins	with base_level	1
 C Map size 18:14 :: 252
-C Map seens texture: 112 (60x60)
-loaded room generator	simple	function: 0x0b792050
+C Map seens texture: 111 (60x60)
+loaded room generator	simple	function: 0x0b792e90
 loaded room	pilar	10	5
-room generator	function: 0x0b792050	is making a room
-alloc	simple10x6
-room allocated at	28	11	with center	32	13
-room generator	function: 0x0b792050	is making a room
-alloc	simple12x7
-room allocated at	19	18	with center	24	21
-room generator	function: 0x0b792050	is making a room
-alloc	simple11x7
-room allocated at	5	21	with center	10	24
 alloc	pilar
-room allocated at	36	21	with center	40	23
+room allocated at	26	28	with center	30	30
+room generator	function: 0x0b792e90	is making a room
+alloc	simple12x12
+room allocated at	32	13	with center	37	18
 alloc	pilar
-room allocated at	17	36	with center	21	38
+room allocated at	15	23	with center	19	25
 alloc	pilar
-room allocated at	5	9	with center	9	11
-room generator	function: 0x0b792050	is making a room
-alloc	simple6x5
-room allocated at	17	6	with center	19	8
-room generator	function: 0x0b792050	is making a room
-alloc	simple10x10
-room allocated at	28	36	with center	32	40
+room allocated at	17	33	with center	21	35
 alloc	pilar
-room allocated at	33	30	with center	37	32
-room generator	function: 0x0b792050	is making a room
-alloc	simple10x8
-room allocated at	6	37	with center	10	40
-Begin tunnel	10	table: 0x0b7ac488
-Level unconnected, no way from entrance to exit	22	9	to	8	32
-C Map size 18:14 :: 252
-C Map seens texture: 121 (60x60)
-room generator	function: 0x0b792050	is making a room
-alloc	simple8x7
-room allocated at	32	21	with center	35	24
+room allocated at	38	1	with center	42	3
+room generator	function: 0x0b792e90	is making a room
+alloc	simple9x6
+room allocated at	35	33	with center	39	35
+room generator	function: 0x0b792e90	is making a room
+alloc	simple7x12
+room allocated at	27	1	with center	30	6
 alloc	pilar
-room allocated at	23	23	with center	27	25
+room allocated at	23	17	with center	27	19
 alloc	pilar
-room allocated at	13	12	with center	17	14
+room allocated at	4	42	with center	8	44
 alloc	pilar
-room allocated at	8	39	with center	12	41
-room generator	function: 0x0b792050	is making a room
-alloc	simple10x11
-room allocated at	36	10	with center	40	15
-alloc	pilar
-room allocated at	12	22	with center	16	24
-room generator	function: 0x0b792050	is making a room
-alloc	simple6x8
-room allocated at	26	40	with center	28	43
-alloc	pilar
-room allocated at	16	33	with center	20	35
-room generator	function: 0x0b792050	is making a room
-alloc	simple5x6
-room allocated at	26	34	with center	28	36
-room generator	function: 0x0b792050	is making a room
-alloc	simple9x5
-room allocated at	1	14	with center	5	16
-Begin tunnel	10	table: 0x0ac16e10
+room allocated at	2	5	with center	6	7
+Begin tunnel	10	table: 0x0b7c1658
 [PLAYER BIRTH] resolve...
 Inventory resolver	player	consumable	potion
 Zone made us an inventory according to filter!	Health Potion
@@ -873,29 +408,33 @@ C Map seens texture: 127 (60x60)
 [MODULE LOADER] done loading module	Dredge
 [PROFILE] mounted 	online	on /current-profile
 [PROFILE] unmounted 	online	from /current-profile
-[QUICK HOTKEYS] Loading quick hotkey settings for module "dredge" from /save/quick_hotkeys...
-[QUICK HOTKEYS] Successfully loaded quick hotkey settings.
-Wait finished, counted 1465, 1253 ticks
 [PROFILE THREAD] flushing CSETs
 [PROFILE THREAD] flushing CSETs ignored, empty dataset
+[QUICK HOTKEYS] Loading quick hotkey settings for module "dredge" from /save/quick_hotkeys...
+[QUICK HOTKEYS] Successfully loaded quick hotkey settings.
+Wait finished, counted 794, 2560 ticks
 C Map minimap texture: 126 (50x50; 64x64)
 [ENGINE] Setting requested FPS to 2 (500 ms)
 [ENGINE] Setting requested FPS to 30 (33 ms)
-[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
-[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
-[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
-[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[ENGINE] Setting requested FPS to 2 (500 ms)
+Server latency	88
+[ENGINE] Setting requested FPS to 30 (33 ms)
+[ENGINE] Setting requested FPS to 2 (500 ms)
+[ENGINE] Setting requested FPS to 30 (33 ms)
+[ENGINE] Setting requested FPS to 2 (500 ms)
+Server latency	554
+[ENGINE] Setting requested FPS to 30 (33 ms)
 Loading tile	border_7.png
 Loading tile	border_9.png
 Loading tile	border_1.png
 Loading tile	border_3.png
 Loading tile	border_8.png
 Loading tile	border_4.png
-[COROUTINE] registering	savefilepipe	thread: 0x0b838fb0
+[COROUTINE] registering	savefilepipe	thread: 0x0b6c6230
 [ENGINE] Switching to turn based
 [SAVEFILE PIPE] force waiting
 Make wait background texture 134 : 800x600 (1024, 1024)
-[SAVEFILE PIPE] new save running in the pipe:	player	game	::	game.teag	::	table: 0x0af23298	=>	table: 0x0a9d5ee8	(95)
+[SAVEFILE PIPE] new save running in the pipe:	player	game	::	game.teag	::	table: 0x0af12ec8	=>	table: 0x0b47a6c8	(100)
 Loading savefile 	/save/player/
 [SAVEFILE PIPE] unleashing save thread
 Saving zipname /save/player/game.teag.tmp
@@ -905,7 +444,575 @@ Loading savefile 	/save/player/
 [SAVEFILE] checked validity of type	game	 => 	all fine
 [LOG]	Saving done.
 [SAVEFILE PIPE] on end	saveGame_md5
-Wait finished, counted 347, 138 ticks
+Wait finished, counted 343, 340 ticks
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+[MAIN] rebooting lua state: 	nil	nil	nil	nil	nil
+[ENGINE] Setting requested FPS to 2 (500 ms)
+stack traceback:
+[COROUTINE] error	cannot resume dead coroutine
+[COROUTINE] dead	savefilepipe
+[ENGINE] Switching to turn based
+NO SELFEXE: bootstrapping from CWD
+===top 0
+===top 2
+Booting T-Engine from: C:\Documents and Settings\Spencer\Desktop\dredge\t-engine.exe
+SelfExe gave us app directory of:	C:\Documents and Settings\Spencer\Desktop\dredge\
+LuaVM:	LuaJIT 2.0.2	x86
+Destroying particle thread 0 (waiting for mutex)
+Destroying particle thread 0
+Destroying particle thread 0 (waiting for thread f39e20)
+Cleaning up particle thread 0
+Cleaned up particle thread 0
+Destroyed particle thread 0 (0)
+Creating particles thread 0
+Running lua loader code...
+LuaVM:	LuaJIT 2.0.2	x86
+===	
+Reboot using	te4	LATEST	boot	player	false
+[ENGINE LOADER] available from teae: 	te4-1.1.5
+[ENGINE LOADER] found engines	te4={[1]={[1]=1.000000 , [2]=1.000000 , [3]=5.000000 , [4]="te4" , [5]=17.000000 , ["load_teae"]="/engines/te4-1.1.5.teae" , } , } __byname={["te4-1.1.5"]=true , } 
+[ENGINE LOADER] looked in:
+	C:\Documents and Settings\Spencer\\T-Engine\4.0
+	bootstrap
+	C:\Documents and Settings\Spencer\Desktop\dredge\\game\thirdparty
+	C:\Documents and Settings\Spencer\Desktop\dredge\\game
+[ENGINE LOADER] sorted:	te4	1	1	5
+[ENGINE LOADER] loading engine:	1	1	5	te4
+[ENGINE LOADER] using archived engine:	/engines/te4-1.1.5.teae
+Available resolutions: 1280x800x32
+Available resolutions: 1280x768x32
+Available resolutions: 1280x720x32
+Available resolutions: 1024x768x32
+Available resolutions: 800x1280x32
+Available resolutions: 800x600x32
+Available resolutions: 768x1280x32
+Available resolutions: 768x1024x32
+Available resolutions: 720x1280x32
+Available resolutions: 640x480x32
+Available resolutions: 640x400x32
+Available resolutions: 600x800x32
+Available resolutions: 480x640x32
+Available resolutions: 400x640x32
+Available resolutions: 1280x800x16
+Available resolutions: 1280x768x16
+Available resolutions: 1280x720x16
+Available resolutions: 1024x768x16
+Available resolutions: 800x1280x16
+Available resolutions: 800x600x16
+Available resolutions: 768x1280x16
+Available resolutions: 768x1024x16
+Available resolutions: 720x1280x16
+Available resolutions: 640x480x16
+Available resolutions: 640x400x16
+Available resolutions: 600x800x16
+Available resolutions: 480x640x16
+Available resolutions: 400x640x16
+[KEYBINDER] Loaded keybinds: move
+[KEYBINDER] Loaded keybinds: hotkeys
+[KEYBINDER] Loaded keybinds: inventory
+[KEYBINDER] Loaded keybinds: actions
+[KEYBINDER] Loaded keybinds: interface
+[KEYBINDER] Loaded keybinds: debug
+Remapping	SCREENSHOT	table: 0x0a9d7418
+Remapping	HOTKEY_6	table: 0x0a9d2d78
+Remapping	MOVE_STAY	table: 0x0a9d2dc8
+setResolution: switching resolution to	800x600 Windowed	800	600	false	nil	(forced)
+Setting resolution to 800x600 (windowed, with borders)
+[DO RESIZE] Requested: 800x600 (0, 0)
+[DO RESIZE] Got: 800x600 (0, 0)
+OpenGL max texture size: 2048
+setResolution: performing onResolutionChange...
+
+onResolutionChange: resolution changed to 	800	600	from	nil	nil
+onResolutionChange: no game yet!
+Disabling FBO
+Disabling Shaders
+[ONLINE PROFILE] fun facts	nil
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+[ENGINE] Setting requested FPS to 30 (33 ms)
+[ENGINE] Switching to turn based
+[SAVEFILE PIPE] force waiting
+Creating module	boot	:: (as dir)	true	:: (as team)	nil	
+Loaded module definition for boot-0.1.0 using engine te4-1.1.5
+Creating module	dredge	:: (as dir)	true	:: (as team)	nil	
+Loaded module definition for dredge-0.1.9 using engine te4-1.1.5
+dredge	boot
+* Module: dredge
+ ** 0.1.9
+* Module: boot
+ ** 0.1.0
+After fs.reset
+[1] = {
+  [path] = C:\Documents and Settings\Spencer\Desktop\dredge\\game\engines\te4-1.1.5.teae
+}
+[ENGINE] Switching to turn based
+Loading savefile 	/save//
+Loading savefile 	/save/player/
+Make wait background texture 2 : 800x600 (1024, 1024)
+Using cached font	/data/font/DroidSans.ttf	12
+[MODULE] All hashes validation: 	nil	no online profile active
+[PROFILE THREAD] batching CSETs
+[MODULE LOADER] loading module	Dredge	[mod.load]	::	nil	nil
+[GAMMA] Setting gamma correction using SDL	1.2
+[ENGINE] Switching to turn based
+[GAMMA] Setting gamma correction using SDL	1.2
+Loading savefile 	/save/player/
+[GAMMA] Setting gamma correction using SDL	1.2
+[MUSIC] loading	whatever.ogg	Error loading sound "/data/music/whatever.ogg": The system cannot find the file specified.
+[ENGINE] Setting requested FPS to 30 (33 ms)
+[MODULE LOADER] done loading module	Dredge
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+Wait finished, counted 4, 636 ticks
+[PROFILE THREAD] flushing CSETs
+[PROFILE THREAD] flushing CSETs ignored, empty dataset
+[ENGINE] Setting requested FPS to 2 (500 ms)
+[ENGINE] Setting requested FPS to 30 (33 ms)
+[ENGINE] Setting requested FPS to 2 (500 ms)
+Server latency	88
+[ENGINE] Setting requested FPS to 30 (33 ms)
+[SOUND] loading from	/data/sound/ui/subtle_button_sound.ogg	:=:	sound "/data/sound/ui/subtle_button_sound.ogg" : <static>
+Creating module	boot	:: (as dir)	true	:: (as team)	nil	
+Loaded module definition for boot-0.1.0 using engine te4-1.1.5
+Creating module	dredge	:: (as dir)	true	:: (as team)	nil	
+Loaded module definition for dredge-0.1.9 using engine te4-1.1.5
+dredge	boot
+* Module: dredge
+ ** 0.1.9
+* Module: boot
+ ** 0.1.0
+After fs.reset
+[1] = {
+  [path] = C:\Documents and Settings\Spencer\Desktop\dredge\\game\engines\te4-1.1.5.teae
+}
+Using cached font	/data/font/DroidSans-Bold.ttf	16
+[ENGINE] Switching to turn based
+[SAVEFILE PIPE] force waiting
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+[MAIN] rebooting lua state: 	te4	1.1.5	dredge-0.1.9	player	true
+[ENGINE] Switching to turn based
+NO SELFEXE: bootstrapping from CWD
+===top 0
+===top 2
+Booting T-Engine from: C:\Documents and Settings\Spencer\Desktop\dredge\t-engine.exe
+SelfExe gave us app directory of:	C:\Documents and Settings\Spencer\Desktop\dredge\
+LuaVM:	LuaJIT 2.0.2	x86
+Destroying particle thread 0 (waiting for mutex)
+Destroying particle thread 0
+Destroying particle thread 0 (waiting for thread f39e20)
+Cleaning up particle thread 0
+Cleaned up particle thread 0
+Destroyed particle thread 0 (0)
+Creating particles thread 0
+Running lua loader code...
+LuaVM:	LuaJIT 2.0.2	x86
+===	
+Reboot using	te4	1.1.5	dredge-0.1.9	player	true
+[ENGINE LOADER] available from teae: 	te4-1.1.5
+[ENGINE LOADER] found engines	te4={[1]={[1]=1.000000 , [2]=1.000000 , [3]=5.000000 , [4]="te4" , [5]=17.000000 , ["load_teae"]="/engines/te4-1.1.5.teae" , } , } __byname={["te4-1.1.5"]=true , } 
+[ENGINE LOADER] looked in:
+	C:\Documents and Settings\Spencer\\T-Engine\4.0
+	bootstrap
+	C:\Documents and Settings\Spencer\Desktop\dredge\\game\thirdparty
+	C:\Documents and Settings\Spencer\Desktop\dredge\\game
+[ENGINE LOADER] loading engine:	1	1	5	te4
+[ENGINE LOADER] using archived engine:	/engines/te4-1.1.5.teae
+Available resolutions: 1280x800x32
+Available resolutions: 1280x768x32
+Available resolutions: 1280x720x32
+Available resolutions: 1024x768x32
+Available resolutions: 800x1280x32
+Available resolutions: 800x600x32
+Available resolutions: 768x1280x32
+Available resolutions: 768x1024x32
+Available resolutions: 720x1280x32
+Available resolutions: 640x480x32
+Available resolutions: 640x400x32
+Available resolutions: 600x800x32
+Available resolutions: 480x640x32
+Available resolutions: 400x640x32
+Available resolutions: 1280x800x16
+Available resolutions: 1280x768x16
+Available resolutions: 1280x720x16
+Available resolutions: 1024x768x16
+Available resolutions: 800x1280x16
+Available resolutions: 800x600x16
+Available resolutions: 768x1280x16
+Available resolutions: 768x1024x16
+Available resolutions: 720x1280x16
+Available resolutions: 640x480x16
+Available resolutions: 640x400x16
+Available resolutions: 600x800x16
+Available resolutions: 480x640x16
+Available resolutions: 400x640x16
+[KEYBINDER] Loaded keybinds: move
+[KEYBINDER] Loaded keybinds: hotkeys
+[KEYBINDER] Loaded keybinds: inventory
+[KEYBINDER] Loaded keybinds: actions
+[KEYBINDER] Loaded keybinds: interface
+[KEYBINDER] Loaded keybinds: debug
+Remapping	SCREENSHOT	table: 0x0a9e67e0
+Remapping	HOTKEY_6	table: 0x0a9e6830
+Remapping	MOVE_STAY	table: 0x0a9e6880
+setResolution: switching resolution to	800x600 Windowed	800	600	false	nil	(forced)
+Setting resolution to 800x600 (windowed, with borders)
+[DO RESIZE] Requested: 800x600 (0, 0)
+[DO RESIZE] Got: 800x600 (0, 0)
+OpenGL max texture size: 2048
+setResolution: performing onResolutionChange...
+
+onResolutionChange: resolution changed to 	800	600	from	nil	nil
+onResolutionChange: no game yet!
+Disabling FBO
+Disabling Shaders
+[ONLINE PROFILE] fun facts	nil
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+[ENGINE] Setting requested FPS to 30 (33 ms)
+[ENGINE] Switching to turn based
+[SAVEFILE PIPE] force waiting
+Creating module	boot	:: (as dir)	true	:: (as team)	nil	
+Loaded module definition for boot-0.1.0 using engine te4-1.1.5
+Creating module	dredge	:: (as dir)	true	:: (as team)	nil	
+Loaded module definition for dredge-0.1.9 using engine te4-1.1.5
+dredge	boot
+* Module: dredge
+ ** 0.1.9
+* Module: boot
+ ** 0.1.0
+After fs.reset
+[1] = {
+  [path] = C:\Documents and Settings\Spencer\Desktop\dredge\\game\engines\te4-1.1.5.teae
+}
+[ENGINE] Switching to turn based
+Loading savefile 	/save//
+Loading savefile 	/save/player/
+Make wait background texture 2 : 800x600 (1024, 1024)
+Using cached font	/data/font/DroidSans.ttf	12
+[MODULE] All hashes validation: 	nil	no online profile active
+[PROFILE] mounted 	offline	on /current-profile
+[PROFILE THREAD] batching CSETs
+[PROFILE] unmounted 	offline	from /current-profile
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+module 'mod.dialogs.ShowInventory' not found:
+	no field package.preload['mod.dialogs.ShowInventory']
+	no file '/mod/dialogs/ShowInventory.lua'
+stack traceback:
+	/engine/utils.lua:2017: in function </engine/utils.lua:2016>
+	[C]: at 0x0048c8b0
+	[C]: in function 'xpcall'
+	/engine/utils.lua:2016: in function 'require_first'
+	/engine/interface/ActorInventory.lua:22: in main chunk
+	[C]: in function 'require'
+	/mod/load.lua:29: in main chunk
+	[C]: in function 'require'
+	/engine/Module.lua:158: in function 'load'
+	/engine/Module.lua:796: in function 'instanciate'
+	/engine/utils.lua:1902: in function 'showMainMenu'
+	/engine/init.lua:153: in main chunk
+	[C]: in function 'dofile'
+	/loader/init.lua:196: in main chunk
+module 'mod.dialogs.ShowEquipment' not found:
+	no field package.preload['mod.dialogs.ShowEquipment']
+	no file '/mod/dialogs/ShowEquipment.lua'
+stack traceback:
+	/engine/utils.lua:2017: in function </engine/utils.lua:2016>
+	[C]: at 0x0048c8b0
+	[C]: in function 'xpcall'
+	/engine/utils.lua:2016: in function 'require_first'
+	/engine/interface/ActorInventory.lua:23: in main chunk
+	[C]: in function 'require'
+	/mod/load.lua:29: in main chunk
+	[C]: in function 'require'
+	/engine/Module.lua:158: in function 'load'
+	/engine/Module.lua:796: in function 'instanciate'
+	/engine/utils.lua:1902: in function 'showMainMenu'
+	/engine/init.lua:153: in main chunk
+	[C]: in function 'dofile'
+	/loader/init.lua:196: in main chunk
+module 'mod.dialogs.ShowEquipInven' not found:
+	no field package.preload['mod.dialogs.ShowEquipInven']
+	no file '/mod/dialogs/ShowEquipInven.lua'
+stack traceback:
+	/engine/utils.lua:2017: in function </engine/utils.lua:2016>
+	[C]: at 0x0048c8b0
+	[C]: in function 'xpcall'
+	/engine/utils.lua:2016: in function 'require_first'
+	/engine/interface/ActorInventory.lua:24: in main chunk
+	[C]: in function 'require'
+	/mod/load.lua:29: in main chunk
+	[C]: in function 'require'
+	/engine/Module.lua:158: in function 'load'
+	/engine/Module.lua:796: in function 'instanciate'
+	/engine/utils.lua:1902: in function 'showMainMenu'
+	/engine/init.lua:153: in main chunk
+	[C]: in function 'dofile'
+	/loader/init.lua:196: in main chunk
+module 'mod.dialogs.ShowPickupFloor' not found:
+	no field package.preload['mod.dialogs.ShowPickupFloor']
+	no file '/mod/dialogs/ShowPickupFloor.lua'
+stack traceback:
+	/engine/utils.lua:2017: in function </engine/utils.lua:2016>
+	[C]: at 0x0048c8b0
+	[C]: in function 'xpcall'
+	/engine/utils.lua:2016: in function 'require_first'
+	/engine/interface/ActorInventory.lua:25: in main chunk
+	[C]: in function 'require'
+	/mod/load.lua:29: in main chunk
+	[C]: in function 'require'
+	/engine/Module.lua:158: in function 'load'
+	/engine/Module.lua:796: in function 'instanciate'
+	/engine/utils.lua:1902: in function 'showMainMenu'
+	/engine/init.lua:153: in main chunk
+	[C]: in function 'dofile'
+	/loader/init.lua:196: in main chunk
+[INVENTORY] define slot	1	In inventory
+[INVENTORY] define slot	2	Inventory
+[INVENTORY] define slot	3	Weapon used
+[INVENTORY] define slot	4	Item worn
+[MODULE LOADER] loading module	Dredge	[mod.load]	::	nil	nil
+[GAMMA] Setting gamma correction using SDL	1.2
+[MAP] Reseting tiles caches
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+[GAMMA] Setting gamma correction using SDL	1.2
+Loading savefile 	/save/player/
+Using cached font	/data/font/DroidSans.ttf	16
+Using cached font	/data/font/DroidSans.ttf	12
+Using cached font	/data/font/DroidSansMono.ttf	10
+Using cached font	/data/font/DroidSans.ttf	12
+Using cached font	/data/font/DroidSans.ttf	12
+[LOG]	Welcome to #00FF00#Dredge.
+[DISPLAY MODE] 16x16 ASCII/background
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+[BIRTHER] selecting type	base
+[BIRTHER] checking allowance for 	base
+[BIRTHER] selecting type	role
+[BIRTHER] checking allowance for 	Anthropologist
+[BIRTHER] Applying descriptor base
+[BIRTHER] Applying descriptor Anthropologist
+Loading savefile 	/save/player/
+Loading entities file from file	/data/zones/dungeon/npcs.lua
+Loading entities file from file	/data/general/npcs/kobold.lua
+Loading entities file from file	/data/zones/dungeon/grids.lua
+Loading entities file from file	/data/general/grids/basic.lua
+Loading entities file from file	/data/zones/dungeon/objects.lua
+Loading entities file from file	/data/general/objects/consumables.lua
+Loading entities file from file	/data/general/objects/melee_weapons.lua
+Loading entities file from file	/data/general/objects/ranged_weapons.lua
+Loading entities file from file	/data/zones/dungeon/traps.lua
+Initiated zone	Old ruins	with base_level	1
+C Map size 18:14 :: 252
+C Map seens texture: 112 (60x60)
+loaded room generator	simple	function: 0x0b78f490
+loaded room	pilar	10	5
+alloc	pilar
+room allocated at	38	29	with center	42	31
+alloc	pilar
+room allocated at	8	12	with center	12	14
+room generator	function: 0x0b78f490	is making a room
+alloc	simple12x8
+room allocated at	2	17	with center	7	20
+room generator	function: 0x0b78f490	is making a room
+alloc	simple12x7
+room allocated at	35	18	with center	40	21
+alloc	pilar
+room allocated at	12	7	with center	16	9
+alloc	pilar
+room allocated at	22	10	with center	26	12
+room generator	function: 0x0b78f490	is making a room
+alloc	simple6x12
+room allocated at	30	28	with center	32	33
+room generator	function: 0x0b78f490	is making a room
+alloc	simple6x10
+room allocated at	13	27	with center	15	31
+room generator	function: 0x0b78f490	is making a room
+alloc	simple5x10
+room allocated at	42	6	with center	44	10
+alloc	pilar
+room allocated at	8	40	with center	12	42
+Begin tunnel	10	table: 0x0b7d8888
+Level unconnected, no way from entrance to exit	9	43	to	14	14
+C Map size 18:14 :: 252
+C Map seens texture: 121 (60x60)
+room generator	function: 0x0b78f490	is making a room
+alloc	simple7x5
+room allocated at	30	33	with center	33	35
+room generator	function: 0x0b78f490	is making a room
+alloc	simple12x7
+room allocated at	24	16	with center	29	19
+alloc	pilar
+room allocated at	37	7	with center	41	9
+room generator	function: 0x0b78f490	is making a room
+alloc	simple11x10
+room allocated at	16	7	with center	21	11
+alloc	pilar
+room allocated at	10	2	with center	14	4
+alloc	pilar
+room allocated at	32	41	with center	36	43
+room generator	function: 0x0b78f490	is making a room
+alloc	simple12x11
+room allocated at	13	31	with center	18	36
+room generator	function: 0x0b78f490	is making a room
+alloc	simple5x8
+room allocated at	9	30	with center	11	33
+alloc	pilar
+room allocated at	8	18	with center	12	20
+room generator	function: 0x0b78f490	is making a room
+alloc	simple11x5
+room allocated at	18	22	with center	23	24
+Begin tunnel	10	table: 0x0b7f0538
+Level unconnected, no way from entrance to exit	34	15	to	29	24
+C Map size 18:14 :: 252
+C Map seens texture: 112 (60x60)
+alloc	pilar
+room allocated at	31	25	with center	35	27
+room generator	function: 0x0b78f490	is making a room
+alloc	simple7x6
+room allocated at	28	3	with center	31	5
+room generator	function: 0x0b78f490	is making a room
+alloc	simple8x12
+room allocated at	2	19	with center	5	24
+room generator	function: 0x0b78f490	is making a room
+alloc	simple6x11
+room allocated at	35	7	with center	37	12
+room generator	function: 0x0b78f490	is making a room
+alloc	simple10x9
+room allocated at	28	37	with center	32	41
+room generator	function: 0x0b78f490	is making a room
+alloc	simple8x9
+room allocated at	28	15	with center	31	19
+room generator	function: 0x0b78f490	is making a room
+alloc	simple6x10
+room allocated at	15	8	with center	17	12
+room generator	function: 0x0b78f490	is making a room
+alloc	simple6x10
+room allocated at	5	33	with center	7	37
+room generator	function: 0x0b78f490	is making a room
+alloc	simple6x10
+room allocated at	1	1	with center	3	5
+alloc	pilar
+room allocated at	19	28	with center	23	30
+Begin tunnel	10	table: 0x0b792af8
+Level unconnected, no way from entrance to exit	4	18	to	26	23
+C Map size 18:14 :: 252
+C Map seens texture: 121 (60x60)
+alloc	pilar
+room allocated at	9	27	with center	13	29
+alloc	pilar
+room allocated at	20	39	with center	24	41
+alloc	pilar
+room allocated at	2	1	with center	6	3
+room generator	function: 0x0b78f490	is making a room
+alloc	simple12x11
+room allocated at	17	12	with center	22	17
+room generator	function: 0x0b78f490	is making a room
+alloc	simple10x11
+room allocated at	35	26	with center	39	31
+room generator	function: 0x0b78f490	is making a room
+alloc	simple8x11
+room allocated at	40	1	with center	43	6
+alloc	pilar
+room allocated at	6	17	with center	10	19
+room generator	function: 0x0b78f490	is making a room
+alloc	simple9x9
+room allocated at	36	12	with center	40	16
+room generator	function: 0x0b78f490	is making a room
+alloc	simple7x9
+room allocated at	27	23	with center	30	27
+room generator	function: 0x0b78f490	is making a room
+alloc	simple12x8
+room allocated at	24	3	with center	29	6
+Begin tunnel	10	table: 0x0b7ccaa8
+Level unconnected, no way from entrance to exit	8	2	to	15	34
+C Map size 18:14 :: 252
+C Map seens texture: 112 (60x60)
+alloc	pilar
+room allocated at	32	6	with center	36	8
+room generator	function: 0x0b78f490	is making a room
+alloc	simple10x8
+room allocated at	1	9	with center	5	12
+room generator	function: 0x0b78f490	is making a room
+alloc	simple10x12
+room allocated at	16	2	with center	20	7
+room generator	function: 0x0b78f490	is making a room
+alloc	simple10x12
+room allocated at	5	26	with center	9	31
+alloc	pilar
+room allocated at	14	29	with center	18	31
+room generator	function: 0x0b78f490	is making a room
+alloc	simple8x5
+room allocated at	5	5	with center	8	7
+alloc	pilar
+room allocated at	7	22	with center	11	24
+room generator	function: 0x0b78f490	is making a room
+alloc	simple7x5
+room allocated at	29	17	with center	32	19
+alloc	pilar
+room allocated at	17	40	with center	21	42
+room generator	function: 0x0b78f490	is making a room
+alloc	simple11x8
+room allocated at	32	36	with center	37	39
+Begin tunnel	10	table: 0x0b873788
+[PLAYER BIRTH] resolve...
+Inventory resolver	player	consumable	potion
+Zone made us an inventory according to filter!	Health Potion
+Inventory resolver	player	consumable	potion
+Zone made us an inventory according to filter!	Experience Potion
+Equipment resolver for	player
+Equipment resolver	player	weapon	slashing
+Zone made us an equipment according to filter!	Dagger
+[PLAYER BIRTH] resolved!
+[BIRTHER] Finished!
+[DISPLAY MODE] 16x16 ASCII/background
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+C Map size 18:14 :: 252
+C Map seens texture: 127 (60x60)
+[LOG]	#LIGHT_RED#Online profile disabled(switching to offline profile) due to no online profile active.
+[MODULE LOADER] done loading module	Dredge
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+[QUICK HOTKEYS] Loading quick hotkey settings for module "dredge" from /save/quick_hotkeys...
+[QUICK HOTKEYS] Successfully loaded quick hotkey settings.
+Wait finished, counted 3408, 5958 ticks
+[PROFILE THREAD] flushing CSETs
+[PROFILE THREAD] flushing CSETs ignored, empty dataset
+C Map minimap texture: 112 (50x50; 64x64)
+[ENGINE] Setting requested FPS to 2 (500 ms)
+Server latency	2363
+[ENGINE] Setting requested FPS to 30 (33 ms)
+Loading tile	border_7.png
+Loading tile	border_9.png
+Loading tile	border_1.png
+Loading tile	border_3.png
+Loading tile	border_8.png
+Loading tile	border_4.png
+[COROUTINE] registering	savefilepipe	thread: 0x0b756330
+[ENGINE] Switching to turn based
+[SAVEFILE PIPE] force waiting
+Make wait background texture 124 : 800x600 (1024, 1024)
+[SAVEFILE PIPE] new save running in the pipe:	player	game	::	game.teag	::	table: 0x0af09e40	=>	table: 0x0b7c7878	(97)
+Loading savefile 	/save/player/
+[SAVEFILE PIPE] unleashing save thread
+Saving zipname /save/player/game.teag.tmp
+Saved zipname /save/player/game.teag.tmp
+[SAVEFILE PIPE] Checking save	player	game	/save/player/game.teag.tmp
+Loading savefile 	/save/player/
+[SAVEFILE] checked validity of type	game	 => 	all fine
+[LOG]	Saving done.
+[SAVEFILE PIPE] on end	saveGame_md5
+Wait finished, counted 353, 268 ticks
 [PROFILE] mounted 	online	on /current-profile
 [PROFILE] unmounted 	online	from /current-profile
 [MAIN] rebooting lua state: 	nil	nil	nil	nil	nil
@@ -1025,13 +1132,1384 @@ Loading savefile 	/save/player/
 [MODULE LOADER] done loading module	Dredge
 [PROFILE] mounted 	online	on /current-profile
 [PROFILE] unmounted 	online	from /current-profile
-Wait finished, counted 4, 242 ticks
+Wait finished, counted 4, 606 ticks
+[PROFILE THREAD] flushing CSETs
+[PROFILE THREAD] flushing CSETs ignored, empty dataset
+[SOUND] loading from	/data/sound/ui/subtle_button_sound.ogg	:=:	sound "/data/sound/ui/subtle_button_sound.ogg" : <static>
+Creating module	boot	:: (as dir)	true	:: (as team)	nil	
+Loaded module definition for boot-0.1.0 using engine te4-1.1.5
+Creating module	dredge	:: (as dir)	true	:: (as team)	nil	
+Loaded module definition for dredge-0.1.9 using engine te4-1.1.5
+dredge	boot
+* Module: dredge
+ ** 0.1.9
+* Module: boot
+ ** 0.1.0
+After fs.reset
+[1] = {
+  [path] = C:\Documents and Settings\Spencer\Desktop\dredge\\game\engines\te4-1.1.5.teae
+}
+Using cached font	/data/font/DroidSans-Bold.ttf	16
+[ENGINE] Switching to turn based
+[SAVEFILE PIPE] force waiting
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+[MAIN] rebooting lua state: 	te4	1.1.5	dredge-0.1.9	player	true
+[ENGINE] Switching to turn based
+NO SELFEXE: bootstrapping from CWD
+===top 0
+===top 2
+Booting T-Engine from: C:\Documents and Settings\Spencer\Desktop\dredge\t-engine.exe
+SelfExe gave us app directory of:	C:\Documents and Settings\Spencer\Desktop\dredge\
+LuaVM:	LuaJIT 2.0.2	x86
+Destroying particle thread 0 (waiting for mutex)
+Destroying particle thread 0
+Destroying particle thread 0 (waiting for thread f39e20)
+Cleaning up particle thread 0
+Cleaned up particle thread 0
+Destroyed particle thread 0 (0)
+Creating particles thread 0
+Running lua loader code...
+LuaVM:	LuaJIT 2.0.2	x86
+===	
+Reboot using	te4	1.1.5	dredge-0.1.9	player	true
+[ENGINE LOADER] available from teae: 	te4-1.1.5
+[ENGINE LOADER] found engines	te4={[1]={[1]=1.000000 , [2]=1.000000 , [3]=5.000000 , [4]="te4" , [5]=17.000000 , ["load_teae"]="/engines/te4-1.1.5.teae" , } , } __byname={["te4-1.1.5"]=true , } 
+[ENGINE LOADER] looked in:
+	C:\Documents and Settings\Spencer\\T-Engine\4.0
+	bootstrap
+	C:\Documents and Settings\Spencer\Desktop\dredge\\game\thirdparty
+	C:\Documents and Settings\Spencer\Desktop\dredge\\game
+[ENGINE LOADER] loading engine:	1	1	5	te4
+[ENGINE LOADER] using archived engine:	/engines/te4-1.1.5.teae
+Available resolutions: 1280x800x32
+Available resolutions: 1280x768x32
+Available resolutions: 1280x720x32
+Available resolutions: 1024x768x32
+Available resolutions: 800x1280x32
+Available resolutions: 800x600x32
+Available resolutions: 768x1280x32
+Available resolutions: 768x1024x32
+Available resolutions: 720x1280x32
+Available resolutions: 640x480x32
+Available resolutions: 640x400x32
+Available resolutions: 600x800x32
+Available resolutions: 480x640x32
+Available resolutions: 400x640x32
+Available resolutions: 1280x800x16
+Available resolutions: 1280x768x16
+Available resolutions: 1280x720x16
+Available resolutions: 1024x768x16
+Available resolutions: 800x1280x16
+Available resolutions: 800x600x16
+Available resolutions: 768x1280x16
+Available resolutions: 768x1024x16
+Available resolutions: 720x1280x16
+Available resolutions: 640x480x16
+Available resolutions: 640x400x16
+Available resolutions: 600x800x16
+Available resolutions: 480x640x16
+Available resolutions: 400x640x16
+[KEYBINDER] Loaded keybinds: move
+[KEYBINDER] Loaded keybinds: hotkeys
+[KEYBINDER] Loaded keybinds: inventory
+[KEYBINDER] Loaded keybinds: actions
+[KEYBINDER] Loaded keybinds: interface
+[KEYBINDER] Loaded keybinds: debug
+Remapping	SCREENSHOT	table: 0x0a9e67e0
+Remapping	HOTKEY_6	table: 0x0a9e6830
+Remapping	MOVE_STAY	table: 0x0a9e6880
+setResolution: switching resolution to	800x600 Windowed	800	600	false	nil	(forced)
+Setting resolution to 800x600 (windowed, with borders)
+[DO RESIZE] Requested: 800x600 (0, 0)
+[DO RESIZE] Got: 800x600 (0, 0)
+OpenGL max texture size: 2048
+setResolution: performing onResolutionChange...
+
+onResolutionChange: resolution changed to 	800	600	from	nil	nil
+onResolutionChange: no game yet!
+Disabling FBO
+Disabling Shaders
+[ONLINE PROFILE] fun facts	nil
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+[ENGINE] Setting requested FPS to 30 (33 ms)
+[ENGINE] Switching to turn based
+[SAVEFILE PIPE] force waiting
+Creating module	boot	:: (as dir)	true	:: (as team)	nil	
+Loaded module definition for boot-0.1.0 using engine te4-1.1.5
+Creating module	dredge	:: (as dir)	true	:: (as team)	nil	
+Loaded module definition for dredge-0.1.9 using engine te4-1.1.5
+dredge	boot
+* Module: dredge
+ ** 0.1.9
+* Module: boot
+ ** 0.1.0
+After fs.reset
+[1] = {
+  [path] = C:\Documents and Settings\Spencer\Desktop\dredge\\game\engines\te4-1.1.5.teae
+}
+[ENGINE] Switching to turn based
+Loading savefile 	/save//
+Loading savefile 	/save/player/
+Make wait background texture 2 : 800x600 (1024, 1024)
+Using cached font	/data/font/DroidSans.ttf	12
+[MODULE] All hashes validation: 	nil	no online profile active
+[PROFILE THREAD] batching CSETs
+[PROFILE] mounted 	offline	on /current-profile
+[PROFILE] unmounted 	offline	from /current-profile
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+module 'mod.dialogs.ShowInventory' not found:
+	no field package.preload['mod.dialogs.ShowInventory']
+	no file '/mod/dialogs/ShowInventory.lua'
+stack traceback:
+	/engine/utils.lua:2017: in function </engine/utils.lua:2016>
+	[C]: at 0x0048c8b0
+	[C]: in function 'xpcall'
+	/engine/utils.lua:2016: in function 'require_first'
+	/engine/interface/ActorInventory.lua:22: in main chunk
+	[C]: in function 'require'
+	/mod/load.lua:29: in main chunk
+	[C]: in function 'require'
+	/engine/Module.lua:158: in function 'load'
+	/engine/Module.lua:796: in function 'instanciate'
+	/engine/utils.lua:1902: in function 'showMainMenu'
+	/engine/init.lua:153: in main chunk
+	[C]: in function 'dofile'
+	/loader/init.lua:196: in main chunk
+module 'mod.dialogs.ShowEquipment' not found:
+	no field package.preload['mod.dialogs.ShowEquipment']
+	no file '/mod/dialogs/ShowEquipment.lua'
+stack traceback:
+	/engine/utils.lua:2017: in function </engine/utils.lua:2016>
+	[C]: at 0x0048c8b0
+	[C]: in function 'xpcall'
+	/engine/utils.lua:2016: in function 'require_first'
+	/engine/interface/ActorInventory.lua:23: in main chunk
+	[C]: in function 'require'
+	/mod/load.lua:29: in main chunk
+	[C]: in function 'require'
+	/engine/Module.lua:158: in function 'load'
+	/engine/Module.lua:796: in function 'instanciate'
+	/engine/utils.lua:1902: in function 'showMainMenu'
+	/engine/init.lua:153: in main chunk
+	[C]: in function 'dofile'
+	/loader/init.lua:196: in main chunk
+module 'mod.dialogs.ShowEquipInven' not found:
+	no field package.preload['mod.dialogs.ShowEquipInven']
+	no file '/mod/dialogs/ShowEquipInven.lua'
+stack traceback:
+	/engine/utils.lua:2017: in function </engine/utils.lua:2016>
+	[C]: at 0x0048c8b0
+	[C]: in function 'xpcall'
+	/engine/utils.lua:2016: in function 'require_first'
+	/engine/interface/ActorInventory.lua:24: in main chunk
+	[C]: in function 'require'
+	/mod/load.lua:29: in main chunk
+	[C]: in function 'require'
+	/engine/Module.lua:158: in function 'load'
+	/engine/Module.lua:796: in function 'instanciate'
+	/engine/utils.lua:1902: in function 'showMainMenu'
+	/engine/init.lua:153: in main chunk
+	[C]: in function 'dofile'
+	/loader/init.lua:196: in main chunk
+module 'mod.dialogs.ShowPickupFloor' not found:
+	no field package.preload['mod.dialogs.ShowPickupFloor']
+	no file '/mod/dialogs/ShowPickupFloor.lua'
+stack traceback:
+	/engine/utils.lua:2017: in function </engine/utils.lua:2016>
+	[C]: at 0x0048c8b0
+	[C]: in function 'xpcall'
+	/engine/utils.lua:2016: in function 'require_first'
+	/engine/interface/ActorInventory.lua:25: in main chunk
+	[C]: in function 'require'
+	/mod/load.lua:29: in main chunk
+	[C]: in function 'require'
+	/engine/Module.lua:158: in function 'load'
+	/engine/Module.lua:796: in function 'instanciate'
+	/engine/utils.lua:1902: in function 'showMainMenu'
+	/engine/init.lua:153: in main chunk
+	[C]: in function 'dofile'
+	/loader/init.lua:196: in main chunk
+[INVENTORY] define slot	1	In inventory
+[INVENTORY] define slot	2	Inventory
+[INVENTORY] define slot	3	Weapon used
+[INVENTORY] define slot	4	Item worn
+[MODULE LOADER] loading module	Dredge	[mod.load]	::	nil	nil
+[GAMMA] Setting gamma correction using SDL	1.2
+[MAP] Reseting tiles caches
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+[GAMMA] Setting gamma correction using SDL	1.2
+Loading savefile 	/save/player/
+Using cached font	/data/font/DroidSans.ttf	16
+Using cached font	/data/font/DroidSans.ttf	12
+Using cached font	/data/font/DroidSansMono.ttf	10
+Using cached font	/data/font/DroidSans.ttf	12
+Using cached font	/data/font/DroidSans.ttf	12
+[LOG]	Welcome to #00FF00#Dredge.
+[DISPLAY MODE] 16x16 ASCII/background
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+[BIRTHER] selecting type	base
+[BIRTHER] checking allowance for 	base
+[BIRTHER] selecting type	role
+[BIRTHER] checking allowance for 	Anthropologist
+[BIRTHER] Applying descriptor base
+[BIRTHER] Applying descriptor Anthropologist
+Loading savefile 	/save/player/
+Loading entities file from file	/data/zones/dungeon/npcs.lua
+Loading entities file from file	/data/general/npcs/kobold.lua
+Loading entities file from file	/data/zones/dungeon/grids.lua
+Loading entities file from file	/data/general/grids/basic.lua
+Loading entities file from file	/data/zones/dungeon/objects.lua
+Loading entities file from file	/data/general/objects/consumables.lua
+Loading entities file from file	/data/general/objects/melee_weapons.lua
+Loading entities file from file	/data/general/objects/ranged_weapons.lua
+Loading entities file from file	/data/zones/dungeon/traps.lua
+Initiated zone	Old ruins	with base_level	1
+C Map size 18:14 :: 252
+C Map seens texture: 112 (60x60)
+loaded room generator	simple	function: 0x0b78f510
+loaded room	pilar	10	5
+alloc	pilar
+room allocated at	32	32	with center	36	34
+alloc	pilar
+room allocated at	9	18	with center	13	20
+room generator	function: 0x0b78f510	is making a room
+alloc	simple8x12
+room allocated at	14	27	with center	17	32
+alloc	pilar
+room allocated at	32	20	with center	36	22
+room generator	function: 0x0b78f510	is making a room
+alloc	simple8x5
+room allocated at	35	7	with center	38	9
+alloc	pilar
+room allocated at	8	39	with center	12	41
+alloc	pilar
+room allocated at	26	4	with center	30	6
+room generator	function: 0x0b78f510	is making a room
+alloc	simple6x6
+room allocated at	42	4	with center	44	6
+alloc	pilar
+room allocated at	37	37	with center	41	39
+alloc	pilar
+room allocated at	6	1	with center	10	3
+Begin tunnel	10	table: 0x0b6fa748
+[PLAYER BIRTH] resolve...
+Inventory resolver	player	consumable	potion
+Zone made us an inventory according to filter!	Health Potion
+Inventory resolver	player	consumable	potion
+Zone made us an inventory according to filter!	Experience Potion
+Equipment resolver for	player
+Equipment resolver	player	weapon	slashing
+Zone made us an equipment according to filter!	Dagger
+[PLAYER BIRTH] resolved!
+[BIRTHER] Finished!
+[DISPLAY MODE] 16x16 ASCII/background
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+C Map size 18:14 :: 252
+C Map seens texture: 127 (60x60)
+[LOG]	#LIGHT_RED#Online profile disabled(switching to offline profile) due to no online profile active.
+[MODULE LOADER] done loading module	Dredge
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+[QUICK HOTKEYS] Loading quick hotkey settings for module "dredge" from /save/quick_hotkeys...
+[QUICK HOTKEYS] Successfully loaded quick hotkey settings.
+Wait finished, counted 799, 2323 ticks
+[PROFILE THREAD] flushing CSETs
+[PROFILE THREAD] flushing CSETs ignored, empty dataset
+C Map minimap texture: 126 (50x50; 64x64)
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[ENGINE] Setting requested FPS to 2 (500 ms)
+[ENGINE] Setting requested FPS to 30 (33 ms)
+Loading tile	border_7.png
+Loading tile	border_9.png
+Loading tile	border_1.png
+Loading tile	border_3.png
+Loading tile	border_8.png
+Loading tile	border_4.png
+[COROUTINE] registering	savefilepipe	thread: 0x0b731fb8
+[ENGINE] Switching to turn based
+[SAVEFILE PIPE] force waiting
+Make wait background texture 131 : 800x600 (1024, 1024)
+[SAVEFILE PIPE] new save running in the pipe:	player	game	::	game.teag	::	table: 0x0af09018	=>	table: 0x0b6b2ef8	(94)
+Loading savefile 	/save/player/
+[SAVEFILE PIPE] unleashing save thread
+Saving zipname /save/player/game.teag.tmp
+Saved zipname /save/player/game.teag.tmp
+[SAVEFILE PIPE] Checking save	player	game	/save/player/game.teag.tmp
+Loading savefile 	/save/player/
+[SAVEFILE] checked validity of type	game	 => 	all fine
+[LOG]	Saving done.
+[SAVEFILE PIPE] on end	saveGame_md5
+Wait finished, counted 370, 316 ticks
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+[MAIN] rebooting lua state: 	nil	nil	nil	nil	nil
+[ENGINE] Setting requested FPS to 2 (500 ms)
+stack traceback:
+[COROUTINE] error	cannot resume dead coroutine
+[COROUTINE] dead	savefilepipe
+[ENGINE] Switching to turn based
+NO SELFEXE: bootstrapping from CWD
+===top 0
+===top 2
+Booting T-Engine from: C:\Documents and Settings\Spencer\Desktop\dredge\t-engine.exe
+SelfExe gave us app directory of:	C:\Documents and Settings\Spencer\Desktop\dredge\
+LuaVM:	LuaJIT 2.0.2	x86
+Destroying particle thread 0 (waiting for mutex)
+Destroying particle thread 0
+Destroying particle thread 0 (waiting for thread f39e20)
+Cleaning up particle thread 0
+Cleaned up particle thread 0
+Destroyed particle thread 0 (0)
+Creating particles thread 0
+Running lua loader code...
+LuaVM:	LuaJIT 2.0.2	x86
+===	
+Reboot using	te4	LATEST	boot	player	false
+[ENGINE LOADER] available from teae: 	te4-1.1.5
+[ENGINE LOADER] found engines	te4={[1]={[1]=1.000000 , [2]=1.000000 , [3]=5.000000 , [4]="te4" , [5]=17.000000 , ["load_teae"]="/engines/te4-1.1.5.teae" , } , } __byname={["te4-1.1.5"]=true , } 
+[ENGINE LOADER] looked in:
+	C:\Documents and Settings\Spencer\\T-Engine\4.0
+	bootstrap
+	C:\Documents and Settings\Spencer\Desktop\dredge\\game\thirdparty
+	C:\Documents and Settings\Spencer\Desktop\dredge\\game
+[ENGINE LOADER] sorted:	te4	1	1	5
+[ENGINE LOADER] loading engine:	1	1	5	te4
+[ENGINE LOADER] using archived engine:	/engines/te4-1.1.5.teae
+Available resolutions: 1280x800x32
+Available resolutions: 1280x768x32
+Available resolutions: 1280x720x32
+Available resolutions: 1024x768x32
+Available resolutions: 800x1280x32
+Available resolutions: 800x600x32
+Available resolutions: 768x1280x32
+Available resolutions: 768x1024x32
+Available resolutions: 720x1280x32
+Available resolutions: 640x480x32
+Available resolutions: 640x400x32
+Available resolutions: 600x800x32
+Available resolutions: 480x640x32
+Available resolutions: 400x640x32
+Available resolutions: 1280x800x16
+Available resolutions: 1280x768x16
+Available resolutions: 1280x720x16
+Available resolutions: 1024x768x16
+Available resolutions: 800x1280x16
+Available resolutions: 800x600x16
+Available resolutions: 768x1280x16
+Available resolutions: 768x1024x16
+Available resolutions: 720x1280x16
+Available resolutions: 640x480x16
+Available resolutions: 640x400x16
+Available resolutions: 600x800x16
+Available resolutions: 480x640x16
+Available resolutions: 400x640x16
+[KEYBINDER] Loaded keybinds: move
+[KEYBINDER] Loaded keybinds: hotkeys
+[KEYBINDER] Loaded keybinds: inventory
+[KEYBINDER] Loaded keybinds: actions
+[KEYBINDER] Loaded keybinds: interface
+[KEYBINDER] Loaded keybinds: debug
+Remapping	SCREENSHOT	table: 0x0a9d7418
+Remapping	HOTKEY_6	table: 0x0a9d2d78
+Remapping	MOVE_STAY	table: 0x0a9d2dc8
+setResolution: switching resolution to	800x600 Windowed	800	600	false	nil	(forced)
+Setting resolution to 800x600 (windowed, with borders)
+[DO RESIZE] Requested: 800x600 (0, 0)
+[DO RESIZE] Got: 800x600 (0, 0)
+OpenGL max texture size: 2048
+setResolution: performing onResolutionChange...
+
+onResolutionChange: resolution changed to 	800	600	from	nil	nil
+onResolutionChange: no game yet!
+Disabling FBO
+Disabling Shaders
+[ONLINE PROFILE] fun facts	nil
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+[ENGINE] Setting requested FPS to 30 (33 ms)
+[ENGINE] Switching to turn based
+[SAVEFILE PIPE] force waiting
+Creating module	boot	:: (as dir)	true	:: (as team)	nil	
+Loaded module definition for boot-0.1.0 using engine te4-1.1.5
+Creating module	dredge	:: (as dir)	true	:: (as team)	nil	
+Loaded module definition for dredge-0.1.9 using engine te4-1.1.5
+dredge	boot
+* Module: dredge
+ ** 0.1.9
+* Module: boot
+ ** 0.1.0
+After fs.reset
+[1] = {
+  [path] = C:\Documents and Settings\Spencer\Desktop\dredge\\game\engines\te4-1.1.5.teae
+}
+[ENGINE] Switching to turn based
+Loading savefile 	/save//
+Loading savefile 	/save/player/
+Make wait background texture 2 : 800x600 (1024, 1024)
+Using cached font	/data/font/DroidSans.ttf	12
+[MODULE] All hashes validation: 	nil	no online profile active
+[PROFILE THREAD] batching CSETs
+[MODULE LOADER] loading module	Dredge	[mod.load]	::	nil	nil
+[GAMMA] Setting gamma correction using SDL	1.2
+[ENGINE] Switching to turn based
+[GAMMA] Setting gamma correction using SDL	1.2
+Loading savefile 	/save/player/
+[GAMMA] Setting gamma correction using SDL	1.2
+[MUSIC] loading	whatever.ogg	Error loading sound "/data/music/whatever.ogg": The system cannot find the file specified.
+[ENGINE] Setting requested FPS to 30 (33 ms)
+[MODULE LOADER] done loading module	Dredge
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+Wait finished, counted 4, 652 ticks
+[PROFILE THREAD] flushing CSETs
+[PROFILE THREAD] flushing CSETs ignored, empty dataset
+[SOUND] loading from	/data/sound/ui/subtle_button_sound.ogg	:=:	sound "/data/sound/ui/subtle_button_sound.ogg" : <static>
+Creating module	boot	:: (as dir)	true	:: (as team)	nil	
+Loaded module definition for boot-0.1.0 using engine te4-1.1.5
+Creating module	dredge	:: (as dir)	true	:: (as team)	nil	
+Loaded module definition for dredge-0.1.9 using engine te4-1.1.5
+dredge	boot
+* Module: dredge
+ ** 0.1.9
+* Module: boot
+ ** 0.1.0
+After fs.reset
+[1] = {
+  [path] = C:\Documents and Settings\Spencer\Desktop\dredge\\game\engines\te4-1.1.5.teae
+}
+Using cached font	/data/font/DroidSans-Bold.ttf	16
+[ENGINE] Switching to turn based
+[SAVEFILE PIPE] force waiting
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+[MAIN] rebooting lua state: 	te4	1.1.5	dredge-0.1.9	player	true
+[ENGINE] Switching to turn based
+NO SELFEXE: bootstrapping from CWD
+===top 0
+===top 2
+Booting T-Engine from: C:\Documents and Settings\Spencer\Desktop\dredge\t-engine.exe
+SelfExe gave us app directory of:	C:\Documents and Settings\Spencer\Desktop\dredge\
+LuaVM:	LuaJIT 2.0.2	x86
+Destroying particle thread 0 (waiting for mutex)
+Destroying particle thread 0
+Destroying particle thread 0 (waiting for thread f39e20)
+Cleaning up particle thread 0
+Cleaned up particle thread 0
+Destroyed particle thread 0 (0)
+Creating particles thread 0
+Running lua loader code...
+LuaVM:	LuaJIT 2.0.2	x86
+===	
+Reboot using	te4	1.1.5	dredge-0.1.9	player	true
+[ENGINE LOADER] available from teae: 	te4-1.1.5
+[ENGINE LOADER] found engines	te4={[1]={[1]=1.000000 , [2]=1.000000 , [3]=5.000000 , [4]="te4" , [5]=17.000000 , ["load_teae"]="/engines/te4-1.1.5.teae" , } , } __byname={["te4-1.1.5"]=true , } 
+[ENGINE LOADER] looked in:
+	C:\Documents and Settings\Spencer\\T-Engine\4.0
+	bootstrap
+	C:\Documents and Settings\Spencer\Desktop\dredge\\game\thirdparty
+	C:\Documents and Settings\Spencer\Desktop\dredge\\game
+[ENGINE LOADER] loading engine:	1	1	5	te4
+[ENGINE LOADER] using archived engine:	/engines/te4-1.1.5.teae
+Available resolutions: 1280x800x32
+Available resolutions: 1280x768x32
+Available resolutions: 1280x720x32
+Available resolutions: 1024x768x32
+Available resolutions: 800x1280x32
+Available resolutions: 800x600x32
+Available resolutions: 768x1280x32
+Available resolutions: 768x1024x32
+Available resolutions: 720x1280x32
+Available resolutions: 640x480x32
+Available resolutions: 640x400x32
+Available resolutions: 600x800x32
+Available resolutions: 480x640x32
+Available resolutions: 400x640x32
+Available resolutions: 1280x800x16
+Available resolutions: 1280x768x16
+Available resolutions: 1280x720x16
+Available resolutions: 1024x768x16
+Available resolutions: 800x1280x16
+Available resolutions: 800x600x16
+Available resolutions: 768x1280x16
+Available resolutions: 768x1024x16
+Available resolutions: 720x1280x16
+Available resolutions: 640x480x16
+Available resolutions: 640x400x16
+Available resolutions: 600x800x16
+Available resolutions: 480x640x16
+Available resolutions: 400x640x16
+[KEYBINDER] Loaded keybinds: move
+[KEYBINDER] Loaded keybinds: hotkeys
+[KEYBINDER] Loaded keybinds: inventory
+[KEYBINDER] Loaded keybinds: actions
+[KEYBINDER] Loaded keybinds: interface
+[KEYBINDER] Loaded keybinds: debug
+Remapping	SCREENSHOT	table: 0x0a9e67e0
+Remapping	HOTKEY_6	table: 0x0a9e6830
+Remapping	MOVE_STAY	table: 0x0a9e6880
+setResolution: switching resolution to	800x600 Windowed	800	600	false	nil	(forced)
+Setting resolution to 800x600 (windowed, with borders)
+[DO RESIZE] Requested: 800x600 (0, 0)
+[DO RESIZE] Got: 800x600 (0, 0)
+OpenGL max texture size: 2048
+setResolution: performing onResolutionChange...
+
+onResolutionChange: resolution changed to 	800	600	from	nil	nil
+onResolutionChange: no game yet!
+Disabling FBO
+Disabling Shaders
+[ONLINE PROFILE] fun facts	nil
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+[ENGINE] Setting requested FPS to 30 (33 ms)
+[ENGINE] Switching to turn based
+[SAVEFILE PIPE] force waiting
+Creating module	boot	:: (as dir)	true	:: (as team)	nil	
+Loaded module definition for boot-0.1.0 using engine te4-1.1.5
+Creating module	dredge	:: (as dir)	true	:: (as team)	nil	
+Loaded module definition for dredge-0.1.9 using engine te4-1.1.5
+dredge	boot
+* Module: dredge
+ ** 0.1.9
+* Module: boot
+ ** 0.1.0
+After fs.reset
+[1] = {
+  [path] = C:\Documents and Settings\Spencer\Desktop\dredge\\game\engines\te4-1.1.5.teae
+}
+[ENGINE] Switching to turn based
+Loading savefile 	/save//
+Loading savefile 	/save/player/
+Make wait background texture 2 : 800x600 (1024, 1024)
+Using cached font	/data/font/DroidSans.ttf	12
+[MODULE] All hashes validation: 	nil	no online profile active
+[PROFILE] mounted 	offline	on /current-profile
+[PROFILE THREAD] batching CSETs
+[PROFILE] unmounted 	offline	from /current-profile
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+module 'mod.dialogs.ShowInventory' not found:
+	no field package.preload['mod.dialogs.ShowInventory']
+	no file '/mod/dialogs/ShowInventory.lua'
+stack traceback:
+	/engine/utils.lua:2017: in function </engine/utils.lua:2016>
+	[C]: at 0x0048c8b0
+	[C]: in function 'xpcall'
+	/engine/utils.lua:2016: in function 'require_first'
+	/engine/interface/ActorInventory.lua:22: in main chunk
+	[C]: in function 'require'
+	/mod/load.lua:29: in main chunk
+	[C]: in function 'require'
+	/engine/Module.lua:158: in function 'load'
+	/engine/Module.lua:796: in function 'instanciate'
+	/engine/utils.lua:1902: in function 'showMainMenu'
+	/engine/init.lua:153: in main chunk
+	[C]: in function 'dofile'
+	/loader/init.lua:196: in main chunk
+module 'mod.dialogs.ShowEquipment' not found:
+	no field package.preload['mod.dialogs.ShowEquipment']
+	no file '/mod/dialogs/ShowEquipment.lua'
+stack traceback:
+	/engine/utils.lua:2017: in function </engine/utils.lua:2016>
+	[C]: at 0x0048c8b0
+	[C]: in function 'xpcall'
+	/engine/utils.lua:2016: in function 'require_first'
+	/engine/interface/ActorInventory.lua:23: in main chunk
+	[C]: in function 'require'
+	/mod/load.lua:29: in main chunk
+	[C]: in function 'require'
+	/engine/Module.lua:158: in function 'load'
+	/engine/Module.lua:796: in function 'instanciate'
+	/engine/utils.lua:1902: in function 'showMainMenu'
+	/engine/init.lua:153: in main chunk
+	[C]: in function 'dofile'
+	/loader/init.lua:196: in main chunk
+module 'mod.dialogs.ShowEquipInven' not found:
+	no field package.preload['mod.dialogs.ShowEquipInven']
+	no file '/mod/dialogs/ShowEquipInven.lua'
+stack traceback:
+	/engine/utils.lua:2017: in function </engine/utils.lua:2016>
+	[C]: at 0x0048c8b0
+	[C]: in function 'xpcall'
+	/engine/utils.lua:2016: in function 'require_first'
+	/engine/interface/ActorInventory.lua:24: in main chunk
+	[C]: in function 'require'
+	/mod/load.lua:29: in main chunk
+	[C]: in function 'require'
+	/engine/Module.lua:158: in function 'load'
+	/engine/Module.lua:796: in function 'instanciate'
+	/engine/utils.lua:1902: in function 'showMainMenu'
+	/engine/init.lua:153: in main chunk
+	[C]: in function 'dofile'
+	/loader/init.lua:196: in main chunk
+module 'mod.dialogs.ShowPickupFloor' not found:
+	no field package.preload['mod.dialogs.ShowPickupFloor']
+	no file '/mod/dialogs/ShowPickupFloor.lua'
+stack traceback:
+	/engine/utils.lua:2017: in function </engine/utils.lua:2016>
+	[C]: at 0x0048c8b0
+	[C]: in function 'xpcall'
+	/engine/utils.lua:2016: in function 'require_first'
+	/engine/interface/ActorInventory.lua:25: in main chunk
+	[C]: in function 'require'
+	/mod/load.lua:29: in main chunk
+	[C]: in function 'require'
+	/engine/Module.lua:158: in function 'load'
+	/engine/Module.lua:796: in function 'instanciate'
+	/engine/utils.lua:1902: in function 'showMainMenu'
+	/engine/init.lua:153: in main chunk
+	[C]: in function 'dofile'
+	/loader/init.lua:196: in main chunk
+[INVENTORY] define slot	1	In inventory
+[INVENTORY] define slot	2	Inventory
+[INVENTORY] define slot	3	Weapon used
+[INVENTORY] define slot	4	Item worn
+[MODULE LOADER] loading module	Dredge	[mod.load]	::	nil	nil
+[GAMMA] Setting gamma correction using SDL	1.2
+[MAP] Reseting tiles caches
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+[GAMMA] Setting gamma correction using SDL	1.2
+Loading savefile 	/save/player/
+Using cached font	/data/font/DroidSans.ttf	16
+Using cached font	/data/font/DroidSans.ttf	12
+Using cached font	/data/font/DroidSansMono.ttf	10
+Using cached font	/data/font/DroidSans.ttf	12
+Using cached font	/data/font/DroidSans.ttf	12
+[LOG]	Welcome to #00FF00#Dredge.
+[DISPLAY MODE] 16x16 ASCII/background
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+[BIRTHER] selecting type	base
+[BIRTHER] checking allowance for 	base
+[BIRTHER] selecting type	role
+[BIRTHER] checking allowance for 	Anthropologist
+[BIRTHER] Applying descriptor base
+[BIRTHER] Applying descriptor Anthropologist
+Loading savefile 	/save/player/
+Loading entities file from file	/data/zones/dungeon/npcs.lua
+Loading entities file from file	/data/general/npcs/kobold.lua
+Loading entities file from file	/data/zones/dungeon/grids.lua
+Loading entities file from file	/data/general/grids/basic.lua
+Loading entities file from file	/data/zones/dungeon/objects.lua
+Loading entities file from file	/data/general/objects/consumables.lua
+Loading entities file from file	/data/general/objects/melee_weapons.lua
+Loading entities file from file	/data/general/objects/ranged_weapons.lua
+Loading entities file from file	/data/zones/dungeon/traps.lua
+Initiated zone	Old ruins	with base_level	1
+C Map size 18:14 :: 252
+C Map seens texture: 112 (60x60)
+loaded room generator	simple	function: 0x0b78f008
+loaded room	pilar	10	5
+room generator	function: 0x0b78f008	is making a room
+alloc	simple9x12
+room allocated at	20	4	with center	24	9
+room generator	function: 0x0b78f008	is making a room
+alloc	simple11x9
+room allocated at	27	37	with center	32	41
+room generator	function: 0x0b78f008	is making a room
+alloc	simple10x10
+room allocated at	5	5	with center	9	9
+room generator	function: 0x0b78f008	is making a room
+alloc	simple10x6
+room allocated at	25	17	with center	29	19
+room generator	function: 0x0b78f008	is making a room
+alloc	simple5x10
+room allocated at	6	30	with center	8	34
+room generator	function: 0x0b78f008	is making a room
+alloc	simple9x7
+room allocated at	36	30	with center	40	33
+room generator	function: 0x0b78f008	is making a room
+alloc	simple10x11
+room allocated at	5	18	with center	9	23
+room generator	function: 0x0b78f008	is making a room
+alloc	simple5x11
+room allocated at	30	3	with center	32	8
+alloc	pilar
+room allocated at	13	29	with center	17	31
+room generator	function: 0x0b78f008	is making a room
+alloc	simple11x11
+room allocated at	37	20	with center	42	25
+Begin tunnel	10	table: 0x0b7ca940
+[PLAYER BIRTH] resolve...
+Inventory resolver	player	consumable	potion
+Zone made us an inventory according to filter!	Health Potion
+Inventory resolver	player	consumable	potion
+Zone made us an inventory according to filter!	Experience Potion
+Equipment resolver for	player
+Equipment resolver	player	weapon	slashing
+Zone made us an equipment according to filter!	Dagger
+[PLAYER BIRTH] resolved!
+[BIRTHER] Finished!
+[DISPLAY MODE] 16x16 ASCII/background
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+C Map size 18:14 :: 252
+C Map seens texture: 127 (60x60)
+[LOG]	#LIGHT_RED#Online profile disabled(switching to offline profile) due to no online profile active.
+[MODULE LOADER] done loading module	Dredge
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+[PROFILE THREAD] flushing CSETs
+[PROFILE THREAD] flushing CSETs ignored, empty dataset
+[QUICK HOTKEYS] Loading quick hotkey settings for module "dredge" from /save/quick_hotkeys...
+[QUICK HOTKEYS] Successfully loaded quick hotkey settings.
+Wait finished, counted 809, 2397 ticks
+C Map minimap texture: 126 (50x50; 64x64)
+[LOG]	Player hits kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+Server latency	91
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	#{bold}#Armoured kobold warrior killed player!#{normal}#
+Loading savefile 	/save/player/
+[ENGINE] Switching to turn based
+[SAVEFILE PIPE] force waiting
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+[MAIN] rebooting lua state: 	nil	nil	nil	nil	nil
+[ENGINE] Switching to turn based
+NO SELFEXE: bootstrapping from CWD
+===top 0
+===top 2
+Booting T-Engine from: C:\Documents and Settings\Spencer\Desktop\dredge\t-engine.exe
+SelfExe gave us app directory of:	C:\Documents and Settings\Spencer\Desktop\dredge\
+LuaVM:	LuaJIT 2.0.2	x86
+Destroying particle thread 0 (waiting for mutex)
+Destroying particle thread 0
+Destroying particle thread 0 (waiting for thread f39e20)
+Cleaning up particle thread 0
+Cleaned up particle thread 0
+Destroyed particle thread 0 (0)
+Creating particles thread 0
+Running lua loader code...
+LuaVM:	LuaJIT 2.0.2	x86
+===	
+Reboot using	te4	LATEST	boot	player	false
+[ENGINE LOADER] available from teae: 	te4-1.1.5
+[ENGINE LOADER] found engines	te4={[1]={[1]=1.000000 , [2]=1.000000 , [3]=5.000000 , [4]="te4" , [5]=17.000000 , ["load_teae"]="/engines/te4-1.1.5.teae" , } , } __byname={["te4-1.1.5"]=true , } 
+[ENGINE LOADER] looked in:
+	C:\Documents and Settings\Spencer\\T-Engine\4.0
+	bootstrap
+	C:\Documents and Settings\Spencer\Desktop\dredge\\game\thirdparty
+	C:\Documents and Settings\Spencer\Desktop\dredge\\game
+[ENGINE LOADER] sorted:	te4	1	1	5
+[ENGINE LOADER] loading engine:	1	1	5	te4
+[ENGINE LOADER] using archived engine:	/engines/te4-1.1.5.teae
+Available resolutions: 1280x800x32
+Available resolutions: 1280x768x32
+Available resolutions: 1280x720x32
+Available resolutions: 1024x768x32
+Available resolutions: 800x1280x32
+Available resolutions: 800x600x32
+Available resolutions: 768x1280x32
+Available resolutions: 768x1024x32
+Available resolutions: 720x1280x32
+Available resolutions: 640x480x32
+Available resolutions: 640x400x32
+Available resolutions: 600x800x32
+Available resolutions: 480x640x32
+Available resolutions: 400x640x32
+Available resolutions: 1280x800x16
+Available resolutions: 1280x768x16
+Available resolutions: 1280x720x16
+Available resolutions: 1024x768x16
+Available resolutions: 800x1280x16
+Available resolutions: 800x600x16
+Available resolutions: 768x1280x16
+Available resolutions: 768x1024x16
+Available resolutions: 720x1280x16
+Available resolutions: 640x480x16
+Available resolutions: 640x400x16
+Available resolutions: 600x800x16
+Available resolutions: 480x640x16
+Available resolutions: 400x640x16
+[KEYBINDER] Loaded keybinds: move
+[KEYBINDER] Loaded keybinds: hotkeys
+[KEYBINDER] Loaded keybinds: inventory
+[KEYBINDER] Loaded keybinds: actions
+[KEYBINDER] Loaded keybinds: interface
+[KEYBINDER] Loaded keybinds: debug
+Remapping	SCREENSHOT	table: 0x0a9d7418
+Remapping	HOTKEY_6	table: 0x0a9d2d78
+Remapping	MOVE_STAY	table: 0x0a9d2dc8
+setResolution: switching resolution to	800x600 Windowed	800	600	false	nil	(forced)
+Setting resolution to 800x600 (windowed, with borders)
+[DO RESIZE] Requested: 800x600 (0, 0)
+[DO RESIZE] Got: 800x600 (0, 0)
+OpenGL max texture size: 2048
+setResolution: performing onResolutionChange...
+
+onResolutionChange: resolution changed to 	800	600	from	nil	nil
+onResolutionChange: no game yet!
+Disabling FBO
+Disabling Shaders
+[ONLINE PROFILE] fun facts	nil
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+[ENGINE] Setting requested FPS to 30 (33 ms)
+[ENGINE] Switching to turn based
+[SAVEFILE PIPE] force waiting
+Creating module	boot	:: (as dir)	true	:: (as team)	nil	
+Loaded module definition for boot-0.1.0 using engine te4-1.1.5
+Creating module	dredge	:: (as dir)	true	:: (as team)	nil	
+Loaded module definition for dredge-0.1.9 using engine te4-1.1.5
+dredge	boot
+* Module: dredge
+ ** 0.1.9
+* Module: boot
+ ** 0.1.0
+After fs.reset
+[1] = {
+  [path] = C:\Documents and Settings\Spencer\Desktop\dredge\\game\engines\te4-1.1.5.teae
+}
+[ENGINE] Switching to turn based
+Loading savefile 	/save//
+Loading savefile 	/save/player/
+Make wait background texture 2 : 800x600 (1024, 1024)
+Using cached font	/data/font/DroidSans.ttf	12
+[MODULE] All hashes validation: 	nil	no online profile active
+[PROFILE THREAD] batching CSETs
+[MODULE LOADER] loading module	Dredge	[mod.load]	::	nil	nil
+[GAMMA] Setting gamma correction using SDL	1.2
+[ENGINE] Switching to turn based
+[GAMMA] Setting gamma correction using SDL	1.2
+Loading savefile 	/save/player/
+[GAMMA] Setting gamma correction using SDL	1.2
+[MUSIC] loading	whatever.ogg	Error loading sound "/data/music/whatever.ogg": The system cannot find the file specified.
+[ENGINE] Setting requested FPS to 30 (33 ms)
+[MODULE LOADER] done loading module	Dredge
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+Wait finished, counted 4, 638 ticks
 [PROFILE THREAD] flushing CSETs
 [PROFILE THREAD] flushing CSETs ignored, empty dataset
 [ENGINE] Setting requested FPS to 2 (500 ms)
-Server latency	88
-Server latency	87
-Server latency	97
+[ENGINE] Setting requested FPS to 30 (33 ms)
+[SOUND] loading from	/data/sound/ui/subtle_button_sound.ogg	:=:	sound "/data/sound/ui/subtle_button_sound.ogg" : <static>
+Creating module	boot	:: (as dir)	true	:: (as team)	nil	
+Loaded module definition for boot-0.1.0 using engine te4-1.1.5
+Creating module	dredge	:: (as dir)	true	:: (as team)	nil	
+Loaded module definition for dredge-0.1.9 using engine te4-1.1.5
+dredge	boot
+* Module: dredge
+ ** 0.1.9
+* Module: boot
+ ** 0.1.0
+After fs.reset
+[1] = {
+  [path] = C:\Documents and Settings\Spencer\Desktop\dredge\\game\engines\te4-1.1.5.teae
+}
+Using cached font	/data/font/DroidSans-Bold.ttf	16
+[ENGINE] Switching to turn based
+[SAVEFILE PIPE] force waiting
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+[MAIN] rebooting lua state: 	te4	1.1.5	dredge-0.1.9	player	true
+[ENGINE] Switching to turn based
+NO SELFEXE: bootstrapping from CWD
+===top 0
+===top 2
+Booting T-Engine from: C:\Documents and Settings\Spencer\Desktop\dredge\t-engine.exe
+SelfExe gave us app directory of:	C:\Documents and Settings\Spencer\Desktop\dredge\
+LuaVM:	LuaJIT 2.0.2	x86
+Destroying particle thread 0 (waiting for mutex)
+Destroying particle thread 0
+Cleaning up particle thread 0
+Cleaned up particle thread 0
+Destroying particle thread 0 (waiting for thread f39e20)
+Destroyed particle thread 0 (0)
+Creating particles thread 0
+Running lua loader code...
+LuaVM:	LuaJIT 2.0.2	x86
+===	
+Reboot using	te4	1.1.5	dredge-0.1.9	player	true
+[ENGINE LOADER] available from teae: 	te4-1.1.5
+[ENGINE LOADER] found engines	te4={[1]={[1]=1.000000 , [2]=1.000000 , [3]=5.000000 , [4]="te4" , [5]=17.000000 , ["load_teae"]="/engines/te4-1.1.5.teae" , } , } __byname={["te4-1.1.5"]=true , } 
+[ENGINE LOADER] looked in:
+	C:\Documents and Settings\Spencer\\T-Engine\4.0
+	bootstrap
+	C:\Documents and Settings\Spencer\Desktop\dredge\\game\thirdparty
+	C:\Documents and Settings\Spencer\Desktop\dredge\\game
+[ENGINE LOADER] loading engine:	1	1	5	te4
+[ENGINE LOADER] using archived engine:	/engines/te4-1.1.5.teae
+Available resolutions: 1280x800x32
+Available resolutions: 1280x768x32
+Available resolutions: 1280x720x32
+Available resolutions: 1024x768x32
+Available resolutions: 800x1280x32
+Available resolutions: 800x600x32
+Available resolutions: 768x1280x32
+Available resolutions: 768x1024x32
+Available resolutions: 720x1280x32
+Available resolutions: 640x480x32
+Available resolutions: 640x400x32
+Available resolutions: 600x800x32
+Available resolutions: 480x640x32
+Available resolutions: 400x640x32
+Available resolutions: 1280x800x16
+Available resolutions: 1280x768x16
+Available resolutions: 1280x720x16
+Available resolutions: 1024x768x16
+Available resolutions: 800x1280x16
+Available resolutions: 800x600x16
+Available resolutions: 768x1280x16
+Available resolutions: 768x1024x16
+Available resolutions: 720x1280x16
+Available resolutions: 640x480x16
+Available resolutions: 640x400x16
+Available resolutions: 600x800x16
+Available resolutions: 480x640x16
+Available resolutions: 400x640x16
+[KEYBINDER] Loaded keybinds: move
+[KEYBINDER] Loaded keybinds: hotkeys
+[KEYBINDER] Loaded keybinds: inventory
+[KEYBINDER] Loaded keybinds: actions
+[KEYBINDER] Loaded keybinds: interface
+[KEYBINDER] Loaded keybinds: debug
+Remapping	SCREENSHOT	table: 0x0a9e67e0
+Remapping	HOTKEY_6	table: 0x0a9e6830
+Remapping	MOVE_STAY	table: 0x0a9e6880
+setResolution: switching resolution to	800x600 Windowed	800	600	false	nil	(forced)
+Setting resolution to 800x600 (windowed, with borders)
+[DO RESIZE] Requested: 800x600 (0, 0)
+[DO RESIZE] Got: 800x600 (0, 0)
+OpenGL max texture size: 2048
+setResolution: performing onResolutionChange...
+
+onResolutionChange: resolution changed to 	800	600	from	nil	nil
+onResolutionChange: no game yet!
+Disabling FBO
+Disabling Shaders
+[ONLINE PROFILE] fun facts	nil
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+[ENGINE] Setting requested FPS to 30 (33 ms)
+[ENGINE] Switching to turn based
+[SAVEFILE PIPE] force waiting
+Creating module	boot	:: (as dir)	true	:: (as team)	nil	
+Loaded module definition for boot-0.1.0 using engine te4-1.1.5
+Creating module	dredge	:: (as dir)	true	:: (as team)	nil	
+Loaded module definition for dredge-0.1.9 using engine te4-1.1.5
+dredge	boot
+* Module: dredge
+ ** 0.1.9
+* Module: boot
+ ** 0.1.0
+After fs.reset
+[1] = {
+  [path] = C:\Documents and Settings\Spencer\Desktop\dredge\\game\engines\te4-1.1.5.teae
+}
+[ENGINE] Switching to turn based
+Loading savefile 	/save//
+Loading savefile 	/save/player/
+Make wait background texture 2 : 800x600 (1024, 1024)
+Using cached font	/data/font/DroidSans.ttf	12
+[MODULE] All hashes validation: 	nil	no online profile active
+[PROFILE] mounted 	offline	on /current-profile
+[PROFILE] unmounted 	offline	from /current-profile
+[PROFILE THREAD] batching CSETs
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+module 'mod.dialogs.ShowInventory' not found:
+	no field package.preload['mod.dialogs.ShowInventory']
+	no file '/mod/dialogs/ShowInventory.lua'
+stack traceback:
+	/engine/utils.lua:2017: in function </engine/utils.lua:2016>
+	[C]: at 0x0048c8b0
+	[C]: in function 'xpcall'
+	/engine/utils.lua:2016: in function 'require_first'
+	/engine/interface/ActorInventory.lua:22: in main chunk
+	[C]: in function 'require'
+	/mod/load.lua:29: in main chunk
+	[C]: in function 'require'
+	/engine/Module.lua:158: in function 'load'
+	/engine/Module.lua:796: in function 'instanciate'
+	/engine/utils.lua:1902: in function 'showMainMenu'
+	/engine/init.lua:153: in main chunk
+	[C]: in function 'dofile'
+	/loader/init.lua:196: in main chunk
+module 'mod.dialogs.ShowEquipment' not found:
+	no field package.preload['mod.dialogs.ShowEquipment']
+	no file '/mod/dialogs/ShowEquipment.lua'
+stack traceback:
+	/engine/utils.lua:2017: in function </engine/utils.lua:2016>
+	[C]: at 0x0048c8b0
+	[C]: in function 'xpcall'
+	/engine/utils.lua:2016: in function 'require_first'
+	/engine/interface/ActorInventory.lua:23: in main chunk
+	[C]: in function 'require'
+	/mod/load.lua:29: in main chunk
+	[C]: in function 'require'
+	/engine/Module.lua:158: in function 'load'
+	/engine/Module.lua:796: in function 'instanciate'
+	/engine/utils.lua:1902: in function 'showMainMenu'
+	/engine/init.lua:153: in main chunk
+	[C]: in function 'dofile'
+	/loader/init.lua:196: in main chunk
+module 'mod.dialogs.ShowEquipInven' not found:
+	no field package.preload['mod.dialogs.ShowEquipInven']
+	no file '/mod/dialogs/ShowEquipInven.lua'
+stack traceback:
+	/engine/utils.lua:2017: in function </engine/utils.lua:2016>
+	[C]: at 0x0048c8b0
+	[C]: in function 'xpcall'
+	/engine/utils.lua:2016: in function 'require_first'
+	/engine/interface/ActorInventory.lua:24: in main chunk
+	[C]: in function 'require'
+	/mod/load.lua:29: in main chunk
+	[C]: in function 'require'
+	/engine/Module.lua:158: in function 'load'
+	/engine/Module.lua:796: in function 'instanciate'
+	/engine/utils.lua:1902: in function 'showMainMenu'
+	/engine/init.lua:153: in main chunk
+	[C]: in function 'dofile'
+	/loader/init.lua:196: in main chunk
+module 'mod.dialogs.ShowPickupFloor' not found:
+	no field package.preload['mod.dialogs.ShowPickupFloor']
+	no file '/mod/dialogs/ShowPickupFloor.lua'
+stack traceback:
+	/engine/utils.lua:2017: in function </engine/utils.lua:2016>
+	[C]: at 0x0048c8b0
+	[C]: in function 'xpcall'
+	/engine/utils.lua:2016: in function 'require_first'
+	/engine/interface/ActorInventory.lua:25: in main chunk
+	[C]: in function 'require'
+	/mod/load.lua:29: in main chunk
+	[C]: in function 'require'
+	/engine/Module.lua:158: in function 'load'
+	/engine/Module.lua:796: in function 'instanciate'
+	/engine/utils.lua:1902: in function 'showMainMenu'
+	/engine/init.lua:153: in main chunk
+	[C]: in function 'dofile'
+	/loader/init.lua:196: in main chunk
+[INVENTORY] define slot	1	In inventory
+[INVENTORY] define slot	2	Inventory
+[INVENTORY] define slot	3	Weapon used
+[INVENTORY] define slot	4	Item worn
+[MODULE LOADER] loading module	Dredge	[mod.load]	::	nil	nil
+[GAMMA] Setting gamma correction using SDL	1.2
+[MAP] Reseting tiles caches
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+[GAMMA] Setting gamma correction using SDL	1.2
+Loading savefile 	/save/player/
+Using cached font	/data/font/DroidSans.ttf	16
+Using cached font	/data/font/DroidSans.ttf	12
+Using cached font	/data/font/DroidSansMono.ttf	10
+Using cached font	/data/font/DroidSans.ttf	12
+Using cached font	/data/font/DroidSans.ttf	12
+[LOG]	Welcome to #00FF00#Dredge.
+[DISPLAY MODE] 16x16 ASCII/background
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+[BIRTHER] selecting type	base
+[BIRTHER] checking allowance for 	base
+[BIRTHER] selecting type	role
+[BIRTHER] checking allowance for 	Anthropologist
+[BIRTHER] Applying descriptor base
+[BIRTHER] Applying descriptor Anthropologist
+Loading savefile 	/save/player/
+Loading entities file from file	/data/zones/dungeon/npcs.lua
+Loading entities file from file	/data/general/npcs/kobold.lua
+Loading entities file from file	/data/zones/dungeon/grids.lua
+Loading entities file from file	/data/general/grids/basic.lua
+Loading entities file from file	/data/zones/dungeon/objects.lua
+Loading entities file from file	/data/general/objects/consumables.lua
+Loading entities file from file	/data/general/objects/melee_weapons.lua
+Loading entities file from file	/data/general/objects/ranged_weapons.lua
+Loading entities file from file	/data/zones/dungeon/traps.lua
+Initiated zone	Old ruins	with base_level	1
+C Map size 18:14 :: 252
+C Map seens texture: 112 (60x60)
+loaded room generator	simple	function: 0x0ae7f0b8
+loaded room	pilar	10	5
+alloc	pilar
+room allocated at	37	15	with center	41	17
+alloc	pilar
+room allocated at	3	21	with center	7	23
+alloc	pilar
+room allocated at	8	29	with center	12	31
+room generator	function: 0x0ae7f0b8	is making a room
+alloc	simple9x11
+room allocated at	24	26	with center	28	31
+alloc	pilar
+room allocated at	38	20	with center	42	22
+alloc	pilar
+room allocated at	7	43	with center	11	45
+room generator	function: 0x0ae7f0b8	is making a room
+alloc	simple10x12
+room allocated at	1	2	with center	5	7
+alloc	pilar
+room allocated at	23	20	with center	27	22
+alloc	pilar
+room allocated at	21	14	with center	25	16
+alloc	pilar
+room allocated at	26	4	with center	30	6
+Begin tunnel	10	table: 0x0ae8df50
+[PLAYER BIRTH] resolve...
+Inventory resolver	player	consumable	potion
+Zone made us an inventory according to filter!	Health Potion
+Inventory resolver	player	consumable	potion
+Zone made us an inventory according to filter!	Experience Potion
+Equipment resolver for	player
+Equipment resolver	player	weapon	slashing
+Zone made us an equipment according to filter!	Dagger
+[PLAYER BIRTH] resolved!
+[BIRTHER] Finished!
+[DISPLAY MODE] 16x16 ASCII/background
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+C Map size 18:14 :: 252
+C Map seens texture: 127 (60x60)
+[LOG]	#LIGHT_RED#Online profile disabled(switching to offline profile) due to no online profile active.
+[MODULE LOADER] done loading module	Dredge
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+[QUICK HOTKEYS] Loading quick hotkey settings for module "dredge" from /save/quick_hotkeys...
+[QUICK HOTKEYS] Successfully loaded quick hotkey settings.
+Wait finished, counted 775, 2304 ticks
+[PROFILE THREAD] flushing CSETs
+[PROFILE THREAD] flushing CSETs ignored, empty dataset
+C Map minimap texture: 126 (50x50; 64x64)
+[ENGINE] Setting requested FPS to 2 (500 ms)
+[ENGINE] Setting requested FPS to 30 (33 ms)
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
+[LOG]	Player uses Spikeshot.
+Loading tile	tactical_self.png
+Loading tile	tactical_danger.png
+Loading tile	tactical_friend.png
+Loading tile	tactical_enemy.png
+Loading tile	tactical_neutral.png
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#8.40 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#8.40 physical damage#LAST#.
+[LOG]	Player hits kobold warrior for #aaaaaa#8.40 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
+[LOG]	Spikeshot is still on cooldown for 2 turns.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Spikeshot is still on cooldown for 1 turns.
+[LOG]	Player hits kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
+[LOG]	Spikeshot is still on cooldown for 1 turns.
+[LOG]	Spikeshot is still on cooldown for 1 turns.
+[LOG]	Player hits kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
+[LOG]	Spikeshot is still on cooldown for 1 turns.
+[LOG]	Spikeshot is still on cooldown for 1 turns.
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	#{bold}#Kobold warrior killed player!#{normal}#
+[LOG]	#LIGHT_BLUE#You resurrect! CHEATER !
+[LOG]	Spikeshot is still on cooldown for 1 turns.
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	#00ff00#Talent Spikeshot is ready to use.
+[LOG]	Player uses Spikeshot.
+[LOG]	Player hits kobold warrior for #aaaaaa#8.40 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#8.40 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#8.40 physical damage#LAST#.
+[LOG]	Player hits kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
+[LOG]	Player hits kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	#{bold}#Kobold warrior killed player!#{normal}#
+[LOG]	#LIGHT_BLUE#You resurrect! CHEATER !
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
+[LOG]	Player hits kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	#00ff00#Talent Spikeshot is ready to use.
+[LOG]	Player hits kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
+[LOG]	Player hits kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed kobold warrior!#{normal}#
+Server latency	676
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	#{bold}#Armoured kobold warrior killed player!#{normal}#
+[LOG]	#LIGHT_BLUE#You resurrect! CHEATER !
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Player hits armoured kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
+[LOG]	#{bold}#Armoured kobold warrior killed player!#{normal}#
+Loading savefile 	/save/player/
+[ENGINE] Switching to turn based
+[SAVEFILE PIPE] force waiting
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+[MAIN] rebooting lua state: 	nil	nil	nil	nil	nil
+[ENGINE] Switching to turn based
+NO SELFEXE: bootstrapping from CWD
+===top 0
+===top 2
+Booting T-Engine from: C:\Documents and Settings\Spencer\Desktop\dredge\t-engine.exe
+SelfExe gave us app directory of:	C:\Documents and Settings\Spencer\Desktop\dredge\
+LuaVM:	LuaJIT 2.0.2	x86
+Destroying particle thread 0 (waiting for mutex)
+Destroying particle thread 0
+Destroying particle thread 0 (waiting for thread f39e20)
+Cleaning up particle thread 0
+Cleaned up particle thread 0
+Destroyed particle thread 0 (0)
+Creating particles thread 0
+Running lua loader code...
+LuaVM:	LuaJIT 2.0.2	x86
+===	
+Reboot using	te4	LATEST	boot	player	false
+[ENGINE LOADER] available from teae: 	te4-1.1.5
+[ENGINE LOADER] found engines	te4={[1]={[1]=1.000000 , [2]=1.000000 , [3]=5.000000 , [4]="te4" , [5]=17.000000 , ["load_teae"]="/engines/te4-1.1.5.teae" , } , } __byname={["te4-1.1.5"]=true , } 
+[ENGINE LOADER] looked in:
+	C:\Documents and Settings\Spencer\\T-Engine\4.0
+	bootstrap
+	C:\Documents and Settings\Spencer\Desktop\dredge\\game\thirdparty
+	C:\Documents and Settings\Spencer\Desktop\dredge\\game
+[ENGINE LOADER] sorted:	te4	1	1	5
+[ENGINE LOADER] loading engine:	1	1	5	te4
+[ENGINE LOADER] using archived engine:	/engines/te4-1.1.5.teae
+Available resolutions: 1280x800x32
+Available resolutions: 1280x768x32
+Available resolutions: 1280x720x32
+Available resolutions: 1024x768x32
+Available resolutions: 800x1280x32
+Available resolutions: 800x600x32
+Available resolutions: 768x1280x32
+Available resolutions: 768x1024x32
+Available resolutions: 720x1280x32
+Available resolutions: 640x480x32
+Available resolutions: 640x400x32
+Available resolutions: 600x800x32
+Available resolutions: 480x640x32
+Available resolutions: 400x640x32
+Available resolutions: 1280x800x16
+Available resolutions: 1280x768x16
+Available resolutions: 1280x720x16
+Available resolutions: 1024x768x16
+Available resolutions: 800x1280x16
+Available resolutions: 800x600x16
+Available resolutions: 768x1280x16
+Available resolutions: 768x1024x16
+Available resolutions: 720x1280x16
+Available resolutions: 640x480x16
+Available resolutions: 640x400x16
+Available resolutions: 600x800x16
+Available resolutions: 480x640x16
+Available resolutions: 400x640x16
+[KEYBINDER] Loaded keybinds: move
+[KEYBINDER] Loaded keybinds: hotkeys
+[KEYBINDER] Loaded keybinds: inventory
+[KEYBINDER] Loaded keybinds: actions
+[KEYBINDER] Loaded keybinds: interface
+[KEYBINDER] Loaded keybinds: debug
+Remapping	SCREENSHOT	table: 0x0a9d7418
+Remapping	HOTKEY_6	table: 0x0a9d2d78
+Remapping	MOVE_STAY	table: 0x0a9d2dc8
+setResolution: switching resolution to	800x600 Windowed	800	600	false	nil	(forced)
+Setting resolution to 800x600 (windowed, with borders)
+[DO RESIZE] Requested: 800x600 (0, 0)
+[DO RESIZE] Got: 800x600 (0, 0)
+OpenGL max texture size: 2048
+setResolution: performing onResolutionChange...
+
+onResolutionChange: resolution changed to 	800	600	from	nil	nil
+onResolutionChange: no game yet!
+Disabling FBO
+Disabling Shaders
+[ONLINE PROFILE] fun facts	nil
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+[ENGINE] Setting requested FPS to 30 (33 ms)
+[ENGINE] Switching to turn based
+[SAVEFILE PIPE] force waiting
+Creating module	boot	:: (as dir)	true	:: (as team)	nil	
+Loaded module definition for boot-0.1.0 using engine te4-1.1.5
+Creating module	dredge	:: (as dir)	true	:: (as team)	nil	
+Loaded module definition for dredge-0.1.9 using engine te4-1.1.5
+dredge	boot
+* Module: dredge
+ ** 0.1.9
+* Module: boot
+ ** 0.1.0
+After fs.reset
+[1] = {
+  [path] = C:\Documents and Settings\Spencer\Desktop\dredge\\game\engines\te4-1.1.5.teae
+}
+[ENGINE] Switching to turn based
+Loading savefile 	/save//
+Loading savefile 	/save/player/
+Make wait background texture 2 : 800x600 (1024, 1024)
+Using cached font	/data/font/DroidSans.ttf	12
+[MODULE] All hashes validation: 	nil	no online profile active
+[PROFILE THREAD] batching CSETs
+[MODULE LOADER] loading module	Dredge	[mod.load]	::	nil	nil
+[GAMMA] Setting gamma correction using SDL	1.2
+[ENGINE] Switching to turn based
+[GAMMA] Setting gamma correction using SDL	1.2
+Loading savefile 	/save/player/
+[GAMMA] Setting gamma correction using SDL	1.2
+[MUSIC] loading	whatever.ogg	Error loading sound "/data/music/whatever.ogg": The system cannot find the file specified.
+[ENGINE] Setting requested FPS to 30 (33 ms)
+[MODULE LOADER] done loading module	Dredge
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+Wait finished, counted 4, 607 ticks
+[PROFILE THREAD] flushing CSETs
+[PROFILE THREAD] flushing CSETs ignored, empty dataset
+[ENGINE] Setting requested FPS to 2 (500 ms)
 [ENGINE] Setting requested FPS to 30 (33 ms)
 [SOUND] loading from	/data/sound/ui/subtle_button_sound.ogg	:=:	sound "/data/sound/ui/subtle_button_sound.ogg" : <static>
 Creating module	boot	:: (as dir)	true	:: (as team)	nil	
@@ -1272,33 +2750,64 @@ Loading entities file from file	/data/zones/dungeon/traps.lua
 Initiated zone	Old ruins	with base_level	1
 C Map size 18:14 :: 252
 C Map seens texture: 112 (60x60)
-loaded room generator	simple	function: 0x0b78fdb8
+loaded room generator	simple	function: 0x0ae7ef48
 loaded room	pilar	10	5
+room generator	function: 0x0ae7ef48	is making a room
+alloc	simple9x11
+room allocated at	15	11	with center	19	16
+room generator	function: 0x0ae7ef48	is making a room
+alloc	simple6x5
+room allocated at	37	12	with center	39	14
+room generator	function: 0x0ae7ef48	is making a room
+alloc	simple11x7
+room allocated at	14	28	with center	19	31
+room generator	function: 0x0ae7ef48	is making a room
+alloc	simple11x11
+room allocated at	27	8	with center	32	13
+room generator	function: 0x0ae7ef48	is making a room
+alloc	simple10x9
+room allocated at	38	23	with center	42	27
+room generator	function: 0x0ae7ef48	is making a room
+alloc	simple5x5
+room allocated at	16	36	with center	18	38
+room generator	function: 0x0ae7ef48	is making a room
+alloc	simple12x7
+room allocated at	1	27	with center	6	30
 alloc	pilar
-room allocated at	27	3	with center	31	5
+room allocated at	27	35	with center	31	37
 alloc	pilar
-room allocated at	19	34	with center	23	36
-room generator	function: 0x0b78fdb8	is making a room
-alloc	simple8x9
-room allocated at	23	16	with center	26	20
-room generator	function: 0x0b78fdb8	is making a room
-alloc	simple12x10
-room allocated at	32	35	with center	37	39
+room allocated at	18	21	with center	22	23
+room generator	function: 0x0ae7ef48	is making a room
+alloc	simple10x6
+room allocated at	4	39	with center	8	41
+Begin tunnel	10	table: 0x0aeca9f0
+Level unconnected, no way from entrance to exit	41	20	to	28	42
+C Map size 18:14 :: 252
+C Map seens texture: 121 (60x60)
 alloc	pilar
-room allocated at	20	11	with center	24	13
+room allocated at	6	34	with center	10	36
 alloc	pilar
-room allocated at	30	26	with center	34	28
+room allocated at	35	27	with center	39	29
 alloc	pilar
-room allocated at	1	18	with center	5	20
-room generator	function: 0x0b78fdb8	is making a room
-alloc	simple10x8
-room allocated at	4	36	with center	8	39
-room generator	function: 0x0b78fdb8	is making a room
-alloc	simple8x6
-room allocated at	9	31	with center	12	33
+room allocated at	12	10	with center	16	12
+room generator	function: 0x0ae7ef48	is making a room
+alloc	simple6x8
+room allocated at	34	40	with center	36	43
+room generator	function: 0x0ae7ef48	is making a room
+alloc	simple9x6
+room allocated at	24	28	with center	28	30
 alloc	pilar
-room allocated at	13	16	with center	17	18
-Begin tunnel	10	table: 0x0b734d50
+room allocated at	38	6	with center	42	8
+room generator	function: 0x0ae7ef48	is making a room
+alloc	simple9x10
+room allocated at	17	35	with center	21	39
+alloc	pilar
+room allocated at	11	24	with center	15	26
+alloc	pilar
+room allocated at	34	36	with center	38	38
+alloc	pilar
+room allocated at	32	11	with center	36	13
+Begin tunnel	10	table: 0x0b46a688
 [PLAYER BIRTH] resolve...
 Inventory resolver	player	consumable	potion
 Zone made us an inventory according to filter!	Health Potion
@@ -1322,186 +2831,20 @@ C Map seens texture: 127 (60x60)
 [PROFILE] unmounted 	online	from /current-profile
 [QUICK HOTKEYS] Loading quick hotkey settings for module "dredge" from /save/quick_hotkeys...
 [QUICK HOTKEYS] Successfully loaded quick hotkey settings.
-Wait finished, counted 834, 919 ticks
+Wait finished, counted 1432, 3203 ticks
 [PROFILE THREAD] flushing CSETs
 [PROFILE THREAD] flushing CSETs ignored, empty dataset
 C Map minimap texture: 126 (50x50; 64x64)
-Server latency	90
-Server latency	89
-Server latency	89
-Server latency	88
-[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
-[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
-[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
-[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
-[LOG]	Player hits kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
-[LOG]	Player hits kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
-[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
-[LOG]	Player hits kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
-[LOG]	Player hits kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
-[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
-[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
-[LOG]	Player hits kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
-[LOG]	Player hits kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
-[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
-[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
-[LOG]	Player hits kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
-[LOG]	Player hits kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
-[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
-[LOG]	Kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
-[LOG]	Player hits kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
-[LOG]	Player hits kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
-[LOG]	#{bold}#Player killed kobold warrior!#{normal}#
-[LOG]	Player hits armoured kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
-[LOG]	Player hits armoured kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
-[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
-[LOG]	Player hits armoured kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
-[LOG]	Player hits armoured kobold warrior for #aaaaaa#6.00 physical damage#LAST#.
-[LOG]	Armoured kobold warrior hits player for #aaaaaa#5.00 physical damage#LAST#.
-Server latency	89
-Loading tile	border_7.png
-Loading tile	border_9.png
-Loading tile	border_1.png
-Loading tile	border_3.png
-Loading tile	border_8.png
-Loading tile	border_4.png
-[COROUTINE] registering	savefilepipe	thread: 0x0b7ed858
-[ENGINE] Switching to turn based
-[SAVEFILE PIPE] force waiting
-Make wait background texture 136 : 800x600 (1024, 1024)
-[SAVEFILE PIPE] new save running in the pipe:	player	game	::	game.teag	::	table: 0x0af43258	=>	table: 0x0b4c1520	(100)
-Loading savefile 	/save/player/
-[SAVEFILE PIPE] unleashing save thread
-Saving zipname /save/player/game.teag.tmp
-Saved zipname /save/player/game.teag.tmp
-[SAVEFILE PIPE] Checking save	player	game	/save/player/game.teag.tmp
-Loading savefile 	/save/player/
-[SAVEFILE] checked validity of type	game	 => 	all fine
-[LOG]	Saving done.
-[SAVEFILE PIPE] on end	saveGame_md5
-Wait finished, counted 251, 123 ticks
-[PROFILE] mounted 	online	on /current-profile
-[PROFILE] unmounted 	online	from /current-profile
-[MAIN] rebooting lua state: 	nil	nil	nil	nil	nil
-stack traceback:
-[COROUTINE] error	cannot resume dead coroutine
-[COROUTINE] dead	savefilepipe
-[ENGINE] Switching to turn based
-NO SELFEXE: bootstrapping from CWD
-===top 0
-===top 2
-Booting T-Engine from: C:\Documents and Settings\Spencer\Desktop\dredge\t-engine.exe
-SelfExe gave us app directory of:	C:\Documents and Settings\Spencer\Desktop\dredge\
-LuaVM:	LuaJIT 2.0.2	x86
-Destroying particle thread 0 (waiting for mutex)
-Destroying particle thread 0
-Cleaning up particle thread 0
-Cleaned up particle thread 0
-Destroying particle thread 0 (waiting for thread f39e20)
-Destroyed particle thread 0 (0)
-Creating particles thread 0
-Running lua loader code...
-LuaVM:	LuaJIT 2.0.2	x86
-===	
-Reboot using	te4	LATEST	boot	player	false
-[ENGINE LOADER] available from teae: 	te4-1.1.5
-[ENGINE LOADER] found engines	te4={[1]={[1]=1.000000 , [2]=1.000000 , [3]=5.000000 , [4]="te4" , [5]=17.000000 , ["load_teae"]="/engines/te4-1.1.5.teae" , } , } __byname={["te4-1.1.5"]=true , } 
-[ENGINE LOADER] looked in:
-	C:\Documents and Settings\Spencer\\T-Engine\4.0
-	bootstrap
-	C:\Documents and Settings\Spencer\Desktop\dredge\\game\thirdparty
-	C:\Documents and Settings\Spencer\Desktop\dredge\\game
-[ENGINE LOADER] sorted:	te4	1	1	5
-[ENGINE LOADER] loading engine:	1	1	5	te4
-[ENGINE LOADER] using archived engine:	/engines/te4-1.1.5.teae
-Available resolutions: 1280x800x32
-Available resolutions: 1280x768x32
-Available resolutions: 1280x720x32
-Available resolutions: 1024x768x32
-Available resolutions: 800x1280x32
-Available resolutions: 800x600x32
-Available resolutions: 768x1280x32
-Available resolutions: 768x1024x32
-Available resolutions: 720x1280x32
-Available resolutions: 640x480x32
-Available resolutions: 640x400x32
-Available resolutions: 600x800x32
-Available resolutions: 480x640x32
-Available resolutions: 400x640x32
-Available resolutions: 1280x800x16
-Available resolutions: 1280x768x16
-Available resolutions: 1280x720x16
-Available resolutions: 1024x768x16
-Available resolutions: 800x1280x16
-Available resolutions: 800x600x16
-Available resolutions: 768x1280x16
-Available resolutions: 768x1024x16
-Available resolutions: 720x1280x16
-Available resolutions: 640x480x16
-Available resolutions: 640x400x16
-Available resolutions: 600x800x16
-Available resolutions: 480x640x16
-Available resolutions: 400x640x16
-[KEYBINDER] Loaded keybinds: move
-[KEYBINDER] Loaded keybinds: hotkeys
-[KEYBINDER] Loaded keybinds: inventory
-[KEYBINDER] Loaded keybinds: actions
-[KEYBINDER] Loaded keybinds: interface
-[KEYBINDER] Loaded keybinds: debug
-Remapping	SCREENSHOT	table: 0x0a9d7418
-Remapping	HOTKEY_6	table: 0x0a9d2d78
-Remapping	MOVE_STAY	table: 0x0a9d2dc8
-setResolution: switching resolution to	800x600 Windowed	800	600	false	nil	(forced)
-Setting resolution to 800x600 (windowed, with borders)
-[DO RESIZE] Requested: 800x600 (0, 0)
-[DO RESIZE] Got: 800x600 (0, 0)
-OpenGL max texture size: 2048
-setResolution: performing onResolutionChange...
-
-onResolutionChange: resolution changed to 	800	600	from	nil	nil
-onResolutionChange: no game yet!
-Disabling FBO
-Disabling Shaders
-[ONLINE PROFILE] fun facts	nil
-[PROFILE] mounted 	online	on /current-profile
-[PROFILE] unmounted 	online	from /current-profile
-[ENGINE] Setting requested FPS to 30 (33 ms)
-[ENGINE] Switching to turn based
-[SAVEFILE PIPE] force waiting
-Creating module	boot	:: (as dir)	true	:: (as team)	nil	
-Loaded module definition for boot-0.1.0 using engine te4-1.1.5
-Creating module	dredge	:: (as dir)	true	:: (as team)	nil	
-Loaded module definition for dredge-0.1.9 using engine te4-1.1.5
-dredge	boot
-* Module: dredge
- ** 0.1.9
-* Module: boot
- ** 0.1.0
-After fs.reset
-[1] = {
-  [path] = C:\Documents and Settings\Spencer\Desktop\dredge\\game\engines\te4-1.1.5.teae
-}
-[ENGINE] Switching to turn based
-Loading savefile 	/save//
-Loading savefile 	/save/player/
-Make wait background texture 2 : 800x600 (1024, 1024)
-Using cached font	/data/font/DroidSans.ttf	12
-[MODULE] All hashes validation: 	nil	no online profile active
-[PROFILE THREAD] batching CSETs
-[MODULE LOADER] loading module	Dredge	[mod.load]	::	nil	nil
-[GAMMA] Setting gamma correction using SDL	1.2
-[ENGINE] Switching to turn based
-[GAMMA] Setting gamma correction using SDL	1.2
-Loading savefile 	/save/player/
-[GAMMA] Setting gamma correction using SDL	1.2
-[MUSIC] loading	whatever.ogg	Error loading sound "/data/music/whatever.ogg": The system cannot find the file specified.
-[ENGINE] Setting requested FPS to 30 (33 ms)
-[MODULE LOADER] done loading module	Dredge
-[PROFILE] mounted 	online	on /current-profile
-[PROFILE] unmounted 	online	from /current-profile
-Wait finished, counted 4, 260 ticks
-[PROFILE THREAD] flushing CSETs
-[PROFILE THREAD] flushing CSETs ignored, empty dataset
-[SOUND] loading from	/data/sound/ui/subtle_button_sound.ogg	:=:	sound "/data/sound/ui/subtle_button_sound.ogg" : <static>
-Using cached font	/data/font/DroidSans-Bold.ttf	16
-Thanks for having fun!
+Using cached font	/data/font/VeraMono.ttf	12
+Lua Error: /mod/dialogs/CharacterSheet.lua:137: attempt to call method 'getWeaponDam' (a nil value)
+	At [C]:-1 getWeaponDam
+	At /mod/dialogs/CharacterSheet.lua:137 drawDialog
+	At /mod/dialogs/CharacterSheet.lua:55 switchTo
+	At /mod/dialogs/CharacterSheet.lua:21 on_change
+	At /engine/ui/Tab.lua:96 select
+	At /engine/ui/Tab.lua:57 fct
+	At /engine/Mouse.lua:52 receiveMouse
+	At /engine/Mouse.lua:90 delegate
+	At /engine/ui/Dialog.lua:533 mouseEvent
+	At /engine/ui/Dialog.lua:312 fct
+	At /engine/Mouse.lua:52 

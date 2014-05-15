@@ -63,8 +63,6 @@ function _M:init(t, no_default)
 	engine.interface.ActorLevel.init(self, t)
 	engine.interface.ActorFOV.init(self, t)
 	engine.interface.ActorInventory.init(self, t)
-	
-	self:recalculateStats()
 end
 
 function _M:addedToLevel(level, x, y)

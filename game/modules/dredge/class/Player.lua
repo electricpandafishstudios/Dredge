@@ -55,6 +55,7 @@ function _M:move(x, y, force)
 		game.level.map:moveViewSurround(self.x, self.y, 8, 8)
 		self.exp = self.exp + math.max(1, (.001 * (self:getExpChart(self.level + 1) - self.exp)))
 	end
+	self:recalculateStats()
 	return moved
 end
 
