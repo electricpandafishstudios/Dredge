@@ -33,7 +33,7 @@ newTalent{
 	action = function(self, t)
 		local tg = {type="cone", range=self:getTalentRange(t), radius=5, cone_angle=90, no_restrict=true, stop_block=false}
 		local x, y, target = self:getTarget(tg)
-		self:project(tg,x,y, DamageType.PHYSICAL, 1 + self:getCon() * (0.3 + 0.1 * points) + self:getMen() * (0.4 + 0.2 * points), nil)
+		self:project(tg,x,y, DamageType.PHYSICAL, 1 + self:getCon() * 0.5 + self:getMen() * 0.6, nil)
 		return true
 	end,
 	info = function(self, t)

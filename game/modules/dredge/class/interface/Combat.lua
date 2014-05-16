@@ -57,6 +57,8 @@ function _M:attackTargetWith(target, dam, damage_type, weapon)
 	
 	if hit then
 		DamageType:get(damage_type).projector(self, target.x, target.y, damage_type, dmg)
+	else
+		self:missed(target, self)
 	end
 end
 
@@ -82,4 +84,12 @@ end
 
 function _M:getFinalDamage(adjusted, DR)
 	return math.max(1, adjusted * ((100 - math.min(DR, 90)) / 100))
+end
+
+function _M:missed(target, src)
+	local flash = game.flash.GOOD
+	if target == game.player then flash = game.flash.BAD end	
+	if target then
+		game.logSeen(target, flash, "%s misses.", src.name.capitalize())
+	end
 end
